@@ -34,6 +34,13 @@ public class PlayerMove : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     { 
-        print(collision.collider.name);
+        if(collision.gameObject.name == "ss")
+        {
+            print(collision.gameObject.name);
+        }
+        else
+        {
+            print("no");
+        }
     }
 }
