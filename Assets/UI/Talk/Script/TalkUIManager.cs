@@ -10,6 +10,7 @@ public class TalkUIManager : MonoBehaviour
     public TextMeshProUGUI SpeechText;
     private string Array;
     public float delay;
+    public GameObject EndCusor;
 
     void Start()
     {
@@ -28,6 +29,7 @@ public class TalkUIManager : MonoBehaviour
     }
     IEnumerator Talk(string name, string speech)
     {
+        EndCusor.SetActive(false);
         var wait = new WaitForSeconds(delay);
         int a = 0;
         NameText.text = name;
@@ -39,7 +41,7 @@ public class TalkUIManager : MonoBehaviour
             SpeechText.text = Array;
             yield return wait;
         }
-
+        EndCusor.SetActive(true);
         while (!Input.GetMouseButtonUp(0))
         {
             yield return 0;
