@@ -1,0 +1,40 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+[RequireComponent(typeof(Outline))]
+public abstract class Objects : MonoBehaviour
+{
+    Outline outline;
+    private bool isCliked;
+    public bool _isCliked
+    {
+        get { return isCliked; }
+        set
+        {
+            if (value)
+            {
+                outline.enabled = true;
+            }
+            else
+            {
+                outline.enabled = false;
+            }
+            isCliked = value;
+        }
+    }
+    private void Start()
+    {
+        outline = GetComponent<Outline>();
+        outline.enabled = false;
+    }
+
+    protected virtual void OnCliked()
+    {
+        isCliked = true;
+    }
+
+    protected abstract void Interaction();
+    
+}
