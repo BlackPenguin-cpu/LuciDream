@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerMove : MonoBehaviour
 {
     float speed = 10f;
     Vector3 mousePos, transPos, targetPos;
     bool isHorizontal = true;
-
+    NavMeshAgent agent;
     void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
@@ -17,6 +19,7 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             CalTargetPos();
+            agent.SetDestination(transform.position);
         }
     }
     private Vector2 tpos2d;
