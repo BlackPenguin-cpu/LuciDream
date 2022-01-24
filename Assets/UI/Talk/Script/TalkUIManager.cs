@@ -8,9 +8,9 @@ public class TalkUIManager : MonoBehaviour
 {
     public TextMeshProUGUI NameText;
     public TextMeshProUGUI SpeechText;
-    private string Array;
     public float delay;
     public GameObject EndCusor;
+    private bool IsClick = false;
 
     void Start()
     {
@@ -19,7 +19,11 @@ public class TalkUIManager : MonoBehaviour
 
     void Update()
     {
-
+        Debug.Log("아아아아아아아");
+        if (Input.GetMouseButtonUp(0))
+        {
+            IsClick = true;
+        }
     }
     IEnumerator TextScript()
     {
@@ -29,16 +33,19 @@ public class TalkUIManager : MonoBehaviour
     }
     IEnumerator Talk(string name, string speech)
     {
+        IsClick = false;
         EndCusor.SetActive(false);
         var wait = new WaitForSeconds(delay);
-        int a = 0;
         NameText.text = name;
-        Array = "";
+        SpeechText.text = "";
 
-        for (a = 0; a < speech.Length; a++)
+        foreach (var letter in speech)
         {
-            Array += speech[a];
-            SpeechText.text = Array;
+            if (IsClick)
+            {
+                wait = new WaitForSeconds(0);
+            }
+                SpeechText.text += letter;
             yield return wait;
         }
         EndCusor.SetActive(true);
