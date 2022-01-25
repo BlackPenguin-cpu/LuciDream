@@ -764,8 +764,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 891632750}
-        m_TargetAssemblyTypeName: Option, Assembly-CSharp
+      - m_Target: {fileID: 891632752}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: SetMusicVolume
         m_Mode: 0
         m_Arguments:
@@ -3156,6 +3156,8 @@ GameObject:
   - component: {fileID: 891632750}
   - component: {fileID: 891632749}
   - component: {fileID: 891632751}
+  - component: {fileID: 891632752}
+  - component: {fileID: 891632753}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3220,7 +3222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de5920aef71c4f847b1fcce1aaf6e25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Music: {fileID: 1640221988}
+  Music: {fileID: 0}
   slider: {fileID: 143953723}
   text: {fileID: 72700708}
 --- !u!114 &891632751
@@ -3237,6 +3239,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resolutionDropdown: {fileID: 303710835}
   fullscreenBtn: {fileID: 690885661}
+--- !u!114 &891632752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891632746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e06133c529a8bc45ae5ac6e4f5b2911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isNotSingle: 0
+  audioSource: {fileID: 1640221988}
+  clips: []
+  BGMBar: {fileID: 0}
+  SFXBar: {fileID: 0}
+  On: 1
+  SFXOn: 1
+  slider: {fileID: 0}
+  text: {fileID: 0}
+--- !u!114 &891632753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891632746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &911794904
 GameObject:
   m_ObjectHideFlags: 0

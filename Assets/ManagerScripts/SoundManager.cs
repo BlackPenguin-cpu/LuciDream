@@ -22,6 +22,12 @@ public class SoundManager : Singleton<SoundManager>
     float SEvolume = 1;
     protected SoundManager() { }
 
+    
+    public Slider slider;
+    public Text text;
+    float Value = 0;
+    int p = 0;
+
     public void Playbgm(string name)
     //사용법 Sound.Instance.ChangeClip("이름",루프 할껀지안할껀지(bool))
     {
@@ -72,4 +78,27 @@ public class SoundManager : Singleton<SoundManager>
         SEvolume = volume;
     }
 
+
+    public void Slider_right()
+    {
+        if (Value < 1)
+        {
+            Value += 0.1f;
+            p += 10;
+
+        }
+        text.text = p.ToString() + "%";
+        slider.GetComponent<Slider>().value = Value;
+    }
+
+    public void Slider_left()
+    {
+        if (Value > 0.1f)
+        {
+            Value -= 0.1f;
+            p -= 10;
+        }
+        text.text = p.ToString() + "%";
+        slider.GetComponent<Slider>().value = Value;
+    }
 }
