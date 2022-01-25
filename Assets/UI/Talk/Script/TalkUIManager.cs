@@ -19,7 +19,6 @@ public class TalkUIManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("아아아아아아아");
         if (Input.GetMouseButtonUp(0))
         {
             IsClick = true;
@@ -43,9 +42,10 @@ public class TalkUIManager : MonoBehaviour
         {
             if (IsClick)
             {
-                wait = new WaitForSeconds(0);
+                SpeechText.text = speech;
+                break;
             }
-                SpeechText.text += letter;
+            SpeechText.text += letter;
             yield return wait;
         }
         EndCusor.SetActive(true);

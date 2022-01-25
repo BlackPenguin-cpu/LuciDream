@@ -837,7 +837,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Location: {fileID: 1186502452}
-  Album: {fileID: 8683491236210080259, guid: 2d021193dd6bd1a40afa591782427b21, type: 3}
+  Album:
+  - {fileID: 6649283532186034098, guid: d1c1de8a9b00ff64caa4c28977784fa4, type: 3}
+  - {fileID: 8904275064029384058, guid: 282a800dec5c46145a7eb3f0f8ccc9e2, type: 3}
+  - {fileID: 2881870904927366598, guid: 67bc4232c210d684bbea2e906f04671a, type: 3}
+  - {fileID: 8683491236210080259, guid: 2d021193dd6bd1a40afa591782427b21, type: 3}
+  - {fileID: 959926068245948942, guid: 9404905243addac4da8b65a3026f08bc, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1675918158
 GameObject:
   m_ObjectHideFlags: 0

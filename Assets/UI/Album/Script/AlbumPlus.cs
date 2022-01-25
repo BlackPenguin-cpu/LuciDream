@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class AlbumPlus : MonoBehaviour
 {
     public Transform Location;
-    public GameObject Album;
+    public List<GameObject> Album;
     private ScrollRect scrollRect;
+    private int Array = 0;
     void Start()
     {
         scrollRect = GetComponent<ScrollRect>();
@@ -15,12 +16,17 @@ public class AlbumPlus : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     public void AlbumAdd()
     {
-        Instantiate(Album, scrollRect.content);
-        
+
+        if (Album[Array] != null && Array < Album.Count)
+        {
+            Instantiate(Album[Array], scrollRect.content);
+            Array++;
+            Debug.Log("¤±¤¤¤·¤©");
+        }
     }
 }
