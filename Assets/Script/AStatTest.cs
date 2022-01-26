@@ -19,4 +19,13 @@ public class AStarTest : MonoBehaviour
 {
     public Vector2Int bottomLeft, topRight, startPos, targewtPos;
     public List<Node> FinalNodeList;
+    public bool allowDiagonal, dontCrossCorner;
+    int sizeX, sizeY;
+    Node[,][] NodeArray;
+    int[] a;
+
+    private void Start()
+    {
+        Debug.Log(NodeArray[1,1]);
+    }
 }
