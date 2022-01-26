@@ -15,7 +15,7 @@ public class AlbumPlus : MonoBehaviour
     void Start()
     {
         scrollRect = GetComponent<ScrollRect>();
-        
+        AlbumAdd();
     }
 
     void Update()
@@ -26,14 +26,14 @@ public class AlbumPlus : MonoBehaviour
     {
         if (ReLoad)
         {
-        foreach(bool Activation in AlbumUnlock)
-        {
-            if (Activation)
+            foreach (bool Activation in AlbumUnlock)
             {
-                Instantiate(Album[Array], scrollRect.content);
+                if (Activation)
+                {
+                    Instantiate(Album[Array], scrollRect.content);
+                }
                 Array++;
             }
-        }
         }
         ReLoad = false;
         Array = 0;
