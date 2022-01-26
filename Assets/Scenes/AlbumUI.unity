@@ -706,7 +706,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC568\uBC94 \uCD94\uAC00\n"
+  m_Text: "\uC568\uBC94 \uBD88\uB7EC\uC624\uAE30"
 --- !u!222 &1140222402
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -845,6 +845,8 @@ MonoBehaviour:
   - {fileID: 959926068245948942, guid: 9404905243addac4da8b65a3026f08bc, type: 3}
   - {fileID: 0}
   - {fileID: 0}
+  AlbumUnlock: 0100010001
+  Array: 0
 --- !u!1 &1675918158
 GameObject:
   m_ObjectHideFlags: 0

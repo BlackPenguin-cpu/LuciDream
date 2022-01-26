@@ -7,32 +7,35 @@ public class AlbumPlus : MonoBehaviour
 {
     public Transform Location;
     public List<GameObject> Album;
-    private ScrollRect scrollRect;
+    public List<bool> AlbumUnlock;
     public int Array = 0;
+    private ScrollRect scrollRect;
     private int AlbumSave;
+    private bool ReLoad = true;
     void Start()
     {
-        //AlbumSave = PlayerPrefs.GetInt("Album");
         scrollRect = GetComponent<ScrollRect>();
-        /*for(int i = 0; i < AlbumSave - 1; i++)
-        {
-
-        }*/
+        
     }
 
     void Update()
     {
-
     }
 
     public void AlbumAdd()
     {
-
-        if (Album[Array] != null && Array < Album.Count)
+        if (ReLoad)
         {
-            Instantiate(Album[Array], scrollRect.content);
-            ++Array;
-            //PlayerPrefs.SetInt("Album", Array);
+        foreach(bool Activation in AlbumUnlock)
+        {
+            if (Activation)
+            {
+                Instantiate(Album[Array], scrollRect.content);
+                Array++;
+            }
         }
+        }
+        ReLoad = false;
+        Array = 0;
     }
 }
