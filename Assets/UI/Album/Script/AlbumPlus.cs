@@ -1,20 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class AlbumPlus : MonoBehaviour
 {
     public Transform Location;
-    public List<GameObject> Album;
+    public GameObject Album;
     public List<bool> AlbumUnlock;
-    public int Array = 0;
+    public List<Texture2D> AlbumImage;
+    private TextMeshProUGUI Numbering;
     private ScrollRect scrollRect;
-    private int AlbumSave;
     private bool ReLoad = true;
+    private int Array = 0;
     void Start()
     {
         scrollRect = GetComponent<ScrollRect>();
+        Numbering = Album.GetComponentInChildren<TextMeshProUGUI>();
         AlbumAdd();
     }
 
@@ -30,12 +33,12 @@ public class AlbumPlus : MonoBehaviour
             {
                 if (Activation)
                 {
-                    Instantiate(Album[Array], scrollRect.content);
+                    Numbering.text = "#" + ++Array;
+                    Instantiate(Album, scrollRect.content);
                 }
-                Array++;
             }
         }
         ReLoad = false;
-        Array = 0;
+        Numbering.text = "Number";
     }
 }
