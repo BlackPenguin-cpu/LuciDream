@@ -45,6 +45,7 @@ public class TalkUIManager : MonoBehaviour
                 SpeechText.text = speech;
                 break;
             }
+            SoundManager.Instance.PlaySound("TalkSound");
             SpeechText.text += letter;
             yield return wait;
         }
