@@ -628,8 +628,12 @@ MonoBehaviour:
   Album: {fileID: 8683491236210080259, guid: 2d021193dd6bd1a40afa591782427b21, type: 3}
   AlbumUnlock: 0100010001
   AlbumImage:
-  - {fileID: 2800000, guid: f313599c8ba0b7d41963acfb250a9a64, type: 3}
-  - {fileID: 2800000, guid: 594735846da25b44fa8a5163157f1419, type: 3}
+  - {fileID: 21300000, guid: eebd8e0a2c19554419a98fc8f9419157, type: 3}
+  - {fileID: 21300000, guid: f313599c8ba0b7d41963acfb250a9a64, type: 3}
+  - {fileID: 21300000, guid: f313599c8ba0b7d41963acfb250a9a64, type: 3}
+  - {fileID: 21300000, guid: 594735846da25b44fa8a5163157f1419, type: 3}
+  - {fileID: 21300000, guid: 594735846da25b44fa8a5163157f1419, type: 3}
+  - {fileID: 0}
 --- !u!1 &1675918158
 GameObject:
   m_ObjectHideFlags: 0
