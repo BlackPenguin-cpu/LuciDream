@@ -25,7 +25,10 @@ public class NumberPad : MonoBehaviour
 
     public void BackSpaceButtonClick()
     {
-        NumberBoard.text = NumberBoard.text.Substring(0, NumberBoard.text.Length - 1);
+        if (NumberBoard.text.Length != 0)
+        {
+            NumberBoard.text = NumberBoard.text.Substring(0, NumberBoard.text.Length - 1);
+        }
     }
 
     public void OKButtonClick()
