@@ -13,6 +13,7 @@ public class NumberPad : MonoBehaviour
 
     void Update()
     {
+        PasswordCheck();
     }
 
     public void NumberButtonClick(int Number)
@@ -31,8 +32,10 @@ public class NumberPad : MonoBehaviour
         }
     }
 
-    public void OKButtonClick()
+    void PasswordCheck()
     {
+        if (NumberBoard.text.Length == 4)
+        {
         if (NumberBoard.text == Password)
         {
             Debug.Log("맞음!!");
@@ -40,6 +43,7 @@ public class NumberPad : MonoBehaviour
         else
         {
             Debug.Log("틀림!!");
+        }
         }
     }
 }
