@@ -30,7 +30,9 @@ public class AStarTest : MonoBehaviour
     private void Start()
     {
         PathFinding();
-        OnDrawGizmos();
+    }
+    private void Update()
+    {
     }
 
     public void PathFinding()
@@ -38,7 +40,7 @@ public class AStarTest : MonoBehaviour
         startPos = Vector2Int.RoundToInt(StartTR.position);
 
         //NodeArray의 크기 정해주고, isWall, x, y 대입
-        sizeX = topRight.x = bottomLeft.x + 1;
+        sizeX = topRight.x - bottomLeft.x + 1;
         sizeY = topRight.y - bottomLeft.y + 1;
         NodeArray = new Node[sizeX, sizeY];
 
@@ -75,7 +77,7 @@ public class AStarTest : MonoBehaviour
             if (CurNode == TargetNode)
             {
                 Node TargetCurNode = TargetNode;
-                while (TargetNode == TargetCurNode.ParentNode)
+                while (TargetCurNode != StartNode)
                 {
                     FinalNodeList.Add(TargetCurNode);
                     TargetCurNode = TargetCurNode.ParentNode;
