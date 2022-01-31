@@ -15,7 +15,7 @@ public class Node
     public int F { get { return G + H; } }
 
 }
-public class AStarTest : MonoBehaviour
+public class AStarTest : Singleton<AStarTest>
 {
     public Vector2Int bottomLeft, topRight, startPos, targetPos;
     public List<Node> FinalNodeList;
