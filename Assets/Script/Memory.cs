@@ -14,6 +14,16 @@ public class Memory : MonoBehaviour
     public GameObject mint;
     public GameObject black;
     public GameObject purple;
+    public GameObject red1;
+    public GameObject yellow1;
+    public GameObject green1;
+    public GameObject blue1;
+    public GameObject orange1;
+    public GameObject pink1;
+    public GameObject mint1;
+    public GameObject black1;
+    public GameObject purple1;
+
     int i = 0;
     int a = 0;
     int b = 0;
@@ -35,56 +45,64 @@ public class Memory : MonoBehaviour
     }
     void Randoma()
     {
-        float random = Random.Range(1, 2);
-        print(random);
+        float random = Random.Range(1, 10);
         if(i < 3)
         {
             switch (random)
             {
                 case 1:
                     red.SetActive(true);
+                    red1.SetActive(true);
                     i++;
-                    Red = 1;
+                    Red++;
                     break;
                 case 2:
                     yellow.SetActive(true);
+                    yellow1.SetActive(true);
                     i++;
-                    Yellow = 1;
+                    Yellow++;
                     break;
                 case 3:
                     green.SetActive(true);
+                    green1.SetActive(true);
                     i++;
-                    Green = 1;
+                    Green++;
                     break;
                 case 4:
                     blue.SetActive(true);
+                    blue1.SetActive(true);
                     i++;
-                    Blue = 1;
+                    Blue++;
                     break;
                 case 5:
                     orange.SetActive(true);
+                    orange1.SetActive(true);
                     i++;
-                    Orange = 1;
+                    Orange++;
                     break;
                 case 6:
                     pink.SetActive(true);
+                    pink1.SetActive(true);
                     i++;
-                    Pink = 1;
+                    Pink++;
                     break;
                 case 7:
                     mint.SetActive(true);
+                    mint1.SetActive(true);
                     i++;
-                    Mint = 1;
+                    Mint++;
                     break;
                 case 8:
                     black.SetActive(true);
+                    black1.SetActive(true);
                     i++;
-                    Black = 1;
+                    Black++;
                     break;
                 case 9:
                     purple.SetActive(true);
+                    purple1.SetActive(true);
                     i++;
-                    Purple = 1;
+                    Purple++;
                     break;
             }
             Invoke("Delete", 2);
@@ -107,6 +125,16 @@ public class Memory : MonoBehaviour
         mint.SetActive(false);
         black.SetActive(false);
         purple.SetActive(false);
+
+        red1.SetActive(false);
+        yellow1.SetActive(false);
+        green1.SetActive(false);
+        blue1.SetActive(false);
+        orange1.SetActive(false);
+        pink1.SetActive(false);
+        mint1.SetActive(false);
+        black1.SetActive(false);
+        purple1.SetActive(false);
     }
     void aaa()
     {
@@ -130,7 +158,7 @@ public class Memory : MonoBehaviour
     {
         if(b >= 3)
         {
-            if (a >= 3)
+            if (a == 3)
             {
                 print("good");
             }
@@ -140,82 +168,82 @@ public class Memory : MonoBehaviour
     public void Reda()
     {
         b++;
-        if (Red == 1)
+        if (Red >= 1)
         {
             a += Red;
-            Red = 0;
+            Red--;
         }
     }
     public void Yellowa()
     {
         b++;
-        if (Yellow == 1)
+        if (Yellow >= 1)
         {
             a += Yellow;
-            Yellow = 0;
+            Yellow--;
         }
     }
     public void Greena()
     {
         b++;
-        if (Green == 1)
+        if (Green >= 1)
         {
             a += Green;
-            Green = 0;
+            Green--;
         }
     }
     public void Bluea()
     {
         b++;
-        if (Blue == 1)
+        if (Blue >= 1)
         {
             a += Blue;
-            Blue = 0;
+            Blue--;
         }
     }
     public void Orangea()
     {
         b++;
-        if (Orange == 1)
+        if (Orange >= 1)
         {
             a += Orange;
-            Orange = 0;
+            Orange--;
         }
     }
     public void Pinka()
     {
         b++;
-        if (Pink == 1)
+        if (Pink >= 1)
         {
             a += Pink;
-            Pink = 0;
+            Pink--;
         }
     }
     public void Minta()
     {
         b++;
-        if (Mint == 1)
+        if (Mint >= 1)
         {
             a += Mint;
-            Mint = 0;
+            Mint--;
         }
     }
     public void Blacka()
     {
         b++;
-        if (Black == 1)
+        if (Black >= 1)
         {
             a += Black;
-            Black = 0;
+            Black--;
         }
     }
     public void Purplea()
     {
         b++;
-        if (Purple == 1)
+        if (Purple >= 1)
         {
             a += Purple;
-            Purple = 0;
+            Purple--;
         }
     }
 }
