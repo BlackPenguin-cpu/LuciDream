@@ -3,47 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+public enum PlayerState
+{
+    IDLE,
+    WALK,
+    DIE
+}
+
 public class PlayerMove : MonoBehaviour
 {
-    float speed = 10f;
-    Vector3 mousePos, transPos, targetPos;
-    bool isHorizontal = true;
-    NavMeshAgent agent;
-    void Start()
+    public float MoveSpeed;
+    public PlayerState State;
+    private Coroutine OnMouseClickIEnmerator;
+    [SerializeField] Camera Camera;
+
+    private void OnLevelWasLoaded(int level)
     {
-        agent = GetComponent<NavMeshAgent>();
+        Camera = Camera.main;
+    }
+    private void Start()
+    {
+        Camera = Camera.main;
     }
 
-    void Update()
+    private void Update()
     {
-        if (Input.GetMouseButtonDown(1))
         {
-            CalTargetPos();
-            agent.SetDestination(transform.position);
+            if (OnMouseClickIEnmerator != null) StopCoroutine(OnMouseClickIEnmerator);
+            OnMouseClickIEnmerator = StartCoroutine(OnMouseClick());
         }
-    }
-    private Vector2 tpos2d;
-    void CalTargetPos()
-    {
-        mousePos = Input.mousePosition;
-        transPos = Camera.main.ScreenToWorldPoint(mousePos);
-        targetPos = new Vector3(transPos.x, transPos.y, 0);
     }
 
-    void FixedUpdate()
+    IEnumerator OnMouseClick()
     {
-        transform.position = Vector3.MoveTowards(transform.position, targetPos, Time.deltaTime * speed); 
+
+        yield return new WaitForSeconds(MoveSpeed);
+    }
+    IEnumerator OnWalk(Vector2 Dir)
+    {
+        yield return null;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    { 
-        if(collision.gameObject.name == "ss")
-        {
-            print(collision.gameObject.name);
-        }
-        else
-        {
-            print("no");
-        }
-    }
 }
