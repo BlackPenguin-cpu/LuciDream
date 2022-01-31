@@ -58,14 +58,14 @@ public class NumberPad : MonoBehaviour
 
     public void CloseButtonClick()
     {
-        numberpad.transform.DOMove(new Vector3(960, 1540, 0), 1).SetEase(Ease.Linear);
+        numberpad.transform.DOMove(new Vector3(960, 1540, 0), 1).SetEase(Ease.InBack);
         NumberBoard.text = "";
         AnswerCheck = true;
     }
 
     public void MoveButtonClick()
     {
-        numberpad.transform.DOMove(new Vector3(960, 540, 0), 1).SetEase(Ease.Linear);
+        numberpad.transform.DOMove(new Vector3(960, 540, 0), 1).SetEase(Ease.OutBack);
     }
 
     IEnumerator ClearDirecting()
