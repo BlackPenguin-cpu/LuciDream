@@ -29,7 +29,6 @@ public class AStarTest : Singleton<AStarTest>
 
     private void Start()
     {
-        PathFinding();
     }
     private void Update()
     {
