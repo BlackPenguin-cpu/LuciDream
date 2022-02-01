@@ -21,7 +21,6 @@ public class Memoryconterol : MonoBehaviour
         else
         {
             GetComponent<Button>().interactable = false;
-            Color color = Color.white;
         }   
     }
 }
