@@ -23,10 +23,13 @@ public class Memory : MonoBehaviour
     public GameObject mint1;
     public GameObject black1;
     public GameObject purple1;
+    public GameObject Good;
+    public GameObject Bad;
 
     int i = 0;
     int a = 0;
     int b = 0;
+    int c = 3;
     int Red = 0;
     int Yellow = 0;
     int Green = 0;
@@ -46,7 +49,7 @@ public class Memory : MonoBehaviour
     void Randoma()
     {
         float random = Random.Range(1, 10);
-        if(i < 3)
+        if(c > i)
         {
             switch (random)
             {
@@ -105,8 +108,8 @@ public class Memory : MonoBehaviour
                     Purple++;
                     break;
             }
-            Invoke("Delete", 2);
-            Invoke("aaa", 3);
+            Invoke("Delete", 1);
+            Invoke("aaa", 2);
         }
         else
         {
@@ -135,6 +138,9 @@ public class Memory : MonoBehaviour
         mint1.SetActive(false);
         black1.SetActive(false);
         purple1.SetActive(false);
+
+        Good.SetActive(false);
+        Bad.SetActive(false);
     }
     void aaa()
     {
@@ -152,98 +158,199 @@ public class Memory : MonoBehaviour
         mint.SetActive(true);
         black.SetActive(true);
         purple.SetActive(true);
+
+        red1.SetActive(true);
+        yellow1.SetActive(true);
+        green1.SetActive(true);
+        blue1.SetActive(true);
+        orange1.SetActive(true);
+        pink1.SetActive(true);
+        mint1.SetActive(true);
+        black1.SetActive(true);
+        purple1.SetActive(true);
     }
 
-    private void Update()
+    void Clear()
     {
-        if(b >= 3)
+        if (b >= c)
         {
-            if (a == 3)
+            if (a == c)
             {
-                print("good");
+                Good.SetActive(true);
+                Invoke("good", 2);
             }
-            else print("bad");
+            else
+            {
+                Bad.SetActive(true);
+                Invoke("bad", 2);
+            }
         }
+    }
+
+    void good()
+    {
+        Good.SetActive(false);
+        c++;
+        b = 0;
+        a = 0;
+        i = 0;
+        Delete();
+        On = false;
+        Invoke("aaa", 1);
+    }
+
+    void bad()
+    {
+        Bad.SetActive (false);
+        b = 0;
+        a = 0;
+        i = 0;
+        Delete();
+        On = false;
+        Invoke("aaa", 1);
     }
     public void Reda()
     {
         b++;
-        if (Red >= 1)
+        if (Red == 1)
         {
             a += Red;
             Red--;
+            Clear();
+        }
+        else if (Red > 1)
+        {
+            a += 1;
+            Red--;
+            Clear();
         }
     }
     public void Yellowa()
     {
         b++;
-        if (Yellow >= 1)
+        if (Yellow == 1)
         {
             a += Yellow;
             Yellow--;
+            Clear();
+        }
+        else if (Yellow > 1)
+        {
+            a += 1;
+            Yellow--;
+            Clear();
         }
     }
     public void Greena()
     {
         b++;
-        if (Green >= 1)
+        if (Green == 1)
         {
             a += Green;
             Green--;
+            Clear();
+        }
+        else if(Green > 1)
+        {
+            a += 1;
+            Green--;
+            Clear();
         }
     }
     public void Bluea()
     {
         b++;
-        if (Blue >= 1)
+        if (Blue == 1)
         {
             a += Blue;
             Blue--;
+            Clear();
+        }
+        else if (Blue > 1)
+        {
+            a += 1;
+            Blue--;
+            Clear();
         }
     }
     public void Orangea()
     {
         b++;
-        if (Orange >= 1)
+        if (Orange == 1)
         {
             a += Orange;
             Orange--;
+            Clear();
+        }
+        else if (Orange > 1)
+        {
+            a += 1;
+            Orange--;
+            Clear();
         }
     }
     public void Pinka()
     {
         b++;
-        if (Pink >= 1)
+        if (Pink == 1)
         {
             a += Pink;
             Pink--;
+            Clear();
+        }
+        else if (Pink > 1)
+        {
+            a += 1;
+            Pink--;
+            Clear();
         }
     }
     public void Minta()
     {
         b++;
-        if (Mint >= 1)
+        if (Mint == 1)
         {
             a += Mint;
             Mint--;
+            Clear();
+        }
+        else if (Mint > 1)
+        {
+            a += 1;
+            Mint--;
+            Clear();
         }
     }
     public void Blacka()
     {
         b++;
-        if (Black >= 1)
+        if (Black == 1)
         {
             a += Black;
             Black--;
+            Clear();
+        }
+        else if (Black > 1)
+        {
+            a += 1;
+            Black--;
+            Clear();
         }
     }
     public void Purplea()
     {
         b++;
-        if (Purple >= 1)
+        if (Purple == 1)
         {
             a += Purple;
             Purple--;
+            Clear();
+        }
+        else if (Purple > 1)
+        {
+            a += 1;
+            Purple--;
+            Clear();
         }
     }
 }
