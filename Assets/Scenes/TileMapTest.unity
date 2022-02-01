@@ -389,6 +389,7 @@ GameObject:
   - component: {fileID: 392041771}
   - component: {fileID: 392041770}
   - component: {fileID: 392041769}
+  - component: {fileID: 392041774}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -455,6 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8c32949a78f71f4da478646ccc4de6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNotSingle: 0
   bottomLeft: {x: -5, y: -5}
   topRight: {x: 10, y: 10}
   startPos: {x: 0, y: 0}
@@ -528,6 +530,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &392041774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392041768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb5f232cd058b2149923dec9234e6458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isNotSingle: 0
+  MoveSpeed: 1
+  State: 0
+  Camera: {fileID: 1648544899}
+  NodeList: []
 --- !u!1 &1313131343
 GameObject:
   m_ObjectHideFlags: 0
