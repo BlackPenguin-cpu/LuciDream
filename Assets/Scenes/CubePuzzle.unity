@@ -308,15 +308,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 594775711}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4222d86a923c9f64c9d930eb440c4c04, type: 3}
+  m_Script: {fileID: 11500000, guid: a8235c817513ece469357d8b5c13a4c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cube:
+  Cubes:
   - {fileID: 1066357407}
   - {fileID: 1064261877}
   - {fileID: 1522537724}
-  Number: 000000000000000000000000
-  Max: 3
+  Numbers: 000000000000000000000000
 --- !u!1 &604586485
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,10 +557,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 594775713}
-        m_TargetAssemblyTypeName: CubeRotation, Assembly-CSharp
+      - m_Target: {fileID: 1064261882}
+        m_TargetAssemblyTypeName: Cube, Assembly-CSharp
         m_MethodName: Rotation
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -617,12 +616,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1064261877}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25b0eea39418afb4ea23527300d4e0f2, type: 3}
+  m_Script: {fileID: 11500000, guid: dde7ef3825fdd4743b89c149e314e615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cube: {fileID: 1064261877}
   Number: 3
   text: {fileID: 807399848}
+  Cubes:
+  - {fileID: 1064261877}
+  - {fileID: 1522537724}
 --- !u!1 &1066357407
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,10 +745,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 594775713}
-        m_TargetAssemblyTypeName: CubeRotation, Assembly-CSharp
+      - m_Target: {fileID: 1066357412}
+        m_TargetAssemblyTypeName: Cube, Assembly-CSharp
         m_MethodName: Rotation
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -765,12 +766,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1066357407}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25b0eea39418afb4ea23527300d4e0f2, type: 3}
+  m_Script: {fileID: 11500000, guid: dde7ef3825fdd4743b89c149e314e615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cube: {fileID: 1066357407}
   Number: 1
   text: {fileID: 604586485}
+  Cubes:
+  - {fileID: 1066357407}
+  - {fileID: 1064261877}
 --- !u!1 &1522537724
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,10 +857,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 594775713}
-        m_TargetAssemblyTypeName: CubeRotation, Assembly-CSharp
+      - m_Target: {fileID: 1522537729}
+        m_TargetAssemblyTypeName: Cube, Assembly-CSharp
         m_MethodName: Rotation
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -913,12 +916,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1522537724}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25b0eea39418afb4ea23527300d4e0f2, type: 3}
+  m_Script: {fileID: 11500000, guid: dde7ef3825fdd4743b89c149e314e615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cube: {fileID: 1522537724}
   Number: 1
   text: {fileID: 230672332}
+  Cubes:
+  - {fileID: 1522537724}
+  - {fileID: 1066357407}
 --- !u!1 &1759583099
 GameObject:
   m_ObjectHideFlags: 0
