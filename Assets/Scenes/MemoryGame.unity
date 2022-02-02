@@ -2924,6 +2924,10 @@ MonoBehaviour:
   purple1: {fileID: 1278991906}
   Good: {fileID: 151044337}
   Bad: {fileID: 1524917960}
+  Deletetime: 1
+  Deletetime1: 0.5
+  aaatime: 2
+  aaatime1: 1
   On: 0
 --- !u!1 &2008190125
 GameObject:

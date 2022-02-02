@@ -30,6 +30,10 @@ public class Memory : MonoBehaviour
     int a = 0;
     int b = 0;
     int c = 3;
+    public float Deletetime;
+    public float Deletetime1;
+    public float aaatime;
+    public float aaatime1;
     int Red = 0;
     int Yellow = 0;
     int Green = 0;
@@ -108,8 +112,17 @@ public class Memory : MonoBehaviour
                     Purple++;
                     break;
             }
-            Invoke("Delete", 1);
-            Invoke("aaa", 2);
+            if(c == 3)
+            {
+                Invoke("Delete", Deletetime);
+                Invoke("aaa", aaatime);
+            }
+            else if (c >= 4)
+            {
+                Invoke("Delete", Deletetime1);
+                Invoke("aaa", aaatime1);
+            }
+            
         }
         else
         {
@@ -178,11 +191,11 @@ public class Memory : MonoBehaviour
             {
                 Good.SetActive(true);
                 Invoke("good", 2);
-            }
-            else
-            {
-                Bad.SetActive(true);
-                Invoke("bad", 2);
+
+                if(c == 4)
+                {
+                    print("clear");
+                }
             }
         }
     }
@@ -205,6 +218,7 @@ public class Memory : MonoBehaviour
         b = 0;
         a = 0;
         i = 0;
+        c = 3;
         Delete();
         On = false;
         Invoke("aaa", 1);
@@ -224,6 +238,11 @@ public class Memory : MonoBehaviour
             Red--;
             Clear();
         }
+        else if(Red == 0)
+        {
+            Bad.SetActive(true);
+            Invoke("bad", 2);
+        }
     }
     public void Yellowa()
     {
@@ -239,6 +258,11 @@ public class Memory : MonoBehaviour
             a += 1;
             Yellow--;
             Clear();
+        }
+        else if (Yellow == 0)
+        {
+            Bad.SetActive(true);
+            Invoke("bad", 2);
         }
     }
     public void Greena()
@@ -256,6 +280,11 @@ public class Memory : MonoBehaviour
             Green--;
             Clear();
         }
+        else if (Green == 0)
+        {
+            Bad.SetActive(true);
+            Invoke("bad", 2);
+        }
     }
     public void Bluea()
     {
@@ -271,6 +300,11 @@ public class Memory : MonoBehaviour
             a += 1;
             Blue--;
             Clear();
+        }
+        else if (Blue == 0)
+        {
+            Bad.SetActive(true);
+            Invoke("bad", 2);
         }
     }
     public void Orangea()
@@ -288,6 +322,11 @@ public class Memory : MonoBehaviour
             Orange--;
             Clear();
         }
+        else if (Orange == 0)
+        {
+            Bad.SetActive(true);
+            Invoke("bad", 2);
+        }
     }
     public void Pinka()
     {
@@ -303,6 +342,11 @@ public class Memory : MonoBehaviour
             a += 1;
             Pink--;
             Clear();
+        }
+        else if (Pink == 0)
+        {
+            Bad.SetActive(true);
+            Invoke("bad", 2);
         }
     }
     public void Minta()
@@ -320,6 +364,11 @@ public class Memory : MonoBehaviour
             Mint--;
             Clear();
         }
+        else if (Mint == 0)
+        {
+            Bad.SetActive(true);
+            Invoke("bad", 2);
+        }
     }
     public void Blacka()
     {
@@ -336,6 +385,11 @@ public class Memory : MonoBehaviour
             Black--;
             Clear();
         }
+        else if (Black == 0)
+        {
+            Bad.SetActive(true);
+            Invoke("bad", 2);
+        }
     }
     public void Purplea()
     {
@@ -351,6 +405,11 @@ public class Memory : MonoBehaviour
             a += 1;
             Purple--;
             Clear();
+        }
+        else if (Purple == 0)
+        {
+            Bad.SetActive(true);
+            Invoke("bad", 2);
         }
     }
 }
