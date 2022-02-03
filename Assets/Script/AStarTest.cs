@@ -112,7 +112,8 @@ public class AStarTest : Singleton<AStarTest>
             && checkX < topRight.x + 1
             && checkY >= bottomLeft.y
             && checkY < topRight.y + 1
-            && !NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y].isWall
+            && (!NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y].isWall 
+            || NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y] == TargetNode)
             && !ClosedList.Contains(NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y]))
         {
             //대각선 장애물 사이로 못지나감

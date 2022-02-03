@@ -25,6 +25,7 @@ public class Player : Singleton<Player>
     public PlayerDir PlayerDir;
     public bool Dead;
 
+    private Objects InteractionObj;
     private Coroutine OnMouseClickIEnumerator;
     private Camera Camera;
     private List<Node> NodeList;
@@ -93,7 +94,20 @@ public class Player : Singleton<Player>
 
     IEnumerator OnMouseClick()
     {
+        //클릭 체크
         Vector2 mouse = Camera.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
+        RaycastHit2D[] hitobjects = Physics2D.RaycastAll(mouse, Vector3.forward);
+
+        foreach (RaycastHit2D hit in hitobjects)
+        {
+            GameObject obj = hit.collider.gameObject;
+            if (obj.tag == "Interaction")
+            {
+                obj.GetComponent<Objects>();
+            }
+        }
+
+        //이동
         AStarTest.Instance.targetPos = Vector2Int.RoundToInt(mouse);
         AStarTest.Instance.PathFinding();
         NodeList = AStarTest.Instance.FinalNodeList;
@@ -101,6 +115,7 @@ public class Player : Singleton<Player>
         {
             foreach (Node node in NodeList)
             {
+                if (node.isWall == true) break;
                 State = PlayerState.WALK;
                 if (tween != null) tween.Kill();
                 Vector2 dir = new Vector2(node.x, node.y);
@@ -111,8 +126,7 @@ public class Player : Singleton<Player>
                 State = PlayerState.IDLE;
             }
         }
-        else StopCoroutine(OnMouseClickIEnumerator);
-
+        else if (OnMouseClickIEnumerator != null) StopCoroutine(OnMouseClickIEnumerator);
     }
 
     void VectorStateChecker(Vector2 dir)

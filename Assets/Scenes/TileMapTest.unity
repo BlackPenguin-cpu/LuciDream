@@ -543,10 +543,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNotSingle: 0
-  MoveSpeed: 1
+  MoveSpeed: 0.2
   State: 0
-  Camera: {fileID: 1648544899}
-  NodeList: []
+  PlayerDir: 0
+  Dead: 0
 --- !u!1 &1313131343
 GameObject:
   m_ObjectHideFlags: 0
