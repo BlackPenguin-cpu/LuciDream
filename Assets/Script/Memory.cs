@@ -14,9 +14,26 @@ public class Memory : MonoBehaviour
     public GameObject mint;
     public GameObject black;
     public GameObject purple;
+    public GameObject red1;
+    public GameObject yellow1;
+    public GameObject green1;
+    public GameObject blue1;
+    public GameObject orange1;
+    public GameObject pink1;
+    public GameObject mint1;
+    public GameObject black1;
+    public GameObject purple1;
+    public GameObject Good;
+    public GameObject Bad;
+
     int i = 0;
     int a = 0;
     int b = 0;
+    int c = 3;
+    public float Deletetime;
+    public float Deletetime1;
+    public float aaatime;
+    public float aaatime1;
     int Red = 0;
     int Yellow = 0;
     int Green = 0;
@@ -35,60 +52,77 @@ public class Memory : MonoBehaviour
     }
     void Randoma()
     {
-        float random = Random.Range(1, 2);
-        print(random);
-        if(i < 3)
+        float random = Random.Range(1, 10);
+        if(c > i)
         {
             switch (random)
             {
                 case 1:
                     red.SetActive(true);
+                    red1.SetActive(true);
                     i++;
-                    Red = 1;
+                    Red++;
                     break;
                 case 2:
                     yellow.SetActive(true);
+                    yellow1.SetActive(true);
                     i++;
-                    Yellow = 1;
+                    Yellow++;
                     break;
                 case 3:
                     green.SetActive(true);
+                    green1.SetActive(true);
                     i++;
-                    Green = 1;
+                    Green++;
                     break;
                 case 4:
                     blue.SetActive(true);
+                    blue1.SetActive(true);
                     i++;
-                    Blue = 1;
+                    Blue++;
                     break;
                 case 5:
                     orange.SetActive(true);
+                    orange1.SetActive(true);
                     i++;
-                    Orange = 1;
+                    Orange++;
                     break;
                 case 6:
                     pink.SetActive(true);
+                    pink1.SetActive(true);
                     i++;
-                    Pink = 1;
+                    Pink++;
                     break;
                 case 7:
                     mint.SetActive(true);
+                    mint1.SetActive(true);
                     i++;
-                    Mint = 1;
+                    Mint++;
                     break;
                 case 8:
                     black.SetActive(true);
+                    black1.SetActive(true);
                     i++;
-                    Black = 1;
+                    Black++;
                     break;
                 case 9:
                     purple.SetActive(true);
+                    purple1.SetActive(true);
                     i++;
-                    Purple = 1;
+                    Purple++;
                     break;
             }
-            Invoke("Delete", 2);
-            Invoke("aaa", 3);
+            if(c == 3)
+            {
+                Invoke("Delete", Deletetime);
+                Invoke("aaa", aaatime);
+            }
+            else if (c >= 4)
+            {
+                Invoke("Delete", Deletetime1);
+                Invoke("aaa", aaatime1);
+            }
+            
         }
         else
         {
@@ -107,6 +141,19 @@ public class Memory : MonoBehaviour
         mint.SetActive(false);
         black.SetActive(false);
         purple.SetActive(false);
+
+        red1.SetActive(false);
+        yellow1.SetActive(false);
+        green1.SetActive(false);
+        blue1.SetActive(false);
+        orange1.SetActive(false);
+        pink1.SetActive(false);
+        mint1.SetActive(false);
+        black1.SetActive(false);
+        purple1.SetActive(false);
+
+        Good.SetActive(false);
+        Bad.SetActive(false);
     }
     void aaa()
     {
@@ -124,18 +171,57 @@ public class Memory : MonoBehaviour
         mint.SetActive(true);
         black.SetActive(true);
         purple.SetActive(true);
+
+        red1.SetActive(true);
+        yellow1.SetActive(true);
+        green1.SetActive(true);
+        blue1.SetActive(true);
+        orange1.SetActive(true);
+        pink1.SetActive(true);
+        mint1.SetActive(true);
+        black1.SetActive(true);
+        purple1.SetActive(true);
     }
 
-    private void Update()
+    void Clear()
     {
-        if(b >= 3)
+        if (b >= c)
         {
-            if (a >= 3)
+            if (a == c)
             {
-                print("good");
+                Good.SetActive(true);
+                Invoke("good", 2);
+
+                if(c == 4)
+                {
+                    print("clear");
+                }
             }
-            else print("bad");
         }
+    }
+
+    void good()
+    {
+        Good.SetActive(false);
+        c++;
+        b = 0;
+        a = 0;
+        i = 0;
+        Delete();
+        On = false;
+        Invoke("aaa", 1);
+    }
+
+    void bad()
+    {
+        Bad.SetActive (false);
+        b = 0;
+        a = 0;
+        i = 0;
+        c = 3;
+        Delete();
+        On = false;
+        Invoke("aaa", 1);
     }
     public void Reda()
     {
@@ -143,7 +229,19 @@ public class Memory : MonoBehaviour
         if (Red == 1)
         {
             a += Red;
-            Red = 0;
+            Red--;
+            Clear();
+        }
+        else if (Red > 1)
+        {
+            a += 1;
+            Red--;
+            Clear();
+        }
+        else if(Red == 0)
+        {
+            Bad.SetActive(true);
+            Invoke("bad", 2);
         }
     }
     public void Yellowa()
@@ -152,7 +250,19 @@ public class Memory : MonoBehaviour
         if (Yellow == 1)
         {
             a += Yellow;
-            Yellow = 0;
+            Yellow--;
+            Clear();
+        }
+        else if (Yellow > 1)
+        {
+            a += 1;
+            Yellow--;
+            Clear();
+        }
+        else if (Yellow == 0)
+        {
+            Bad.SetActive(true);
+            Invoke("bad", 2);
         }
     }
     public void Greena()
@@ -161,7 +271,19 @@ public class Memory : MonoBehaviour
         if (Green == 1)
         {
             a += Green;
-            Green = 0;
+            Green--;
+            Clear();
+        }
+        else if(Green > 1)
+        {
+            a += 1;
+            Green--;
+            Clear();
+        }
+        else if (Green == 0)
+        {
+            Bad.SetActive(true);
+            Invoke("bad", 2);
         }
     }
     public void Bluea()
@@ -170,7 +292,19 @@ public class Memory : MonoBehaviour
         if (Blue == 1)
         {
             a += Blue;
-            Blue = 0;
+            Blue--;
+            Clear();
+        }
+        else if (Blue > 1)
+        {
+            a += 1;
+            Blue--;
+            Clear();
+        }
+        else if (Blue == 0)
+        {
+            Bad.SetActive(true);
+            Invoke("bad", 2);
         }
     }
     public void Orangea()
@@ -179,7 +313,19 @@ public class Memory : MonoBehaviour
         if (Orange == 1)
         {
             a += Orange;
-            Orange = 0;
+            Orange--;
+            Clear();
+        }
+        else if (Orange > 1)
+        {
+            a += 1;
+            Orange--;
+            Clear();
+        }
+        else if (Orange == 0)
+        {
+            Bad.SetActive(true);
+            Invoke("bad", 2);
         }
     }
     public void Pinka()
@@ -188,7 +334,19 @@ public class Memory : MonoBehaviour
         if (Pink == 1)
         {
             a += Pink;
-            Pink = 0;
+            Pink--;
+            Clear();
+        }
+        else if (Pink > 1)
+        {
+            a += 1;
+            Pink--;
+            Clear();
+        }
+        else if (Pink == 0)
+        {
+            Bad.SetActive(true);
+            Invoke("bad", 2);
         }
     }
     public void Minta()
@@ -197,7 +355,19 @@ public class Memory : MonoBehaviour
         if (Mint == 1)
         {
             a += Mint;
-            Mint = 0;
+            Mint--;
+            Clear();
+        }
+        else if (Mint > 1)
+        {
+            a += 1;
+            Mint--;
+            Clear();
+        }
+        else if (Mint == 0)
+        {
+            Bad.SetActive(true);
+            Invoke("bad", 2);
         }
     }
     public void Blacka()
@@ -206,7 +376,19 @@ public class Memory : MonoBehaviour
         if (Black == 1)
         {
             a += Black;
-            Black = 0;
+            Black--;
+            Clear();
+        }
+        else if (Black > 1)
+        {
+            a += 1;
+            Black--;
+            Clear();
+        }
+        else if (Black == 0)
+        {
+            Bad.SetActive(true);
+            Invoke("bad", 2);
         }
     }
     public void Purplea()
@@ -215,7 +397,19 @@ public class Memory : MonoBehaviour
         if (Purple == 1)
         {
             a += Purple;
-            Purple = 0;
+            Purple--;
+            Clear();
+        }
+        else if (Purple > 1)
+        {
+            a += 1;
+            Purple--;
+            Clear();
+        }
+        else if (Purple == 0)
+        {
+            Bad.SetActive(true);
+            Invoke("bad", 2);
         }
     }
 }
