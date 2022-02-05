@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Outline))]
 public abstract class Objects : MonoBehaviour
 {
     Outline outline;
