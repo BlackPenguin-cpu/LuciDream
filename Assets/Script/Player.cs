@@ -124,6 +124,7 @@ public class Player : Singleton<Player>
                     {
                         InteractionObj.Interaction();
                         InteractionObj = null;
+                        Debug.Log("asd");
                         break;
                     }
                 }
