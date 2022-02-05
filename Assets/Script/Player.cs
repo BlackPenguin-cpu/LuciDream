@@ -49,7 +49,10 @@ public class Player : Singleton<Player>
         if (Input.GetMouseButtonDown(1))
         {
             if (OnMouseClickIEnumerator != null) StopCoroutine(OnMouseClickIEnumerator);
-            OnMouseClickIEnumerator = StartCoroutine(OnMouseClick());
+            if (!TalkUIManager.Instance.IsTalk)
+            {
+                OnMouseClickIEnumerator = StartCoroutine(OnMouseClick());
+            }
         }
         CameraMove();
     }
@@ -120,7 +123,7 @@ public class Player : Singleton<Player>
             {
                 if (InteractionObj != null)
                 {
-                    if (Vector2.Distance(InteractionObj.transform.position, transform.position) < 1)
+                    if (Vector2.Distance(InteractionObj.transform.position, transform.position) <= 1)
                     {
                         InteractionObj.Interaction();
                         InteractionObj = null;
