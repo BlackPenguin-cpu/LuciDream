@@ -7,7 +7,7 @@ public class Misc : Objects
     public string Name;
     public List<string> Speech;
 
-    protected override void Interaction()
+    public override void Interaction()
     {
 
         StartCoroutine(TalkUIManager.Instance.TextScript(Name, Speech));
