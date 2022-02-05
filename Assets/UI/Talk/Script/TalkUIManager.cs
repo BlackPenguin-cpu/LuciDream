@@ -27,6 +27,7 @@ public class TalkUIManager : Singleton<TalkUIManager>
     }
     public IEnumerator TextScript(string Name, List<string> Speech)
     {
+        Box.SetActive(true);
         if (Name == null)
         {
             Name = "";
