@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Desktop : Objects
 {
-    protected override void Interaction()
+    public override void Interaction()
     {
         GetComponent<onClick_MainMenu>().Opition_in();
     }

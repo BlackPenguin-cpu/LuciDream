@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Door : Objects
 {
-    protected override void Interaction()
+    public override void Interaction()
     {
         onClick_MainMenu.OnApplicationQuit();
     }

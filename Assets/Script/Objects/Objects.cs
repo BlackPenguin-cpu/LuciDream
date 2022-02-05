@@ -30,11 +30,10 @@ public abstract class Objects : MonoBehaviour
         outline.enabled = false;
     }
 
-    protected virtual void OnCliked()
+    public virtual void OnCliked()
     {
         isCliked = true;
     }
-
-    protected abstract void Interaction();
+    public abstract void Interaction();
     
 }

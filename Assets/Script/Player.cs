@@ -25,7 +25,7 @@ public class Player : Singleton<Player>
     public PlayerDir PlayerDir;
     public bool Dead;
 
-    private Objects InteractionObj;
+    private Objects InteractionObj = null;
     private Coroutine OnMouseClickIEnumerator;
     private Camera Camera;
     private List<Node> NodeList;
@@ -40,6 +40,7 @@ public class Player : Singleton<Player>
     private void Start()
     {
         Camera = Camera.main;
+        Camera.transform.position = transform.position;
     }
 
     private void Update()
@@ -103,7 +104,9 @@ public class Player : Singleton<Player>
             GameObject obj = hit.collider.gameObject;
             if (obj.tag == "Interaction")
             {
-                obj.GetComponent<Objects>();
+                Objects Interactive = obj.GetComponent<Objects>();
+                Interactive.OnCliked();
+                InteractionObj = Interactive;
             }
         }
 
@@ -115,7 +118,17 @@ public class Player : Singleton<Player>
         {
             foreach (Node node in NodeList)
             {
+                if (InteractionObj != null)
+                {
+                    if (Vector2.Distance(InteractionObj.transform.position, transform.position) < 1)
+                    {
+                        InteractionObj.Interaction();
+                        InteractionObj = null;
+                        break;
+                    }
+                }
                 if (node.isWall == true) break;
+
                 State = PlayerState.WALK;
                 if (tween != null) tween.Kill();
                 Vector2 dir = new Vector2(node.x, node.y);
