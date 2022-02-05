@@ -21,6 +21,7 @@ public enum PlayerDir
 public class Player : Singleton<Player>
 {
     public float MoveSpeed;
+    public float MoveTime;
     public PlayerState State;
     public PlayerDir PlayerDir;
     public bool Dead;
@@ -39,6 +40,7 @@ public class Player : Singleton<Player>
     }
     private void Start()
     {
+        anim = GetComponent<Animator>();
         Camera = Camera.main;
         Camera.transform.position = transform.position;
     }
@@ -59,8 +61,8 @@ public class Player : Singleton<Player>
 
     void AnimationChecker()
     {
-        //anim.SetInteger("State", (int)State);
-        //anim.SetInteger("Dir", (int)State);
+        anim.SetInteger("State", (int)State);
+        anim.SetInteger("Dir", (int)PlayerDir);
 
         switch (State)
         {
@@ -123,7 +125,7 @@ public class Player : Singleton<Player>
             {
                 if (InteractionObj != null)
                 {
-                    if (Vector2.Distance(InteractionObj.transform.position, transform.position) <= 1)
+                    if (Vector2.Distance(InteractionObj.transform.position, transform.position) <= 1.5f)
                     {
                         InteractionObj.Interaction();
                         InteractionObj = null;
@@ -133,13 +135,12 @@ public class Player : Singleton<Player>
                 }
                 if (node.isWall == true) break;
 
+                Vector2 dir = new Vector2(node.x, node.y);
+                VectorStateChecker(dir);
                 State = PlayerState.WALK;
                 if (tween != null) tween.Kill();
-                Vector2 dir = new Vector2(node.x, node.y);
                 tween = transform.DOMove(dir, MoveSpeed);
-                VectorStateChecker(dir);
-                yield return tween;
-                yield return new WaitForSeconds(MoveSpeed);
+                yield return new WaitForSeconds(MoveTime);
                 State = PlayerState.IDLE;
             }
         }
@@ -152,7 +153,7 @@ public class Player : Singleton<Player>
         {
             PlayerDir = PlayerDir.RIGHT;
         }
-        else if (transform.position.x < dir.x)
+        else if (transform.position.x > dir.x)
         {
             PlayerDir = PlayerDir.LEFT;
         }

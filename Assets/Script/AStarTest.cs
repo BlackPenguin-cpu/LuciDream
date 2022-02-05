@@ -127,7 +127,6 @@ public class AStarTest : Singleton<AStarTest>
             //이웃노드에 넣고, 직선은 10, 대각선은 14 코스트 
             Node NeighborNode = NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y];
             int MoveCost = CurNode.G + (CurNode.x - checkX == 0 || CurNode.y - checkY == 0 ? 10 : 14);
-
             //이동비용이 이웃노드G보다 작거나 또는 열린리스트에 이웃노드가 없다면 G,H,ParentNode를 설정 후 열린 리스트에 추가
             if (MoveCost < NeighborNode.G || !OpenList.Contains(NeighborNode))
             {
