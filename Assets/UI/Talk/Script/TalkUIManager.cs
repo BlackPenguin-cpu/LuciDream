@@ -12,6 +12,7 @@ public class TalkUIManager : Singleton<TalkUIManager>
     public GameObject EndCusor;
     private bool IsClick = false;
     public GameObject Box;
+    public bool IsTalk = false;
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class TalkUIManager : Singleton<TalkUIManager>
     }
     public IEnumerator TextScript(string Name, List<string> Speech)
     {
+        IsTalk = true;
         Box.SetActive(true);
         if (Name == null)
         {
@@ -38,6 +40,7 @@ public class TalkUIManager : Singleton<TalkUIManager>
 
         }
         Box.SetActive(false);
+        IsTalk = false;
     }
     IEnumerator Talk(string name, string speech)
     {
