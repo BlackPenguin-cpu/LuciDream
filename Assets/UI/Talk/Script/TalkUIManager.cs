@@ -4,17 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class TalkUIManager : MonoBehaviour
+public class TalkUIManager : Singleton<TalkUIManager>
 {
     public TextMeshProUGUI NameText;
     public TextMeshProUGUI SpeechText;
     public float delay;
     public GameObject EndCusor;
     private bool IsClick = false;
+    public GameObject Box;
 
     void Start()
     {
-        StartCoroutine(TextScript());
+        //StartCoroutine(TextScript());
     }
 
     void Update()
@@ -24,11 +25,18 @@ public class TalkUIManager : MonoBehaviour
             IsClick = true;
         }
     }
-    IEnumerator TextScript()
+    public IEnumerator TextScript(string Name, List<string> Speech)
     {
-        yield return StartCoroutine(Talk("???", "인간의 70%는 물로 이루어져 있다. 그럼 여기서 다른 생각을 해볼 수 있다."));
-        yield return StartCoroutine(Talk("???", "인간의 70%가 물이라면 사람이 10명 모였을 때 7명은 물인가?"));
-        yield return StartCoroutine(Talk("???", "그렇다 디럭스 붐버 ☆★☆★☆★☆★"));
+        if (Name == null)
+        {
+            Name = "";
+        }
+        foreach (string str in Speech)
+        {
+            yield return StartCoroutine(Talk(Name, str));
+
+        }
+        Box.SetActive(false);
     }
     IEnumerator Talk(string name, string speech)
     {
