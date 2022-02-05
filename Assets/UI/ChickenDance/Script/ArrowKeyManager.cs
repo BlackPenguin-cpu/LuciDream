@@ -10,17 +10,35 @@ public class ArrowKeyManager : MonoBehaviour
     public List<int> ArrowKeyArray;
     public List<GameObject> Arrow;
     public int KeyCount;
+    public int level = 0;
+    public int Maxlevel = 0;
     public GameObject ArrowUI;
+    public GameObject Timer;
     public GameObject Bar;
     public bool KeyDown = false;
-    public int Count = 0;
+    private int Count = 0;
     private int Multiply = 1;
+    private bool Reset = true;
     void Start()
     {
 
     }
     void Update()
     {
+        if(Timer.GetComponent<ChickenTimer>().Second <= 0 && Reset)
+        {
+            KeyDown = false;
+            Bar.transform.DOMove(new Vector3(960,1280,0),1).SetEase(Ease.InBack);
+            Timer.SetActive(false);
+            Debug.Log("³Ê ½ÇÆÐ ¤µ¤¡");
+            Reset = false;
+        }
+        if (level == Maxlevel)
+        {
+            level = 0;
+            Bar.transform.DOMove(new Vector3(960,1280,0),1).SetEase(Ease.InBack);
+            Timer.SetActive(false);
+        }
         if (KeyDown)
         {
             ArrowKeyDown();
@@ -48,10 +66,33 @@ public class ArrowKeyManager : MonoBehaviour
         Bar.SetActive(true);
         Bar.transform.DOMove(new Vector3(960, 830, 0), 1).SetEase(Ease.OutBack);
         KeyBoard();
+        Timer.SetActive(true);
     }
 
     void ArrowKeyDown()
     {
+        if (Count == KeyCount)
+        {
+            foreach (GameObject ArrowColor in Arrow)
+            {
+                Destroy(ArrowColor);
+            }
+
+            for (int i = 0; i < 3 * Multiply; i++)
+            {
+                ArrowKeyArray.RemoveAt(0);
+            }
+            Multiply++;
+            level++;
+            Count = 0;
+            KeyCount += 3;
+            KeyDown = false;
+            if (level < Maxlevel)
+            {
+                KeyBoard();
+            }
+        }
+
         if (Input.GetKeyUp(KeyCode.LeftArrow))
         {
             Debug.Log("asdf0");
@@ -79,23 +120,6 @@ public class ArrowKeyManager : MonoBehaviour
 
     void Check(int a)
     {
-        if (Count == KeyCount)
-        {
-            foreach (GameObject ArrowColor in Arrow)
-            {
-                Destroy(ArrowColor);
-            }
-
-            for (int i = 0; i < 3 * Multiply; i++)
-            {
-                ArrowKeyArray.RemoveAt(0);
-            }
-            Multiply++;
-            Count = 0;
-            KeyCount += 3;
-            KeyDown = false;
-            KeyBoard();
-        }
 
         if (ArrowKeyArray[Count] == a)
         {
