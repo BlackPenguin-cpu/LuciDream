@@ -57,6 +57,6 @@ public class onClick_MainMenu : MonoBehaviour
     }
     public static void StartGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Map");
     }
 }
