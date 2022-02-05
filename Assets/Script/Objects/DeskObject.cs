@@ -7,6 +7,7 @@ public class DeskObject : Objects
     public GameObject Option;
     public override void Interaction()
     {
+        base.Interaction();
         Option.SetActive(true);
     }
 

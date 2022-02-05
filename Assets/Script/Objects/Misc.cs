@@ -9,6 +9,7 @@ public class Misc : Objects
 
     public override void Interaction()
     {
+        base.Interaction();
         StartCoroutine(Hide());
     }
 

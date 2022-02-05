@@ -6,6 +6,7 @@ public class Bed : Objects
 {
     public override void Interaction()
     {
+        base.Interaction();
         onClick_MainMenu.StartGame();
     }
 

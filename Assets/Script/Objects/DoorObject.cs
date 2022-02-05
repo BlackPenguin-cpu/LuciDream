@@ -8,6 +8,7 @@ public class DoorObject : Objects
 
     public override void Interaction()
     {
+        base.Interaction();
         ExitUI.SetActive(true);
     }
 

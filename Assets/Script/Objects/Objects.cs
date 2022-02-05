@@ -5,34 +5,50 @@ using UnityEngine.UI;
 
 public abstract class Objects : MonoBehaviour
 {
-    Outline outline;
-    private bool isCliked;
-    public bool _isCliked
+    private bool isOutLine;
+    public bool isClicked;
+    SpriteRenderer spriteRenderer;
+    public bool _isOutLine
     {
-        get { return isCliked; }
+        get { return isOutLine; }
         set
         {
             if (value)
             {
-                outline.enabled = true;
+                spriteRenderer.material = Resources.Load<Material>("OutLine");
             }
             else
             {
-                outline.enabled = false;
+                spriteRenderer.material = Resources.Load<Material>("Default");
             }
-            isCliked = value;
+            isOutLine = value;
         }
     }
     private void Start()
     {
-        outline = GetComponent<Outline>();
-        outline.enabled = false;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+    protected void OnMouseEnter()
+    {
+        _isOutLine = true;
+    }
+    protected void OnMouseExit()
+    {
+        if (isClicked == false)
+        {
+            _isOutLine = false;
+        }
     }
 
     public virtual void OnCliked()
     {
-        isCliked = true;
+        _isOutLine = true;
+        isClicked = true;
     }
-    public abstract void Interaction();
-    
+    public virtual void Interaction()
+    {
+        _isOutLine = false;
+        isClicked = false;
+    }
+
 }

@@ -6,6 +6,7 @@ public class Desktop : Objects
 {
     public override void Interaction()
     {
+        base.Interaction();
         GetComponent<onClick_MainMenu>().Opition_in();
     }
 

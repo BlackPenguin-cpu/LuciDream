@@ -8,6 +8,7 @@ public class BedObject : Objects
     public GameObject BedUI;
     public override void Interaction()
     {
+        base.Interaction();
         BedUI.SetActive(true);
     }
 

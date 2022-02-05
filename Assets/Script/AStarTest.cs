@@ -24,15 +24,9 @@ public class AStarTest : Singleton<AStarTest>
     int sizeX, sizeY;
     Node[,] NodeArray;
     Node StartNode, TargetNode, CurNode;
+
     List<Node> OpenList, ClosedList;
     public Transform StartTR;
-
-    private void Start()
-    {
-    }
-    private void Update()
-    {
-    }
 
     public void PathFinding()
     {
@@ -112,7 +106,7 @@ public class AStarTest : Singleton<AStarTest>
             && checkX < topRight.x + 1
             && checkY >= bottomLeft.y
             && checkY < topRight.y + 1
-            && (!NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y].isWall 
+            && (!NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y].isWall
             || NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y] == TargetNode)
             && !ClosedList.Contains(NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y]))
         {
@@ -123,6 +117,7 @@ public class AStarTest : Singleton<AStarTest>
             // 대각선 장애물 옆으로 못지나감
             if (dontCrossCorner) if (NodeArray[CurNode.x - bottomLeft.x, checkY - bottomLeft.y].isWall
                      || NodeArray[checkX - bottomLeft.x, CurNode.y - bottomLeft.y].isWall) return;
+
 
             //이웃노드에 넣고, 직선은 10, 대각선은 14 코스트 
             Node NeighborNode = NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y];
@@ -138,6 +133,7 @@ public class AStarTest : Singleton<AStarTest>
             }
 
         }
+
     }
 
     private void OnDrawGizmos()

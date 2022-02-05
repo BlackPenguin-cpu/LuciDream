@@ -7,6 +7,7 @@ public class NintendoObject : Objects
     public GameObject Album;
     public override void Interaction()
     {
+        base.Interaction();
         Album.SetActive(true);
     }
 

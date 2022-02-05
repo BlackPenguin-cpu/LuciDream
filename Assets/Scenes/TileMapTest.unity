@@ -414,7 +414,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ab0633c7914447e48be56c3beca4059b, type: 2}
+  - {fileID: 2100000, guid: ec3921001c7bf9a49a3a0d7ffcf47f3a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -472,6 +472,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9846d8ca41bf4f448ae94bdde200556b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isClicked: 0
+  OutLine: {fileID: 2100000, guid: ab0633c7914447e48be56c3beca4059b, type: 2}
   Name: "\uB545\uCF69"
   Speech:
   - "\uD788?\uD788"

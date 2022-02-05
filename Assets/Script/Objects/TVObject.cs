@@ -8,6 +8,7 @@ public class TVObject : Objects
 
     public override void Interaction()
     {
+        base.Interaction();
         Album.SetActive(true);
     }
 

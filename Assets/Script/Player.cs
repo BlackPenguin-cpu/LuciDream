@@ -28,21 +28,13 @@ public class Player : Singleton<Player>
 
     private Objects InteractionObj = null;
     private Coroutine OnMouseClickIEnumerator;
-    private Camera Camera;
     private List<Node> NodeList;
     private Tweener tween;
     private Animator anim;
 
-    private void OnLevelWasLoaded(int level)
-    {
-        anim = GetComponent<Animator>();
-        Camera = Camera.main;
-    }
     private void Start()
     {
         anim = GetComponent<Animator>();
-        Camera = Camera.main;
-        Camera.transform.position = transform.position;
     }
 
     private void Update()
@@ -50,13 +42,12 @@ public class Player : Singleton<Player>
         AnimationChecker();
         if (Input.GetMouseButtonDown(1))
         {
-            if (OnMouseClickIEnumerator != null) StopCoroutine(OnMouseClickIEnumerator);
             if (!TalkUIManager.Instance.IsTalk)
             {
+                if (OnMouseClickIEnumerator != null) StopCoroutine(OnMouseClickIEnumerator);
                 OnMouseClickIEnumerator = StartCoroutine(OnMouseClick());
             }
         }
-        CameraMove();
     }
 
     void AnimationChecker()
@@ -93,27 +84,30 @@ public class Player : Singleton<Player>
         }
     }
 
-    void CameraMove()
-    {
-        Camera.transform.position = Vector3.Lerp(Camera.transform.position, this.gameObject.transform.position + new Vector3(0, 0, -10), Time.deltaTime);
-    }
+
 
     IEnumerator OnMouseClick()
     {
         //클릭 체크
-        Vector2 mouse = Camera.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
+        Vector2 mouse = Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
         RaycastHit2D[] hitobjects = Physics2D.RaycastAll(mouse, Vector3.forward);
+
+        if (InteractionObj != null)
+        {
+            InteractionObj.isClicked = false;
+            InteractionObj._isOutLine = false;
+        }
 
         foreach (RaycastHit2D hit in hitobjects)
         {
             GameObject obj = hit.collider.gameObject;
             if (obj.tag == "Interaction")
             {
-                Objects Interactive = obj.GetComponent<Objects>();
-                Interactive.OnCliked();
-                InteractionObj = Interactive;
+                InteractionObj = obj.GetComponent<Objects>();
+                InteractionObj.OnCliked();
             }
         }
+
 
         //이동
         AStarTest.Instance.targetPos = Vector2Int.RoundToInt(mouse);
@@ -125,11 +119,10 @@ public class Player : Singleton<Player>
             {
                 if (InteractionObj != null)
                 {
-                    if (Vector2.Distance(InteractionObj.transform.position, transform.position) <= 1.5f)
+                    if (Vector2.Distance(InteractionObj.transform.position, transform.position) <= 1.6f)
                     {
                         InteractionObj.Interaction();
                         InteractionObj = null;
-                        Debug.Log("asd");
                         break;
                     }
                 }

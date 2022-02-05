@@ -6,6 +6,7 @@ public class Door : Objects
 {
     public override void Interaction()
     {
+        base.Interaction();
         onClick_MainMenu.OnApplicationQuit();
     }
     void Start()
