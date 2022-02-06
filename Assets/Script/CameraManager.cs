@@ -7,6 +7,7 @@ public class CameraManager : Singleton<CameraManager>
 {
     [SerializeField] Player player;
     float Timer;
+    float PlayerTimer;
     void Start()
     {
         player = FindObjectOfType<Player>();
@@ -31,7 +32,16 @@ public class CameraManager : Singleton<CameraManager>
             }
             if (Timer > 0)
             {
-                ZoomOut();
+                if (PlayerTimer > 5)
+                {
+                    Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, 5, Time.deltaTime);
+                    FollowPlayer();
+                }
+                else
+                {
+                    ZoomOut();
+                    PlayerTimer += Time.deltaTime;
+                }
             }
             else
             {
