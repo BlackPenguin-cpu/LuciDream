@@ -243,6 +243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb3e712fcb71e5441bc3a57cc2b52617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  i: 0
+  time: 10
   answer: {fileID: 1894079877}
   number1: {fileID: 679033208}
   number2: {fileID: 1942866126}
