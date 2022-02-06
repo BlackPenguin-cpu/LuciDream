@@ -28,7 +28,7 @@ public class MainTitle : MonoBehaviour
             already = true;
             for (float i = 0; i < 1; i += 0.01f)
             {
-                Text.faceColor = new Color(Text.faceColor.r, Text.faceColor.g, Text.faceColor.b, i);
+                Text.color = new Color(Text.faceColor.r, Text.faceColor.g, Text.faceColor.b, i);
                 yield return new WaitForSeconds(0.01f);
             }
         }
