@@ -24,15 +24,9 @@ public class AStarTest : Singleton<AStarTest>
     int sizeX, sizeY;
     Node[,] NodeArray;
     Node StartNode, TargetNode, CurNode;
+
     List<Node> OpenList, ClosedList;
     public Transform StartTR;
-
-    private void Start()
-    {
-    }
-    private void Update()
-    {
-    }
 
     public void PathFinding()
     {
@@ -84,7 +78,7 @@ public class AStarTest : Singleton<AStarTest>
                 FinalNodeList.Add(StartNode);
                 FinalNodeList.Reverse();
 
-                for (int i = 0; i < FinalNodeList.Count; i++) Debug.Log(i + "번째는" + FinalNodeList[i].x + "," + FinalNodeList[i].y);
+                //for (int i = 0; i < FinalNodeList.Count; i++) Debug.Log(i + "번째는" + FinalNodeList[i].x + "," + FinalNodeList[i].y);
                 return;
             }
 
@@ -112,7 +106,7 @@ public class AStarTest : Singleton<AStarTest>
             && checkX < topRight.x + 1
             && checkY >= bottomLeft.y
             && checkY < topRight.y + 1
-            && (!NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y].isWall 
+            && (!NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y].isWall
             || NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y] == TargetNode)
             && !ClosedList.Contains(NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y]))
         {
@@ -124,10 +118,10 @@ public class AStarTest : Singleton<AStarTest>
             if (dontCrossCorner) if (NodeArray[CurNode.x - bottomLeft.x, checkY - bottomLeft.y].isWall
                      || NodeArray[checkX - bottomLeft.x, CurNode.y - bottomLeft.y].isWall) return;
 
+
             //이웃노드에 넣고, 직선은 10, 대각선은 14 코스트 
             Node NeighborNode = NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y];
             int MoveCost = CurNode.G + (CurNode.x - checkX == 0 || CurNode.y - checkY == 0 ? 10 : 14);
-
             //이동비용이 이웃노드G보다 작거나 또는 열린리스트에 이웃노드가 없다면 G,H,ParentNode를 설정 후 열린 리스트에 추가
             if (MoveCost < NeighborNode.G || !OpenList.Contains(NeighborNode))
             {
@@ -139,6 +133,7 @@ public class AStarTest : Singleton<AStarTest>
             }
 
         }
+
     }
 
     private void OnDrawGizmos()

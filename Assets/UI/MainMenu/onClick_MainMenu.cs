@@ -5,16 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class onClick_MainMenu : MonoBehaviour
 {
-    public  GameObject MainMenu;
-    public  GameObject Opition;
-    public  GameObject Exit;
-    public  GameObject RS;
-    public  void Opition_in()
+    public GameObject MainMenu;
+    public GameObject Opition;
+    public GameObject Exit;
+    public GameObject RS;
+    public void Opition_in()
     {
         MainMenu.SetActive(false);
         Exit.SetActive(false);
         Opition.SetActive(true);
-        RS.SetActive(false); 
+        RS.SetActive(false);
     }
     public void Opition_out()
     {
@@ -57,6 +57,6 @@ public class onClick_MainMenu : MonoBehaviour
     }
     public static void StartGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Map");
     }
 }

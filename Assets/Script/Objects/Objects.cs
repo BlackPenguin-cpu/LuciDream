@@ -3,38 +3,52 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Outline))]
 public abstract class Objects : MonoBehaviour
 {
-    Outline outline;
-    private bool isCliked;
-    public bool _isCliked
+    private bool isOutLine;
+    public bool isClicked;
+    SpriteRenderer spriteRenderer;
+    public bool _isOutLine
     {
-        get { return isCliked; }
+        get { return isOutLine; }
         set
         {
             if (value)
             {
-                outline.enabled = true;
+                spriteRenderer.material = Resources.Load<Material>("OutLine");
             }
             else
             {
-                outline.enabled = false;
+                spriteRenderer.material = Resources.Load<Material>("Default");
             }
-            isCliked = value;
+            isOutLine = value;
         }
     }
     private void Start()
     {
-        outline = GetComponent<Outline>();
-        outline.enabled = false;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
-
-    protected virtual void OnCliked()
+    protected void OnMouseEnter()
     {
-        isCliked = true;
+        _isOutLine = true;
+    }
+    protected void OnMouseExit()
+    {
+        if (isClicked == false)
+        {
+            _isOutLine = false;
+        }
     }
 
-    protected abstract void Interaction();
-    
+    public virtual void OnCliked()
+    {
+        _isOutLine = true;
+        isClicked = true;
+    }
+    public virtual void Interaction()
+    {
+        _isOutLine = false;
+        isClicked = false;
+    }
+
 }

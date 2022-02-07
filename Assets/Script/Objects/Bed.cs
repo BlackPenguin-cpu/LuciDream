@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Bed : Objects
 {
-    protected override void Interaction()
+    public override void Interaction()
     {
+        base.Interaction();
         onClick_MainMenu.StartGame();
     }
 
