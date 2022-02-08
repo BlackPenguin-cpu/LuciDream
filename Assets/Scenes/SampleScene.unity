@@ -156,6 +156,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb5f232cd058b2149923dec9234e6458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNotSingle: 0
+  MoveSpeed: 0
+  MoveTime: 0
+  PlayerDir: 0
+  Dead: 0
 --- !u!212 &157763959
 SpriteRenderer:
   m_ObjectHideFlags: 0

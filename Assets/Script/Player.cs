@@ -22,9 +22,23 @@ public class Player : Singleton<Player>
 {
     public float MoveSpeed;
     public float MoveTime;
-    public PlayerState State;
     public PlayerDir PlayerDir;
     public bool Dead;
+    private PlayerState State;
+
+    public PlayerState _State
+    {
+        get { return State; }
+        set
+        {
+            if (value == PlayerState.DIE)
+            {
+                return;
+            }
+            State = value;
+        }
+    }
+
 
     private Objects InteractionObj = null;
     private Coroutine OnMouseClickIEnumerator;
@@ -42,12 +56,13 @@ public class Player : Singleton<Player>
         AnimationChecker();
         if (Input.GetMouseButtonDown(1))
         {
-            if (!TalkUIManager.Instance.IsTalk)
+            if (!TalkUIManager.Instance.IsTalk && State != PlayerState.DIE)
             {
                 if (OnMouseClickIEnumerator != null) StopCoroutine(OnMouseClickIEnumerator);
                 OnMouseClickIEnumerator = StartCoroutine(OnMouseClick());
             }
         }
+
     }
 
     void AnimationChecker()
@@ -76,6 +91,7 @@ public class Player : Singleton<Player>
                 break;
             case PlayerState.DIE:
                 Dead = true;
+                if (OnMouseClickIEnumerator != null) StopCoroutine(OnMouseClickIEnumerator);
                 break;
             case PlayerState.INTERACTIVE:
                 break;
