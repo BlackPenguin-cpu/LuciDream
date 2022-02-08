@@ -33,9 +33,4 @@ public class Option : MonoBehaviour
         text.text = p.ToString() + "%";
         slider.GetComponent <Slider>().value = Value;
     }
-
-    public void SetMusicVolume(float Volume)
-    {
-        Music.volume = Volume;
-    }
 }
