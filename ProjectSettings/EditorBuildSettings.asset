@@ -9,6 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/PlaygroundMap.unity
+    path: Assets/Scenes/Map/PlaygroundMap.unity
     guid: 66f9fe054923a4746aba19ed753ad593
+  - enabled: 1
+    path: Assets/Scenes/Map/1F.unity
+    guid: 3b74a2ff17ad2614396695679bbf0df1
+  - enabled: 1
+    path: Assets/Scenes/Map/B1F.unity
+    guid: 2da660033eac2884caac6e6a4332b093
+  - enabled: 1
+    path: Assets/Scenes/Map/LunchRoom.unity
+    guid: 64896049ae9094a41898fb9f90032d47
+  - enabled: 1
+    path: Assets/Scenes/Map/TGClassMap.unity
+    guid: 519e01fb57cfa804782edaa01a408e37
   m_configObjects: {}

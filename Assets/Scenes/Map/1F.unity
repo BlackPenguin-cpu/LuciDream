@@ -223,7 +223,7 @@ Transform:
   m_LocalScale: {x: 5.6, y: 3.7681, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &114793256
 GameObject:
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 114793257}
   - component: {fileID: 114793259}
   - component: {fileID: 114793258}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -3075,6 +3075,7 @@ GameObject:
   m_Component:
   - component: {fileID: 154257918}
   - component: {fileID: 154257917}
+  - component: {fileID: 154257919}
   m_Layer: 6
   m_Name: GlassDoor
   m_TagString: Untagged
@@ -3145,8 +3146,24 @@ Transform:
   m_LocalScale: {x: 1.1047, y: 1.1609471, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &154257919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154257916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26184a1bdfc8bff44a038de7c8d63480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isClicked: 0
+  SceneName: LunchRoom
+  x: 6.5
+  y: 4
 --- !u!1 &627744942
 GameObject:
   m_ObjectHideFlags: 0
@@ -3327,7 +3344,7 @@ Transform:
   m_LocalScale: {x: 2.143756, y: 1.3096823, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &784947714
 MonoBehaviour:
@@ -3357,7 +3374,8 @@ GameObject:
   - component: {fileID: 824823797}
   - component: {fileID: 824823799}
   - component: {fileID: 824823798}
-  m_Layer: 2
+  - component: {fileID: 824823800}
+  m_Layer: 7
   m_Name: Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3417,7 +3435,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -4286,6 +4304,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &824823800
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824823796}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &839433041
 GameObject:
   m_ObjectHideFlags: 0
@@ -4296,7 +4330,6 @@ GameObject:
   m_Component:
   - component: {fileID: 839433044}
   - component: {fileID: 839433043}
-  - component: {fileID: 839433042}
   - component: {fileID: 839433045}
   m_Layer: 0
   m_Name: Main Camera
@@ -4305,14 +4338,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &839433042
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839433041}
-  m_Enabled: 1
 --- !u!20 &839433043
 Camera:
   m_ObjectHideFlags: 0
@@ -4582,7 +4607,7 @@ Transform:
   m_LocalScale: {x: 2.143756, y: 1.3096823, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1138719494
 MonoBehaviour:
@@ -4899,7 +4924,7 @@ Transform:
   m_LocalScale: {x: 5.6, y: 3.7681, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1555060293
 GameObject:
@@ -4986,7 +5011,7 @@ Transform:
   - {fileID: 627744944}
   - {fileID: 1150943758}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1555060296
 MonoBehaviour:
@@ -5014,6 +5039,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1602670957}
   - component: {fileID: 1602670956}
+  - component: {fileID: 1602670958}
   m_Layer: 6
   m_Name: GlassDoor (1)
   m_TagString: Untagged
@@ -5080,12 +5106,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602670955}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.497, y: 2.628, z: 0}
+  m_LocalPosition: {x: 17.5, y: 2.628, z: 0}
   m_LocalScale: {x: 1.0978508, y: 1.1555816, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1602670958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602670955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26184a1bdfc8bff44a038de7c8d63480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isClicked: 0
+  SceneName: LunchRoom
+  x: 5.5
+  y: 4
 --- !u!1 &1652882202
 GameObject:
   m_ObjectHideFlags: 0
@@ -5186,7 +5228,7 @@ Transform:
   m_LocalScale: {x: 5.6, y: 3.7681, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1673294826
 GameObject:
@@ -5199,6 +5241,7 @@ GameObject:
   - component: {fileID: 1673294827}
   - component: {fileID: 1673294829}
   - component: {fileID: 1673294828}
+  - component: {fileID: 1673294830}
   m_Layer: 7
   m_Name: Wall
   m_TagString: Untagged
@@ -5259,7 +5302,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -6920,6 +6963,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1673294830
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673294826}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &1713817185
 GameObject:
   m_ObjectHideFlags: 0
@@ -6964,8 +7023,77 @@ Transform:
   - {fileID: 1673294827}
   - {fileID: 824823797}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1747970785
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1420347127528601473, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
+      propertyPath: m_Name
+      value: Potal
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420347127528601474, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420347127528601474, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420347127528601474, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420347127528601474, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420347127528601474, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420347127528601474, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420347127528601474, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420347127528601474, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420347127528601474, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420347127528601474, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420347127528601474, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
+      propertyPath: x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
+      propertyPath: y
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
+      propertyPath: SceneName
+      value: B1F
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
 --- !u!1 &1811733089
 GameObject:
   m_ObjectHideFlags: 0
@@ -7047,7 +7175,7 @@ Transform:
   m_LocalScale: {x: 3.4245884, y: 4.175126, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.004}
 --- !u!114 &1811733092
 MonoBehaviour:
