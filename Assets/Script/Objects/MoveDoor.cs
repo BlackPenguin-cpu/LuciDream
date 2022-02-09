@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MoveDoor : Objects
 {
     public string SceneName;
-    public int x, y;
+    public float x, y;
 
     public override void Interaction()
     {
