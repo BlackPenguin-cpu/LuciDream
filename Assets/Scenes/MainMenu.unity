@@ -450,6 +450,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5236770125982416245, guid: 0f7fd105a08673f4e8a30b3b429a8807, type: 3}
+      propertyPath: m_Name
+      value: effect_right (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 5236770125982416247, guid: 0f7fd105a08673f4e8a30b3b429a8807, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -560,7 +564,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5236770126431172672, guid: 0f7fd105a08673f4e8a30b3b429a8807, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5236770126911007691, guid: 0f7fd105a08673f4e8a30b3b429a8807, type: 3}
       propertyPath: m_AnchorMax.x
@@ -576,7 +580,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5236770127017259558, guid: 0f7fd105a08673f4e8a30b3b429a8807, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5236770127160919191, guid: 0f7fd105a08673f4e8a30b3b429a8807, type: 3}
       propertyPath: m_Value
@@ -630,6 +634,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SoundManager, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 5236770127300377002, guid: 0f7fd105a08673f4e8a30b3b429a8807, type: 3}
+      propertyPath: m_Name
+      value: BGM_right
+      objectReference: {fileID: 0}
+    - target: {fileID: 5236770127474210264, guid: 0f7fd105a08673f4e8a30b3b429a8807, type: 3}
+      propertyPath: m_Name
+      value: sound effect
+      objectReference: {fileID: 0}
+    - target: {fileID: 5236770127474210264, guid: 0f7fd105a08673f4e8a30b3b429a8807, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5236770127474210266, guid: 0f7fd105a08673f4e8a30b3b429a8807, type: 3}
+      propertyPath: m_Text
+      value: "\uD6A8\uACFC\uC74C"
+      objectReference: {fileID: 0}
     - target: {fileID: 5236770127488463045, guid: 0f7fd105a08673f4e8a30b3b429a8807, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -638,6 +658,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SoundManager, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 5236770127488463051, guid: 0f7fd105a08673f4e8a30b3b429a8807, type: 3}
+      propertyPath: m_Name
+      value: effect_right (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5236770127567739241, guid: 0f7fd105a08673f4e8a30b3b429a8807, type: 3}
+      propertyPath: m_Name
+      value: BGM
+      objectReference: {fileID: 0}
+    - target: {fileID: 5236770127567739243, guid: 0f7fd105a08673f4e8a30b3b429a8807, type: 3}
+      propertyPath: m_Text
+      value: "\uBC30\uACBD\uC74C"
+      objectReference: {fileID: 0}
     - target: {fileID: 5236770127591978804, guid: 0f7fd105a08673f4e8a30b3b429a8807, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -645,6 +677,10 @@ PrefabInstance:
     - target: {fileID: 5236770127591978804, guid: 0f7fd105a08673f4e8a30b3b429a8807, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SoundManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5236770127591978810, guid: 0f7fd105a08673f4e8a30b3b429a8807, type: 3}
+      propertyPath: m_Name
+      value: BGM_left
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5236770127205922754, guid: 0f7fd105a08673f4e8a30b3b429a8807, type: 3}

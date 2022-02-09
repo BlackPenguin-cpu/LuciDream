@@ -25,7 +25,8 @@ public class SoundManager : Singleton<SoundManager>
     
     public Slider slider;
     public Text text;
-    float Value = 1;
+    float Value = 0;
+
     int p = 100;
 
     public void Playbgm(string name)
@@ -81,11 +82,12 @@ public class SoundManager : Singleton<SoundManager>
 
     public void Slider_right()
     {
+
         if (Value < 1)
         {
             Value += 0.1f;
             p += 10;
-
+            
         }
         else
         {
