@@ -98,7 +98,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.3138698}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -109,7 +109,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.4}
+  m_Size: {x: 1, y: 0.77226025}
   m_EdgeRadius: 0
 --- !u!114 &-8467217740947057816
 MonoBehaviour:
@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9846d8ca41bf4f448ae94bdde200556b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isClicked: 0
   Name: "\uC7A1\uB3D9\uC0AC\uB2C8"
   Speech:
   - "\uD559\uAD50\uB294 \uAFC8\uC5D0\uC11C\uB3C4 \uACF5\uC0AC\uC911\uC774\uAD70"

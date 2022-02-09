@@ -14,6 +14,6 @@ public class BedObject : Objects
 
     public void GameStart()
     {
-        SceneManager.LoadScene("Map");
+        SceneManager.LoadScene("PlaygroundMap");
     }
 }
