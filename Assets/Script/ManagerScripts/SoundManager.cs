@@ -14,20 +14,17 @@ public class SoundManager : Singleton<SoundManager>
 {
     public AudioSource audioSource;
     public List<Clip> clips;
-    public Button BGMBar;
-    public Button SFXBar;
     public bool On = true;
     public bool SFXOn = true;
 
+    
     float SEvolume = 1;
     protected SoundManager() { }
 
-    
-    public Slider slider;
-    public Text text;
-    float Value = 0;
-
-    int p = 100;
+    public Slider MusicSlider;
+    public Slider SESlider;
+    public Text Musictext;
+    public Text SEtext;
 
     public void Playbgm(string name)
     //사용법 Sound.Instance.ChangeClip("이름",루프 할껀지안할껀지(bool))
@@ -73,43 +70,69 @@ public class SoundManager : Singleton<SoundManager>
     public void SetMusicVolume(float volume)
     {
         audioSource.volume = volume;
+        Musictext.text = (int)(volume * 100) + "%";
     }
     public void SetSEVolume(float volume)
     {
         SEvolume = volume;
+        SEtext.text = (int)(volume * 100) + "%";
     }
 
 
-    public void Slider_right()
+    public void SoundButtonLeft()
     {
-
-        if (Value < 1)
+        if (audioSource.volume - 0.1 < 0)
         {
-            Value += 0.1f;
-            p += 10;
-            
+            audioSource.volume = 0;
         }
         else
         {
-            Value = 0;
-            p = 0;
+            Mathf.Round((audioSource.volume -= 0.1f) * 1000f);
         }
-        text.text = p.ToString() + "%";
-        slider.GetComponent<Slider>().value = Value;
+        MusicSlider.value = audioSource.volume;
+        Musictext.text = (int)(audioSource.volume * 100) + "%";
     }
 
-    public void Slider_left()
+    public void SoundButtonRight()
     {
-        if (Value >= 0.1f)
+        if (audioSource.volume + 0.1 > 1)
         {
-            Value -= 0.1f;
-            p -= 10;
-        }else if(Value < 0.1f)
-        {
-            Value = 0;
-            p = 0;
+            audioSource.volume = 1;
         }
-        text.text = p.ToString() + "%";
-        slider.GetComponent<Slider>().value = Value;
+        else
+        {
+            audioSource.volume += 0.1f;
+        }
+        MusicSlider.value = audioSource.volume;
+        Musictext.text = (int)(audioSource.volume * 100) + "%";
     }
+
+    public void SoundEffectLeft()
+    {
+        if(SEvolume - 0.1f < 0)
+        {
+            SEvolume = 0;
+        }
+        else
+        {
+            SEvolume -= 0.1f;
+        }
+        SESlider.value = SEvolume;
+        SEtext.text = (int)(SEvolume * 100) + "%";
+    }
+
+    public void SoundEffectRight()
+    {
+        if(SEvolume + 0.1f > 1)
+        {
+            SEvolume = 1;
+        }
+        else
+        {
+            SEvolume += 0.1f;
+        }
+        SESlider.value = SEvolume;
+        SEtext.text = (int)(SEvolume * 100) + "%";
+    }
+
 }
