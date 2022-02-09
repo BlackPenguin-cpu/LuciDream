@@ -14,6 +14,22 @@ public class BedObject : Objects
 
     public void GameStart()
     {
+        StartCoroutine(ChangeScene());
+    }
+
+    IEnumerator ChangeScene()
+    {
+        while (CameraManager.Instance.vignette.intensity.value != 1)
+        {
+            CameraManager.Instance.vignette.intensity.value += 0.01f;
+            yield return new WaitForSeconds(0.015f);
+        }
         SceneManager.LoadScene("Map");
+        while (CameraManager.Instance.vignette.intensity.value != 0)
+        {
+            CameraManager.Instance.vignette.intensity.value -= 0.01f;
+            yield return new WaitForSeconds(0.015f);
+        }
     }
 }
+

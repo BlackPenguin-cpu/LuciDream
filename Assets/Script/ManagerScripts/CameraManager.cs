@@ -1,16 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
 public class CameraManager : Singleton<CameraManager>
 {
+    [Header("Post Procssing")]
+    [SerializeField] VolumeProfile Volume;
+    public Vignette vignette;
+    public FilmGrain grain;
+    public DepthOfField depthOfField;
+    public Bloom bloom;
+
+    [Header("Camera")]
     [SerializeField] Player player;
     float Timer;
     float PlayerTimer;
     void Start()
     {
         player = FindObjectOfType<Player>();
+        Volume.TryGet<Vignette>(out vignette);
+        Volume.TryGet<FilmGrain>(out grain);
+        Volume.TryGet<DepthOfField>(out depthOfField);
+        Volume.TryGet<Bloom>(out bloom);
+
     }
     private void OnLevelWasLoaded(int level)
     {
@@ -64,5 +79,16 @@ public class CameraManager : Singleton<CameraManager>
     void FollowPlayer()
     {
         transform.position = Vector3.Lerp(transform.position, player.gameObject.transform.position + new Vector3(0, 0, -10), Time.deltaTime);
+    }
+    private void OnApplicationQuit()
+    {
+        VolumeReset();
+    }
+    void VolumeReset()
+    {
+        vignette.intensity.value = 0;
+        grain.intensity.value = 0;
+        depthOfField.mode.value = 0;
+        bloom.intensity.value = 0;
     }
 }
