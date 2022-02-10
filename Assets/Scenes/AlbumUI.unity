@@ -312,6 +312,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1389027715661507060, guid: 15a6f7e93a65d084aad004bd2c8a3cd1, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389027715661507060, guid: 15a6f7e93a65d084aad004bd2c8a3cd1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389027715661507060, guid: 15a6f7e93a65d084aad004bd2c8a3cd1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1389027715727186455, guid: 15a6f7e93a65d084aad004bd2c8a3cd1, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -319,6 +331,18 @@ PrefabInstance:
     - target: {fileID: 1389027715727186455, guid: 15a6f7e93a65d084aad004bd2c8a3cd1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389027716563096982, guid: 15a6f7e93a65d084aad004bd2c8a3cd1, type: 3}
+      propertyPath: AlbumUnlock.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389027716563096982, guid: 15a6f7e93a65d084aad004bd2c8a3cd1, type: 3}
+      propertyPath: AlbumUnlock.Array.data[3]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389027716919959058, guid: 15a6f7e93a65d084aad004bd2c8a3cd1, type: 3}
+      propertyPath: m_Value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1389027717046254048, guid: 15a6f7e93a65d084aad004bd2c8a3cd1, type: 3}
       propertyPath: m_Name
@@ -406,6 +430,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1389027717046254076, guid: 15a6f7e93a65d084aad004bd2c8a3cd1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389027717156178948, guid: 15a6f7e93a65d084aad004bd2c8a3cd1, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
