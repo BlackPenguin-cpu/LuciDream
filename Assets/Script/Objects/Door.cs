@@ -7,6 +7,7 @@ public class Door : Objects
     public override void Interaction()
     {
         base.Interaction();
+        TalkUIManager.Instance.IsTalk = true;
         onClick_MainMenu.OnApplicationQuit();
     }
     void Start()
