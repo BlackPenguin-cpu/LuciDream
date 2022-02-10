@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CloseUp : MonoBehaviour
 {
-    public 
+    public GameObject CloseUpImage;
     void Start()
     {
         
@@ -14,5 +14,9 @@ public class CloseUp : MonoBehaviour
     void Update()
     {
         
+    }
+    public void UnSetActive()
+    {
+        CloseUpImage.SetActive(false);
     }
 }

@@ -10,6 +10,7 @@ public class AlbumPlus : MonoBehaviour
     public GameObject Album;
     public List<bool> AlbumUnlock;
     public List<Sprite> AlbumImage;
+    public List<string> Explanation;
     private TextMeshProUGUI Numbering;
     private ScrollRect scrollRect;
     private bool ReLoad = true;
@@ -22,6 +23,7 @@ public class AlbumPlus : MonoBehaviour
     }
 
     void Update()
+
     {
     }
 
@@ -32,18 +34,22 @@ public class AlbumPlus : MonoBehaviour
             foreach (bool Activation in AlbumUnlock)
             {
                 ++Array;
-                if (AlbumImage[Array] != null)
-                {
-                    Album.GetComponent<Image>().sprite = AlbumImage[Array];
-                }
-
-                if (AlbumImage[Array] == null)
-                {
-                    Album.GetComponent<Image>().sprite = AlbumImage[0];
-                }
 
                 if (Activation)
                 {
+                    if (AlbumImage[Array] != null)
+                    {
+                        Album.GetComponent<Image>().sprite = AlbumImage[Array];
+                        Album.GetComponent<AlbumImage>().Art = AlbumImage[Array];
+                    }
+
+                    if (AlbumImage[Array] == null)
+                    {
+                        Album.GetComponent<Image>().sprite = AlbumImage[0];
+                        Album.GetComponent<AlbumImage>().Art = AlbumImage[0];
+                    }
+                    Album.GetComponent<AlbumImage>().Number = Array;
+                    Album.GetComponent<AlbumImage>().Explanation = Explanation[Array - 1];
                     Numbering.text = "#" + Array;
                     Instantiate(Album, scrollRect.content);
                 }

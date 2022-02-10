@@ -541,6 +541,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 594735846da25b44fa8a5163157f1419, type: 3}
   - {fileID: 21300000, guid: 594735846da25b44fa8a5163157f1419, type: 3}
   - {fileID: 0}
+  Explanation:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
 --- !u!1 &1389027716919959060
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,5 +1007,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB2C8\uAC00 \uC65C \uC8FD\uC5C8\uB0D0\uAD6C\uC694? \uC81C\uAC00 \uC5B4\uCF00\uC54C\uC544\uC694
-    \uC5B4\uCA4C\uB2E4 \uC8FD\uC5C8\uACA0\uC8E0\n"
+  m_Text: 1

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8683491236210080256}
   - component: {fileID: 3064371646729500279}
   - component: {fileID: -8827938818797285132}
+  - component: {fileID: 7569700131714382557}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -67,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: eebd8e0a2c19554419a98fc8f9419157, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -120,7 +121,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3064371646729500279}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7569700131714382557}
+        m_TargetAssemblyTypeName: AlbumImage, Assembly-CSharp
+        m_MethodName: CloseUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7569700131714382557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8683491236210080259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 593334317ba24de44bb505f571d085a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CloseUpImage: {fileID: 0}
+  Number: 5
+  Explanation: 5
 --- !u!1 &9139166902349915863
 GameObject:
   m_ObjectHideFlags: 0
