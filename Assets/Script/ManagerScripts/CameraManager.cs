@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
+using System.Threading.Tasks;
+using System.Threading;
 
 public class CameraManager : Singleton<CameraManager>
 {
@@ -90,5 +92,24 @@ public class CameraManager : Singleton<CameraManager>
         grain.intensity.value = 0;
         depthOfField.mode.value = 0;
         bloom.intensity.value = 0;
+    }
+
+    public async void BedEvent()
+    {
+        while (vignette.intensity.value != 1)
+        {
+            vignette.intensity.value += 0.01f;
+            await Task.Delay(15);
+            //yield return new WaitForSeconds(0.015f);
+        }
+        SceneManager.LoadScene("PlaygroundMap");
+        await Task.Delay(100);
+        //yield return new WaitForSeconds(1);
+        while (vignette.intensity.value != 0)
+        {
+            vignette.intensity.value -= 0.01f;
+            await Task.Delay(15);
+            //yield return new WaitForSeconds(0.015f);
+        }
     }
 }
