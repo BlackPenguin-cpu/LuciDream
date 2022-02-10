@@ -17,7 +17,7 @@ public class SoundManager : Singleton<SoundManager>
     public bool On = true;
     public bool SFXOn = true;
 
-    
+
     float SEvolume = 1;
     protected SoundManager() { }
 
@@ -84,13 +84,15 @@ public class SoundManager : Singleton<SoundManager>
         if (audioSource.volume - 0.1 < 0)
         {
             audioSource.volume = 0;
+            Musictext.text = 0 + "%";
+            MusicSlider.value = audioSource.volume;
         }
         else
         {
-            Mathf.Round((audioSource.volume -= 0.1f) * 1000f);
+            audioSource.volume -= 0.1f;
+            MusicSlider.value = audioSource.volume;
+            Musictext.text = (int)((audioSource.volume * 100) + 1) + "%";
         }
-        MusicSlider.value = audioSource.volume;
-        Musictext.text = (int)(audioSource.volume * 100) + "%";
     }
 
     public void SoundButtonRight()
@@ -98,41 +100,48 @@ public class SoundManager : Singleton<SoundManager>
         if (audioSource.volume + 0.1 > 1)
         {
             audioSource.volume = 1;
+            Musictext.text = 1 + "%";
+            MusicSlider.value = audioSource.volume;
         }
         else
         {
             audioSource.volume += 0.1f;
+            MusicSlider.value = audioSource.volume;
+            Musictext.text = (int)(audioSource.volume * 100) + "%";
+
         }
-        MusicSlider.value = audioSource.volume;
-        Musictext.text = (int)(audioSource.volume * 100) + "%";
     }
 
     public void SoundEffectLeft()
     {
-        if(SEvolume - 0.1f < 0)
+        if (SEvolume - 0.1f < 0)
         {
             SEvolume = 0;
+            SEtext.text = 0 + "%";
+            SESlider.value = SEvolume;
         }
         else
         {
             SEvolume -= 0.1f;
+            SESlider.value = SEvolume;
+            SEtext.text = ((int)(SEvolume * 100) + 1) + "%";
         }
-        SESlider.value = SEvolume;
-        SEtext.text = (int)(SEvolume * 100) + "%";
     }
 
     public void SoundEffectRight()
     {
-        if(SEvolume + 0.1f > 1)
+        if (SEvolume + 0.1f > 1)
         {
             SEvolume = 1;
+            SEtext.text = 1 + "%";
+            SESlider.value = SEvolume;
         }
         else
         {
             SEvolume += 0.1f;
+            SESlider.value = SEvolume;
+            SEtext.text = (int)(SEvolume * 100) + "%";
         }
-        SESlider.value = SEvolume;
-        SEtext.text = (int)(SEvolume * 100) + "%";
     }
 
 }
