@@ -7,18 +7,8 @@ public class Bed : Objects
     public override void Interaction()
     {
         base.Interaction();
+        TalkUIManager.Instance.IsTalk = true;
+        CameraManager.Instance.isUIon = true;
         onClick_MainMenu.StartGame();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

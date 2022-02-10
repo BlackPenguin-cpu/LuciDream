@@ -15,6 +15,7 @@ public class BedObject : Objects
     public void GameStart()
     {
         CameraManager.Instance.BedEvent();
+        BedUI.SetActive(false);
     }
 
 }
