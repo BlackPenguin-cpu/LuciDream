@@ -10,6 +10,4 @@ public class NintendoObject : Objects
         base.Interaction();
         Album.SetActive(true);
     }
-
-
 }
