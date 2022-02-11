@@ -26,6 +26,10 @@ public class SoundManager : Singleton<SoundManager>
     public Text Musictext;
     public Text SEtext;
 
+    void Start()
+    {
+        VloumeSetting();
+    }
     public void Playbgm(string name)
     //사용법 Sound.Instance.ChangeClip("이름",루프 할껀지안할껀지(bool))
     {
@@ -71,11 +75,15 @@ public class SoundManager : Singleton<SoundManager>
     {
         audioSource.volume = volume;
         Musictext.text = (int)(volume * 100) + "%";
+        PlayerPrefs.SetFloat("AudioVolume", audioSource.volume);
+
     }
     public void SetSEVolume(float volume)
     {
         SEvolume = volume;
         SEtext.text = (int)(volume * 100) + "%";
+        PlayerPrefs.SetFloat("SEvloum", SEvolume);
+
     }
 
 
@@ -93,6 +101,7 @@ public class SoundManager : Singleton<SoundManager>
             MusicSlider.value = audioSource.volume;
             Musictext.text = (int)((audioSource.volume * 100) + 1) + "%";
         }
+        PlayerPrefs.SetFloat("AudioVolume", audioSource.volume);
     }
 
     public void SoundButtonRight()
@@ -100,7 +109,7 @@ public class SoundManager : Singleton<SoundManager>
         if (audioSource.volume + 0.1 > 1)
         {
             audioSource.volume = 1;
-            Musictext.text = 1 + "%";
+            Musictext.text = 100 + "%";
             MusicSlider.value = audioSource.volume;
         }
         else
@@ -108,8 +117,8 @@ public class SoundManager : Singleton<SoundManager>
             audioSource.volume += 0.1f;
             MusicSlider.value = audioSource.volume;
             Musictext.text = (int)(audioSource.volume * 100) + "%";
-
         }
+        PlayerPrefs.SetFloat("AudioVolume", audioSource.volume);
     }
 
     public void SoundEffectLeft()
@@ -126,6 +135,7 @@ public class SoundManager : Singleton<SoundManager>
             SESlider.value = SEvolume;
             SEtext.text = ((int)(SEvolume * 100) + 1) + "%";
         }
+        PlayerPrefs.SetFloat("SEvloum", SEvolume);
     }
 
     public void SoundEffectRight()
@@ -133,7 +143,7 @@ public class SoundManager : Singleton<SoundManager>
         if (SEvolume + 0.1f > 1)
         {
             SEvolume = 1;
-            SEtext.text = 1 + "%";
+            SEtext.text = 100 + "%";
             SESlider.value = SEvolume;
         }
         else
@@ -142,6 +152,18 @@ public class SoundManager : Singleton<SoundManager>
             SESlider.value = SEvolume;
             SEtext.text = (int)(SEvolume * 100) + "%";
         }
+        PlayerPrefs.SetFloat("SEvloum", SEvolume);
+    }
+
+    void VloumeSetting()
+    {
+        float AudioVolume = PlayerPrefs.GetFloat("AudioVolume");
+        audioSource.volume = AudioVolume;
+        Musictext.text = (int)(AudioVolume * 100) + "%";
+        MusicSlider.value = AudioVolume;
+        SEvolume = PlayerPrefs.GetFloat("SEvloum");
+        SESlider.value = SEvolume;
+        SEtext.text = (int)(SEvolume * 100) + "%";
     }
 
 }
