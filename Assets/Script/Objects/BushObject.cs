@@ -2,23 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BushObject : MonoBehaviour
+public class BushObject : Objects
 {
-    void Start()
+    public override void Interaction()
     {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            Debug.Log("¿¿æ÷");
-        }
+        base.Interaction();
+        Debug.Log("¡Í±›");
     }
 }
