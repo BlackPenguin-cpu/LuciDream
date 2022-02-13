@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map/FanMap.unity
     guid: 54097b392cbd47e408b59e4145ce4b3e
+  - enabled: 1
+    path: Assets/Scenes/Creeper.unity
+    guid: 240fe702ba2d12a4196d934062ed45d4
+  - enabled: 1
+    path: Assets/Scenes/Map/League of Legends.unity
+    guid: c88b0e77196eb7142921b4c7a59f54f5
   m_configObjects: {}
