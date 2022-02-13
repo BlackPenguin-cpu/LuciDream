@@ -1209,11 +1209,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNotSingle: 0
   Volume: {fileID: 0}
-  vignette: {fileID: 0}
-  grain: {fileID: 0}
-  depthOfField: {fileID: 0}
-  bloom: {fileID: 0}
   player: {fileID: 0}
+  isUIon: 0
 --- !u!1 &478788433
 GameObject:
   m_ObjectHideFlags: 0
@@ -3045,6 +3042,7 @@ GameObject:
   - component: {fileID: 622883559}
   - component: {fileID: 622883558}
   - component: {fileID: 622883557}
+  - component: {fileID: 622883560}
   m_Layer: 7
   m_Name: GlassDoor
   m_TagString: Untagged
@@ -3137,12 +3135,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 622883556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.4, y: 13.5, z: 0}
+  m_LocalPosition: {x: -6.5, y: 13.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &622883560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622883556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26184a1bdfc8bff44a038de7c8d63480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isClicked: 0
+  SceneName: 1F
+  x: -6.5
+  y: -7.5
 --- !u!1 &623227023
 GameObject:
   m_ObjectHideFlags: 0
@@ -7081,6 +7095,7 @@ GameObject:
   - component: {fileID: 1735595979}
   - component: {fileID: 1735595978}
   - component: {fileID: 1735595977}
+  - component: {fileID: 1735595980}
   m_Layer: 7
   m_Name: GlassDoor (1)
   m_TagString: Untagged
@@ -7173,12 +7188,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735595976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.45, y: 13.5, z: 0}
+  m_LocalPosition: {x: -4.5, y: 13.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1735595980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735595976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26184a1bdfc8bff44a038de7c8d63480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isClicked: 0
+  SceneName: 1F
+  x: -6.5
+  y: -7.5
 --- !u!1001 &1740212654
 PrefabInstance:
   m_ObjectHideFlags: 0
