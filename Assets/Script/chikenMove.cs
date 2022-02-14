@@ -2,19 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class chikenMove : MonoBehaviour
+public class chikenMove : Objects
 {
-    // Start is called before the first frame update
-    void Start()
+    public string SceneName;
+    public float x, y;
+    public GameObject Image;
+
+    private void Start()
     {
-        
+        Image.SetActive(false);
+        Time.timeScale = 1;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    public override void Interaction()
     {
-        Move();
+        base.Interaction();
+        Imagee();
     }
     public void Move()
     {
-        SceneManager.LoadScene("Creeper");
+        SceneManager.LoadScene(SceneName);
+        Player.Instance.transform.position = new Vector3(x, y);
+    }
+
+    public void Imagee()
+    {
+        Image.SetActive(true);
+        Time.timeScale = 0;
+    }
+    public void ok()
+    {
+        Move();
+    }
+
+    public void no()
+    {
+        Image.SetActive(false);
+        Time.timeScale = 1;
     }
 }
