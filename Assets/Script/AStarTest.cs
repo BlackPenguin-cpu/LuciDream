@@ -23,7 +23,8 @@ public class AStarTest : Singleton<AStarTest>
 
     int sizeX, sizeY;
     Node[,] NodeArray;
-    Node StartNode, TargetNode, CurNode;
+    public Node StartNode, TargetNode, CurNode;
+    private Vector2Int realBottomLeft, realTopRight;
 
     List<Node> OpenList, ClosedList;
     public Transform StartTR;
@@ -31,6 +32,8 @@ public class AStarTest : Singleton<AStarTest>
     public void PathFinding()
     {
         startPos = Vector2Int.RoundToInt(StartTR.position);
+        realBottomLeft = startPos + bottomLeft;
+        realTopRight = startPos + topRight;
 
         //NodeArray의 크기 정해주고, isWall, x, y 대입
         sizeX = topRight.x - bottomLeft.x + 1;
@@ -42,10 +45,11 @@ public class AStarTest : Singleton<AStarTest>
             for (int j = 0; j < sizeY; j++)
             {
                 bool isWall = false;
-                foreach (Collider2D col in Physics2D.OverlapCircleAll(new Vector2(i + bottomLeft.x, j + bottomLeft.y), 0.4f))
+                foreach (Collider2D col in Physics2D.OverlapCircleAll(new Vector2(i + realBottomLeft.x, j + realBottomLeft.y), 0.4f))
                     if (col.gameObject.layer == LayerMask.NameToLayer("Wall")) isWall = true;
 
                 NodeArray[i, j] = new Node(isWall, i + bottomLeft.x, j + bottomLeft.y);
+                Debug.Log($"{i} {j} ;{i + realBottomLeft.x} {j + realBottomLeft.y} : {isWall}");
             }
         }
         // 시작과 끝 노드, 열린리스트와 닫힌 리스트, 마지막리스트 초기화
@@ -102,10 +106,10 @@ public class AStarTest : Singleton<AStarTest>
     void OpenListAdd(int checkX, int checkY)
     {
         //상하좌우 범위를 벗어나지 않고, 벽이 아니면서, 닫힌 리스트에 없다면
-        if (checkX >= bottomLeft.x
-            && checkX < topRight.x + 1
-            && checkY >= bottomLeft.y
-            && checkY < topRight.y + 1
+        if (checkX >= realBottomLeft.x
+            && checkX < realTopRight.x + 1
+            && checkY >= realBottomLeft.y
+            && checkY < realTopRight.y + 1
             && (!NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y].isWall
             || NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y] == TargetNode)
             && !ClosedList.Contains(NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y]))
