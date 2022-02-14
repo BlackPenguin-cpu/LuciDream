@@ -4,17 +4,33 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class chikenMove : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public string SceneName;
+    public float x, y;
+    public GameObject Image;
+    private void Start()
     {
-
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Move();
+        Image.SetActive(false);
+        Time.timeScale = 1;
     }
     public void Move()
     {
-        SceneManager.LoadScene("Creeper");
+        SceneManager.LoadScene(SceneName);
+        Player.Instance.transform.position = new Vector3(x, y);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Image.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void ok()
+    {
+        Move();
+    }
+
+    public void no()
+    {
+        Image.SetActive(false);
+        Time.timeScale = 1;
     }
 }
