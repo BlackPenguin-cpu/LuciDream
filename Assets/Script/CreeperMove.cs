@@ -19,13 +19,17 @@ public class CreeperMove : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Image.SetActive(true);
-        Time.timeScale = 0;
+        if (collision.gameObject.tag == "Player")
+        {
+            Image.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 
     public void ok()
     {
         Move();
+        print("dddddddd");
     }
 
     public void no()
