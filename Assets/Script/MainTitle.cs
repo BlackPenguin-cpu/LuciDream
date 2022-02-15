@@ -10,8 +10,8 @@ public class MainTitle : MonoBehaviour
     [SerializeField] TextMeshPro Text;
     float Timer = 0;
     bool already;
-    [SerializeField] Image[] Images;
-    bool StopPlayer;
+    [SerializeField] GameObject[] Images;
+    public bool StopPlayer;
 
     void Start()
     {
@@ -21,17 +21,18 @@ public class MainTitle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        StopPlayer = false;
         for (int i = 0; i < Images.Length; i++)
         {
             if (Images[i].gameObject.activeSelf == true)
             {
                 StopPlayer = true;
             }
-
-            StartCoroutine(TextOn());
-            transform.position = transform.position + new Vector3(0, Mathf.Cos(Time.time) * Time.deltaTime * Speed);
-            Timer += Time.deltaTime;
         }
+
+        StartCoroutine(TextOn());
+        transform.position = transform.position + new Vector3(0, Mathf.Cos(Time.time) * Time.deltaTime * Speed);
+        Timer += Time.deltaTime;
         IEnumerator TextOn()
         {
             if (Timer > 5 && !already)

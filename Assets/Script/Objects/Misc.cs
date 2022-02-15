@@ -10,16 +10,11 @@ public class Misc : Objects
     public override void Interaction()
     {
         base.Interaction();
-        StartCoroutine(Hide());
+        StartCoroutine(TalkUIManager.Instance.TextScript(Name, Speech));
     }
-
-    IEnumerator Hide()
+    IEnumerator enumerator()
     {
-
         yield return StartCoroutine(TalkUIManager.Instance.TextScript(Name, Speech));
-        if (gameObject.name == "shoose")
-        {
-            this.gameObject.SetActive(false);
-        }
     }
+
 }

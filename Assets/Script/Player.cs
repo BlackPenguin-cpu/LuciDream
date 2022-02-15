@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public enum PlayerState
 {
@@ -59,6 +60,15 @@ public class Player : Singleton<Player>
             if (!TalkUIManager.Instance.IsTalk && State != PlayerState.DIE)
             {
                 if (OnMouseClickIEnumerator != null) StopCoroutine(OnMouseClickIEnumerator);
+                
+                if(SceneManager.GetActiveScene().name == "TitleMap")
+                {
+                    if (!FindObjectOfType<MainTitle>().StopPlayer)
+                    {
+                        OnMouseClickIEnumerator = StartCoroutine(OnMouseClick());
+                    }
+                }
+                else
                 OnMouseClickIEnumerator = StartCoroutine(OnMouseClick());
             }
         }
