@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class ButtonMove : MonoBehaviour
+public class ButtonMove : Objects
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    public string SceneName;
+    public float x, y;
+    public override void Interaction()
     {
+        base.Interaction();
         Move();
     }
 
     public void Move()
     {
-        SceneManager.LoadScene("ButtonMOve");
+        SceneManager.LoadScene("SceneName");
+        Player.Instance.transform.position = new Vector3(x, y);
     }
 }
