@@ -25,6 +25,7 @@ public class Memory : MonoBehaviour
     public GameObject purple1;
     public GameObject Good;
     public GameObject Bad;
+    public GameObject Player2;
 
     public string SceneName;
     public float x, y;
@@ -50,6 +51,7 @@ public class Memory : MonoBehaviour
        
     void Start()
     {
+        Player2.SetActive(false);
         Delete();
         Randoma();
     }

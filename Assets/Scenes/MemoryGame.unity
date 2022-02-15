@@ -1742,6 +1742,7 @@ GameObject:
   - component: {fileID: 1058873823}
   - component: {fileID: 1058873822}
   - component: {fileID: 1058873825}
+  - component: {fileID: 1058873826}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1846,6 +1847,19 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &1058873826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058873821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1021d5934057250459c497db1e42c64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShakeAmount: 0.8
 --- !u!1 &1065395707
 GameObject:
   m_ObjectHideFlags: 0
@@ -2957,6 +2971,7 @@ MonoBehaviour:
   purple1: {fileID: 1278991906}
   Good: {fileID: 151044337}
   Bad: {fileID: 1524917960}
+  Player2: {fileID: 5168589092254020267, guid: 901a7d5e99d39634e9a432086e726b62, type: 3}
   SceneName: ButtonMOve
   x: 0
   y: 0

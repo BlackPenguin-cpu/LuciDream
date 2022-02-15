@@ -2308,8 +2308,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: Chicken
-  x: 0
-  y: 0
+  x: -7.37
+  y: -2.14
   Image: {fileID: 503506753}
 --- !u!50 &771361293
 Rigidbody2D:
