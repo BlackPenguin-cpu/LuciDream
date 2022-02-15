@@ -15,9 +15,10 @@ public class Number : MonoBehaviour
     public Text number2;
     public GameObject good;
     public GameObject bad;
-
+    public GameObject Player2;
     void Start()
     {
+        Player2.SetActive(false);
         aaa();
         good.SetActive(false);
         bad.SetActive(false);

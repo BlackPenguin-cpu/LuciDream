@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class Memory : MonoBehaviour
 {
     public GameObject red;
@@ -25,6 +25,10 @@ public class Memory : MonoBehaviour
     public GameObject purple1;
     public GameObject Good;
     public GameObject Bad;
+    public GameObject Player2;
+
+    public string SceneName;
+    public float x, y;
 
     int i = 0;
     int a = 0;
@@ -47,6 +51,7 @@ public class Memory : MonoBehaviour
        
     void Start()
     {
+        Player2.SetActive(false);
         Delete();
         Randoma();
     }
@@ -192,9 +197,10 @@ public class Memory : MonoBehaviour
                 Good.SetActive(true);
                 Invoke("good", 2);
 
-                if(c == 4)
+                if(c == 5)
                 {
-                    print("clear");
+                    SceneManager.LoadScene(SceneName);
+                    Player.Instance.transform.position = new Vector3(x, y);
                 }
             }
         }

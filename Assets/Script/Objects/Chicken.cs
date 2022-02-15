@@ -15,19 +15,19 @@ public class Chicken : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
-        Invoke("Think", 3);        
+        Invoke("Think", 1);        
     }
     void FixedUpdate()
     {
         rigid.velocity = new Vector2(nextMove, rigid.velocity.y);
         anim.SetBool("isChicken", true);
-        Invoke("aaa", 5);
+        Invoke("aaa", 0.5f);
     }
 
     void Think()
     {     
-        nextMove = Random.Range(-1, 2);     
-        Invoke("Think", 2); 
+        nextMove = Random.Range(-2, 0);     
+        Invoke("Think", 0.5f); 
         i++;
     }
     void aaa()

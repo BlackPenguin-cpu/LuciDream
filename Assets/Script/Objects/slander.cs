@@ -64,11 +64,17 @@ public class slander : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        follow = true;
+        if (collision.gameObject.tag == "Player")
+        {
+            follow = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        follow = false;
+        if (collision.gameObject.tag == "Player")
+        {
+            follow = false;
+        }
     }
 }

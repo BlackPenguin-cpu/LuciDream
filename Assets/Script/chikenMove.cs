@@ -18,9 +18,12 @@ public class chikenMove : MonoBehaviour
         Player.Instance.transform.position = new Vector3(x, y);
     }
     private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Image.SetActive(true);
-        Time.timeScale = 0;
+    {      
+        if (collision.gameObject.tag == "Player")
+        {
+            Image.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 
     public void ok()

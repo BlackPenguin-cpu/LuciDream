@@ -6,9 +6,15 @@ public class ButtonDie : MonoBehaviour
 {
     Animator anim;
     int i = 0;
+    public GameObject red;
+    public GameObject gm;
+    public GameObject Player2;
     void Start()
     {
+        Player2.SetActive(false);
         anim = GetComponent<Animator>();
+        red.SetActive(false);
+        gm.SetActive(false);
     }
     public void ButtonOn()
     {
@@ -24,6 +30,19 @@ public class ButtonDie : MonoBehaviour
     {
         i = 0;
         anim.SetBool("isButton", false);
+        red.SetActive(true);
+        Invoke("Red", 2);
+        Invoke("Die", 2);
+    }
+
+    void Red()
+    {
+        red.SetActive(false);
+    }
+
+    void Die()
+    {
+        gm.SetActive(true);
         print("Á×À½");
     }
 }
