@@ -12,7 +12,7 @@ public class Chickenclone : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
-        Invoke("Think", 5);
+        Invoke("Think", 1);
     }
     void FixedUpdate()
     {
@@ -22,7 +22,7 @@ public class Chickenclone : MonoBehaviour
 
     void Think()
     {
-        nextMove = Random.Range(-1, 2);
-        Invoke("Think", 5);
+        nextMove = Random.Range(-2, 0);
+        Invoke("Think", 2);
     }
 }

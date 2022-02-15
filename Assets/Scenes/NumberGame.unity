@@ -250,6 +250,7 @@ MonoBehaviour:
   number2: {fileID: 1942866126}
   good: {fileID: 1267720946}
   bad: {fileID: 2042844311}
+  Player2: {fileID: 5168589092254020267, guid: 901a7d5e99d39634e9a432086e726b62, type: 3}
 --- !u!1 &663924012
 GameObject:
   m_ObjectHideFlags: 0
