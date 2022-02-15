@@ -10,7 +10,12 @@ public class Chicken : MonoBehaviour
     public GameObject chicken;
     public int a = 0;
     int i = 0;
+    
 
+    private void Start()
+    {
+       // Vector3.MoveTowards(transform.position, player, 1f);
+    }
     private void Awake()
     {
         anim = GetComponent<Animator>();
