@@ -48,13 +48,12 @@ public class AStarTest : Singleton<AStarTest>
                 foreach (Collider2D col in Physics2D.OverlapCircleAll(new Vector2(i + realBottomLeft.x, j + realBottomLeft.y), 0.4f))
                     if (col.gameObject.layer == LayerMask.NameToLayer("Wall")) isWall = true;
 
-                NodeArray[i, j] = new Node(isWall, i + bottomLeft.x, j + bottomLeft.y);
-                Debug.Log($"{i} {j} ;{i + realBottomLeft.x} {j + realBottomLeft.y} : {isWall}");
-            }
+                NodeArray[i, j] = new Node(isWall, i + realBottomLeft.x, j + realBottomLeft.y);
+            } 
         }
         // 시작과 끝 노드, 열린리스트와 닫힌 리스트, 마지막리스트 초기화
-        StartNode = NodeArray[startPos.x - bottomLeft.x, startPos.y - bottomLeft.y];
-        TargetNode = NodeArray[targetPos.x - bottomLeft.x, targetPos.y - bottomLeft.y];
+        StartNode = NodeArray[- bottomLeft.x,- bottomLeft.x];
+        TargetNode = NodeArray[targetPos.x - realBottomLeft.x  , targetPos.y - realBottomLeft.y];
 
         OpenList = new List<Node>() { StartNode };
         ClosedList = new List<Node>();
@@ -105,26 +104,30 @@ public class AStarTest : Singleton<AStarTest>
 
     void OpenListAdd(int checkX, int checkY)
     {
+
+        int realCheckX = checkX - startPos.x;
+        int realCheckY = checkY - startPos.y;
+        //Debug.Log(NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y].x + " " + NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y].y + " " + NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y].isWall);
         //상하좌우 범위를 벗어나지 않고, 벽이 아니면서, 닫힌 리스트에 없다면
         if (checkX >= realBottomLeft.x
-            && checkX < realTopRight.x + 1
+            && checkX < realTopRight.x
             && checkY >= realBottomLeft.y
-            && checkY < realTopRight.y + 1
-            && (!NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y].isWall
-            || NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y] == TargetNode)
-            && !ClosedList.Contains(NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y]))
+            && checkY < realTopRight.y
+            && (!NodeArray[realCheckX - bottomLeft.x , realCheckY - bottomLeft.y ].isWall
+            || NodeArray[realCheckX - bottomLeft.x , realCheckY - bottomLeft.y ] == TargetNode)
+            && !ClosedList.Contains(NodeArray[realCheckX - bottomLeft.x , realCheckY - bottomLeft.y]))
         {
             //대각선 장애물 사이로 못지나감
             if (allowDiagonal)
-                if (NodeArray[CurNode.x - bottomLeft.x, checkY - bottomLeft.y].isWall
-                    || NodeArray[checkX - bottomLeft.x, CurNode.y - bottomLeft.y].isWall) return;
+                if (NodeArray[CurNode.x - bottomLeft.x, realCheckY - bottomLeft.y].isWall
+                    || NodeArray[realCheckX - bottomLeft.x, CurNode.y - bottomLeft.y].isWall) return;
             // 대각선 장애물 옆으로 못지나감
-            if (dontCrossCorner) if (NodeArray[CurNode.x - bottomLeft.x, checkY - bottomLeft.y].isWall
-                     || NodeArray[checkX - bottomLeft.x, CurNode.y - bottomLeft.y].isWall) return;
+            if (dontCrossCorner) if (NodeArray[CurNode.x - bottomLeft.x, realCheckY - bottomLeft.y].isWall
+                     || NodeArray[realCheckX - bottomLeft.x, CurNode.y - bottomLeft.y].isWall) return;
 
 
             //이웃노드에 넣고, 직선은 10, 대각선은 14 코스트 
-            Node NeighborNode = NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y];
+            Node NeighborNode = NodeArray[realCheckX - bottomLeft.x, realCheckY - bottomLeft.y];
             int MoveCost = CurNode.G + (CurNode.x - checkX == 0 || CurNode.y - checkY == 0 ? 10 : 14);
             //이동비용이 이웃노드G보다 작거나 또는 열린리스트에 이웃노드가 없다면 G,H,ParentNode를 설정 후 열린 리스트에 추가
             if (MoveCost < NeighborNode.G || !OpenList.Contains(NeighborNode))

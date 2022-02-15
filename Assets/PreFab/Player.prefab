@@ -100,13 +100,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNotSingle: 0
-  bottomLeft: {x: -100, y: -100}
-  topRight: {x: 100, y: 100}
+  bottomLeft: {x: -20, y: -20}
+  topRight: {x: 20, y: 20}
   startPos: {x: 0, y: 0}
   targetPos: {x: -3, y: -3}
   FinalNodeList: []
   allowDiagonal: 0
   dontCrossCorner: 0
+  StartNode:
+    isWall: 0
+    x: 0
+    y: 0
+    G: 0
+    H: 0
+  TargetNode:
+    isWall: 0
+    x: 0
+    y: 0
+    G: 0
+    H: 0
+  CurNode:
+    isWall: 0
+    x: 0
+    y: 0
+    G: 0
+    H: 0
   StartTR: {fileID: 5168589092254020270}
 --- !u!61 &5168589092254020265
 BoxCollider2D:
