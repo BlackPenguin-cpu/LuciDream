@@ -186,8 +186,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNotSingle: 0
-  MoveSpeed: 0.3
-  MoveTime: 0.4
+  MoveSpeed: 0.7
+  MoveTime: 0.3
   PlayerDir: 1
   Dead: 0
 --- !u!95 &5168589092254020268
