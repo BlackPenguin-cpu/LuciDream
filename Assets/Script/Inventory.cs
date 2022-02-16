@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     bool Shoose = false;
+    public bool note = false;
+    public bool pen = false;
+    public bool minem = false;
 
     private void Update()
     {
@@ -18,6 +21,11 @@ public class Inventory : MonoBehaviour
             {
                 if (Player.Instance.Dead == false) StartCoroutine(DeathManager.Instance.ShooseDie());
             }
+        }
+
+        if(note == true && pen == true)
+        {
+            if (Player.Instance.Dead == false) StartCoroutine(DeathManager.Instance.DeathNote());
         }
     }
 }

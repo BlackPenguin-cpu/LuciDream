@@ -6,9 +6,8 @@ public class Misc : Objects
 {
     public string Name;
     public List<string> Speech;
-
     public override void Interaction()
-    {
+    {     
         base.Interaction();
         StartCoroutine(TalkUIManager.Instance.TextScript(Name, Speech));
     }
@@ -16,5 +15,4 @@ public class Misc : Objects
     {
         yield return StartCoroutine(TalkUIManager.Instance.TextScript(Name, Speech));
     }
-
 }
