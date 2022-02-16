@@ -60,8 +60,8 @@ public class Player : Singleton<Player>
             if (!TalkUIManager.Instance.IsTalk && State != PlayerState.DIE)
             {
                 if (OnMouseClickIEnumerator != null) StopCoroutine(OnMouseClickIEnumerator);
-                
-                if(SceneManager.GetActiveScene().name == "TitleMap")
+
+                if (SceneManager.GetActiveScene().name == "TitleMap")
                 {
                     if (!FindObjectOfType<MainTitle>().StopPlayer)
                     {
@@ -69,7 +69,7 @@ public class Player : Singleton<Player>
                     }
                 }
                 else
-                OnMouseClickIEnumerator = StartCoroutine(OnMouseClick());
+                    OnMouseClickIEnumerator = StartCoroutine(OnMouseClick());
             }
         }
 
@@ -184,6 +184,12 @@ public class Player : Singleton<Player>
         {
             PlayerDir = PlayerDir.UP;
         }
+    }
+
+    public void CoroutineQuit()
+    {
+        if (OnMouseClickIEnumerator != null)
+            StopCoroutine(OnMouseClickIEnumerator);
     }
 }
 
