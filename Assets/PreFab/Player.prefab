@@ -21,7 +21,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5168589092254020270
 Transform:
   m_ObjectHideFlags: 0
@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNotSingle: 0
+  isNotDontdestroy: 0
   bottomLeft: {x: -20, y: -20}
   topRight: {x: 20, y: 20}
   startPos: {x: 0, y: 0}
@@ -186,7 +187,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNotSingle: 0
-  MoveSpeed: 0.7
+  isNotDontdestroy: 0
+  MoveSpeed: 0.3
   MoveTime: 0.3
   PlayerDir: 1
   Dead: 0
