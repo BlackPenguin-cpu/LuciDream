@@ -5,6 +5,7 @@ using UnityEngine;
 public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
     public bool isNotSingle;
+    public bool isNotDontdestroy;
     private static T instance;
     public static T Instance
     {
@@ -46,6 +47,6 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
                 }
             }
         }
-        DontDestroyOnLoad(gameObject);
+        if(!isNotDontdestroy) DontDestroyOnLoad(gameObject);
     }
 }
