@@ -192,6 +192,7 @@ public class Player : Singleton<Player>
 
     public void CoroutineQuit()
     {
+        DOTween.KillAll();
         if (OnMouseClickIEnumerator != null)
             StopCoroutine(OnMouseClickIEnumerator);
     }
