@@ -74,7 +74,7 @@ public class Player : Singleton<Player>
             }
         }
         die += Time.deltaTime;
-        if(die > 60)
+        if (die > 60)
         {
             print("Á×À½");
         }
@@ -192,9 +192,11 @@ public class Player : Singleton<Player>
 
     public void CoroutineQuit()
     {
-        DOTween.KillAll();
+        if (tween != null)
+            tween.Kill();
         if (OnMouseClickIEnumerator != null)
             StopCoroutine(OnMouseClickIEnumerator);
+        State = PlayerState.IDLE;
     }
 }
 
