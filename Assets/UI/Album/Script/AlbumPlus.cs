@@ -4,19 +4,24 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class AlbumPlus : MonoBehaviour
+public class AlbumPlus : Singleton<AlbumPlus>
 {
     public Transform Location;
     public GameObject Album;
     public List<bool> AlbumUnlock;
     public List<Sprite> AlbumImage;
     public List<string> Explanation;
+    public Sprite testimage;
     private TextMeshProUGUI Numbering;
     private ScrollRect scrollRect;
     private bool ReLoad = true;
     private int Array = 0;
     void Start()
     {
+        Debug.Log("¤±¤¤¤·¤©");
+        AlbumImage.Add(testimage);
+        Explanation.Add("asdf");
+        AlbumUnlock.Add(false);
         scrollRect = GetComponent<ScrollRect>();
         Numbering = Album.GetComponentInChildren<TextMeshProUGUI>();
         AlbumRoad();
