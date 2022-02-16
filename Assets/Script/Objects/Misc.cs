@@ -10,9 +10,9 @@ public class Misc : Objects
     public override void Interaction()
     {
         base.Interaction();
-        StartCoroutine(TalkUIManager.Instance.TextScript(Name, Speech));
+        StartCoroutine(TextPrint());
     }
-    IEnumerator enumerator()
+    protected virtual IEnumerator TextPrint()
     {
         yield return StartCoroutine(TalkUIManager.Instance.TextScript(Name, Speech));
     }

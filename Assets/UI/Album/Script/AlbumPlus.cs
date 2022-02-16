@@ -49,7 +49,7 @@ public class AlbumPlus : MonoBehaviour
                         Album.GetComponent<AlbumImage>().Art = AlbumImage[0];
                     }
                     Album.GetComponent<AlbumImage>().Number = Array;
-                    Album.GetComponent<AlbumImage>().Explanation = Explanation[Array - 1];
+                    Album.GetComponent<AlbumImage>().Explanation = Explanation[Array];
                     Numbering.text = "#" + Array;
                     Instantiate(Album, scrollRect.content);
                 }

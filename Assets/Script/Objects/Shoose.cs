@@ -13,12 +13,20 @@ public class Shoose : Misc
 
     public override void Interaction()
     {
+        base.Interaction();
         StartCoroutine(Hide());
+    }
+    protected override IEnumerator TextPrint()
+    {
+        yield return base.TextPrint();
+
     }
 
     IEnumerator Hide()
     {
+
         yield return new WaitForSeconds(10);
-            this.gameObject.SetActive(false);
+        this.gameObject.SetActive(false);
     }
 }
+
