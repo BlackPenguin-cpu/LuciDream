@@ -9,6 +9,8 @@ public class Inventory : MonoBehaviour
     public bool note = false;
     public bool pen = false;
     public bool minem = false;
+    public bool among = false;
+    public bool portal = false;
 
     private void Update()
     {
@@ -26,6 +28,16 @@ public class Inventory : MonoBehaviour
         if(note == true && pen == true)
         {
             if (Player.Instance.Dead == false) StartCoroutine(DeathManager.Instance.DeathNote());
+        }
+
+        if(among == true)
+        {
+            if (Player.Instance.Dead == false) StartCoroutine(DeathManager.Instance.amongDie());
+        }
+
+        if(portal == true)
+        {
+            if (Player.Instance.Dead == false) StartCoroutine(DeathManager.Instance.amongDie());
         }
     }
 }

@@ -34,6 +34,15 @@ public class DeathManager : Singleton<DeathManager>
 
         vignette.intensity.value = 5;
     }
+    public IEnumerator amongDie()
+    {
+        yield return new WaitForSeconds(5);
+        Player.Instance._State = PlayerState.DIE;
+
+        volume.TryGet(out vignette);
+
+        vignette.intensity.value = 5;
+    }
     public void OnDeathUI(int num, Sprite image, string Text)
     {
         AlbumManager.Instance.gameObject.SetActive(true);
