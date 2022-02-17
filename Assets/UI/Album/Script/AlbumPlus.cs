@@ -11,13 +11,15 @@ public class AlbumPlus : Singleton<AlbumPlus>
     public List<bool> AlbumUnlock;
     public List<Sprite> AlbumImage;
     public List<string> Explanation;
-    public Sprite testimage;
     private TextMeshProUGUI Numbering;
     private ScrollRect scrollRect;
     private bool ReLoad = true;
     private int Array = 0;
     void Start()
     {
+        AlbumUnlock = AlbumManager.Instance.unlock;
+        AlbumImage = AlbumManager.Instance.image;
+        Explanation = AlbumManager.Instance.explanation;
         scrollRect = GetComponent<ScrollRect>();
         Numbering = Album.GetComponentInChildren<TextMeshProUGUI>();
         AlbumRoad();
@@ -34,10 +36,8 @@ public class AlbumPlus : Singleton<AlbumPlus>
         {
             foreach (bool Activation in AlbumUnlock)
             {
-                Array++;
                 if (Activation)
                 {
-                    Debug.Log(Array);
                     if (AlbumImage[Array] != null)
                     {
                         Album.GetComponent<Image>().sprite = AlbumImage[Array];
@@ -54,6 +54,7 @@ public class AlbumPlus : Singleton<AlbumPlus>
                     Numbering.text = "#" + Array;
                     Instantiate(Album, scrollRect.content);
                 }
+                Array++;
             }
         }
         ReLoad = false;

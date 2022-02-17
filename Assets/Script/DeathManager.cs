@@ -46,12 +46,13 @@ public class DeathManager : Singleton<DeathManager>
     public void OnDeathUI(int num, Sprite image, string Text)
     {
         AlbumManager.Instance.gameObject.SetActive(true);
-        AlbumPlus.Instance.AlbumUnlock[num] = true;
-        AlbumPlus.Instance.Explanation[num] = Text;
+        AlbumManager.Instance.image[num] = image;
+        AlbumManager.Instance.unlock[num] = true;
+        AlbumManager.Instance.explanation[num] = Text;
 
-        Photo.sprite = image;
+        /*Photo.sprite = image;
         number.text = "# " + num;
-        Description.text = Text;
+        Description.text = Text;*/
 
         //여따가 num은 번호 image는 이미지 Text는 설명이니까 알아서 적용시켜^^
 
