@@ -3,25 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class test : MonoBehaviour
+public class test : Objects
 {
     public Sprite image;
     public string text;
     public int number;
-    // Start is called before the first frame update
-    void Start()
+    public override void Interaction()
     {
-        Invoke(nameof(asdf), 1f);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    void asdf()
-    {
-
+        base.Interaction();
+        AlbumManager.Instance.ContainerOn();
         DeathManager.Instance.OnDeathUI(number, image, text);
     }
 }

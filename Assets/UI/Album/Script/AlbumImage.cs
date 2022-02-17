@@ -12,7 +12,7 @@ public class AlbumImage : MonoBehaviour
     public Sprite Art;
     void Start()
     {
-        CloseUpImage = GameObject.Find("AlbumCanvas").transform.Find("CloseUp").gameObject;
+        CloseUpImage = AlbumManager.Instance.albumContainer.transform.Find("CloseUp").gameObject;
     }
 
     void Update()
