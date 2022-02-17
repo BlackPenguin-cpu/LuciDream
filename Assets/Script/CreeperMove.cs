@@ -29,7 +29,6 @@ public class CreeperMove : MonoBehaviour
     public void ok()
     {
         Move();
-        print("dddddddd");
     }
 
     public void no()

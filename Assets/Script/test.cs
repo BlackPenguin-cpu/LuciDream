@@ -11,7 +11,6 @@ public class test : Objects
     public override void Interaction()
     {
         base.Interaction();
-        AlbumManager.Instance.ContainerOn();
         DeathManager.Instance.OnDeathUI(number, image, text);
     }
 }
