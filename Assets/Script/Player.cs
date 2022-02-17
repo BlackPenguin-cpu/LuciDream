@@ -74,12 +74,31 @@ public class Player : Singleton<Player>
                     OnMouseClickIEnumerator = StartCoroutine(OnMouseClick());
             }
         }
+        InteractionDetected();
+
         die += Time.deltaTime;
         if (die > 60)
         {
             print("Á×À½");
         }
     }
+    void InteractionDetected()
+    {
+        if (InteractionObj != null)
+        {
+            if (Vector2.Distance(InteractionObj.transform.position, transform.position) <= 1.6f)
+            {
+                State = PlayerState.IDLE;
+                InteractionObj.Interaction();
+                InteractionObj = null;
+                if(OnMouseClickIEnumerator != null)
+                {
+                    StopCoroutine(OnMouseClickIEnumerator);
+                }
+            }
+        }
+    }
+
     void AnimationChecker()
     {
         anim.SetInteger("State", (int)State);
@@ -148,15 +167,6 @@ public class Player : Singleton<Player>
         {
             foreach (Node node in NodeList)
             {
-                if (InteractionObj != null)
-                {
-                    if (Vector2.Distance(InteractionObj.transform.position, transform.position) <= 1.6f)
-                    {
-                        InteractionObj.Interaction();
-                        InteractionObj = null;
-                        break;
-                    }
-                }
                 if (node.isWall == true) break;
 
                 Vector2 dir = new Vector2(node.x, node.y);
