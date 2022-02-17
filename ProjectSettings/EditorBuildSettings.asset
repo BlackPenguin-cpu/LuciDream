@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map/League of Legends.unity
     guid: c88b0e77196eb7142921b4c7a59f54f5
+  - enabled: 1
+    path: Assets/Scenes/Map/Mario.unity
+    guid: 5cad26ea74e22d84f973c0a6215f0207
   m_configObjects: {}

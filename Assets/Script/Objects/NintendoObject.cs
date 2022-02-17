@@ -8,6 +8,6 @@ public class NintendoObject : Objects
     public override void Interaction()
     {
         base.Interaction();
-        Album.SetActive(true);
+        AlbumManager.Instance.ContainerOn();
     }
 }

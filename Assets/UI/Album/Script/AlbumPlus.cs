@@ -18,10 +18,6 @@ public class AlbumPlus : Singleton<AlbumPlus>
     private int Array = 0;
     void Start()
     {
-        Debug.Log("¤±¤¤¤·¤©");
-        AlbumImage.Add(testimage);
-        Explanation.Add("asdf");
-        AlbumUnlock.Add(false);
         scrollRect = GetComponent<ScrollRect>();
         Numbering = Album.GetComponentInChildren<TextMeshProUGUI>();
         AlbumRoad();
@@ -38,10 +34,10 @@ public class AlbumPlus : Singleton<AlbumPlus>
         {
             foreach (bool Activation in AlbumUnlock)
             {
-                ++Array;
-
+                Array++;
                 if (Activation)
                 {
+                    Debug.Log(Array);
                     if (AlbumImage[Array] != null)
                     {
                         Album.GetComponent<Image>().sprite = AlbumImage[Array];
