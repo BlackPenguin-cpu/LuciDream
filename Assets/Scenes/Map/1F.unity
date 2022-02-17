@@ -5292,7 +5292,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
   m_Origin: {x: -3, y: -7, z: 0}
   m_Size: {x: 5, y: 7, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -8098,8 +8098,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.48, y: 0.32}
+  m_DrawMode: 1
+  m_Size: {x: 2, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -8114,7 +8114,7 @@ Transform:
   m_GameObject: {fileID: 1811733089}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.9, y: 0.98, z: -0.3}
-  m_LocalScale: {x: 1, y: 1.1714, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -8170,13 +8170,13 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.5, y: 1}
-    newSize: {x: 0.48, y: 0.32}
+    newSize: {x: 2, y: 1.5}
     adaptiveTilingThreshold: 0.5
-    drawMode: 0
+    drawMode: 1
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.48, y: 0.32}
+  m_Size: {x: 2, y: 1.5}
   m_EdgeRadius: 0
 --- !u!1 &1937556587
 GameObject:
@@ -8600,7 +8600,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 14196e76fbbf27844914f0dfa15eb8d8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2da81717075cdfb40b02b9f4c4d667ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8665,8 +8665,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isClicked: 0
   SceneName: B1F
-  x: -5
-  y: -8
+  x: 3.5
+  y: -6
 --- !u!1001 &4818184712772505027
 PrefabInstance:
   m_ObjectHideFlags: 0
