@@ -6,6 +6,7 @@ using DG.Tweening;
 public class Mario : MonoBehaviour
 {
     private Rigidbody2D rigid;
+    private bool isdie = false;
 
     void Start()
     {
@@ -16,12 +17,17 @@ public class Mario : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && isdie == false)
         {
             Player.Instance.CoroutineQuit();
             rigid.constraints = RigidbodyConstraints2D.FreezePositionX;
             rigid.AddForce(new Vector3(0, 5, 0), ForceMode2D.Impulse);
-            this.gameObject.SetActive(false);
+            isdie = true;
+        }
+        if (other.gameObject.tag == "Player" && isdie)
+        {
+            Debug.Log("난 디버그다");
+            Player.Instance._State = PlayerState.DIE;
         }
     }
 }
