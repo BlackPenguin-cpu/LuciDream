@@ -4,34 +4,55 @@ using UnityEngine;
 
 public class Among : MonoBehaviour
 {
-    public GameObject bule;
-    public GameObject red;
-    public GameObject yellow;
-    public float a = 0;
+    public GameObject Player1;
+    public GameObject Player2;
+    public GameObject Player3;
+    public GameObject Check1;
+    public GameObject Check2;
+    public GameObject Check3;
+    public GameObject Text;
+    public GameObject x;
+    public float a  = 1;
     public GameObject MainCamera;
     
     void Start()
     {
-        bule.SetActive(false);
-        red.SetActive(false);
-        yellow.SetActive(false);
+        Player1.SetActive(false);
+        Player2.SetActive(false);
+        Player3.SetActive(false);
+        Check1.SetActive(false);
+        Check2.SetActive(false);
+        Check3.SetActive(false);
+        x.SetActive(false);
     }
 
     void Update()
     {
-        a += Time.deltaTime;
-        if(a > 2)
+        if(MainCamera.GetComponent<AmongMic>().Ok == true)
         {
             SoundManager.Instance.PlaySound("Amonga");
-            bule.SetActive(true);
-        }if(a > 3)
-            SoundManager.Instance.PlaySound("Amonga");
-        red.SetActive(true);
-        if(a > 4)
-        {
-            SoundManager.Instance.PlaySound("Amonga");
-            yellow.SetActive(true);
-            MainCamera.GetComponent<Inventory>().among = true;
+            Player1.SetActive(true);
+            Player2.SetActive(true);
+            Player3.SetActive(true);
+            if(a >= 0)
+            {
+                Invoke("aaa", 1);
+                Invoke("bbb", 2);
+            }
         }
+    }
+
+    void aaa()
+    {
+        Check1.SetActive(true);
+        Check2.SetActive(true);
+        Check3.SetActive(true);
+        x.SetActive(true);
+    }
+    void bbb()
+    {
+        a = 0;
+        Text.SetActive(true);
+        DeathManager.Instance.OnDeathUI(DeathManager.Instance.DeathList[21]);
     }
 }

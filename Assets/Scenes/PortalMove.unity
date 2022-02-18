@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 346, y: -6.6561}
+  m_AnchoredPosition: {x: 0, y: -0.000002861023}
   m_SizeDelta: {x: 0, y: 13.3122}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &360070359
@@ -1347,6 +1347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 967195062}
   - component: {fileID: 967195061}
+  - component: {fileID: 967195063}
   m_Layer: 0
   m_Name: table
   m_TagString: Untagged
@@ -1419,6 +1420,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &967195063
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967195060}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 1}
+    newSize: {x: 3, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &987298897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,6 +1535,7 @@ GameObject:
   - component: {fileID: 1045448283}
   - component: {fileID: 1045448282}
   - component: {fileID: 1045448284}
+  - component: {fileID: 1045448285}
   m_Layer: 0
   m_Name: portalgun
   m_TagString: Interaction
@@ -1593,10 +1621,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isClicked: 0
-  MainCamera: {fileID: 1838460113}
   Image: {fileID: 987298897}
   potal_bule: {fileID: 1729987525}
   potal_orange: {fileID: 2025533351}
+--- !u!61 &1045448285
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045448281}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.84375, y: 0.46875}
+    newSize: {x: 0.84375, y: 0.46875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.84375, y: 0.46875}
+  m_EdgeRadius: 0
 --- !u!1 &1108128815
 GameObject:
   m_ObjectHideFlags: 0
@@ -1718,6 +1771,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
+      propertyPath: x
+      value: 20.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
+      propertyPath: y
+      value: 2.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
+      propertyPath: SceneName
+      value: LunchRoom
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
 --- !u!1 &1314196100 stripped
@@ -1777,7 +1842,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -189, y: -36}
+  m_AnchoredPosition: {x: 183, y: -48}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1411785836
@@ -1823,7 +1888,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1411785837}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1045448284}
+        m_TargetAssemblyTypeName: Potalgun, Assembly-CSharp
+        m_MethodName: no
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1411785837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1945,13 +2022,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1045448284}
+        m_TargetAssemblyTypeName: Potalgun, Assembly-CSharp
+        m_MethodName: yes
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2198,8 +2275,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isClicked: 0
   SceneName: Moon
-  x: 0
-  y: 0
+  x: 20.38
+  y: 3.63
 --- !u!1 &1838460113
 GameObject:
   m_ObjectHideFlags: 0
@@ -2270,7 +2347,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838460113}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -0.96, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2288,6 +2365,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b602568aa74097848a1f3b8f4c002dbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNotSingle: 0
+  isNotDontdestroy: 0
+  Shoose: 0
   note: 0
   pen: 0
   minem: 0
@@ -2295,6 +2375,7 @@ MonoBehaviour:
   portal: 0
   Creeper: 0
   Chicken: 0
+  Button: 0
 --- !u!114 &1838460118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4738,3 +4819,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isClicked: 0
+  game: {fileID: 5168589092254020267, guid: 901a7d5e99d39634e9a432086e726b62, type: 3}

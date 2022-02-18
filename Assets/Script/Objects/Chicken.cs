@@ -34,6 +34,6 @@ public class Chicken : MonoBehaviour
                 a++;
             }
         }else
-            MainCamera.GetComponent<Inventory>().Chicken = true;
+            DeathManager.Instance.OnDeathUI(DeathManager.Instance.DeathList[11]);
     }
 }

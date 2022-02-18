@@ -7,12 +7,15 @@ public class Pen : Misc
     public GameObject mine;
     public override void Interaction()
     {
-        if (mine.GetComponent<Mine>().chek == true)
+        
+    }
+    private void Update()
+    {
+        if (mine.GetComponent<Pen2>().chek == true)
         {
             StartCoroutine(Hide());
         }
     }
-
     IEnumerator Hide()
     {
         yield return StartCoroutine(TextPrint());

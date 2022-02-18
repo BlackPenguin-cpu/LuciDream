@@ -13,6 +13,7 @@ public class TalkUIManager : Singleton<TalkUIManager>
     private bool IsClick = false;
     public GameObject Box;
     public bool IsTalk = false;
+    public int a = 0;
 
     void Start()
     {
@@ -24,6 +25,7 @@ public class TalkUIManager : Singleton<TalkUIManager>
         if (Input.GetMouseButtonUp(0))
         {
             IsClick = true;
+            a++;
         }
     }
     public IEnumerator TextScript(string Name, List<string> Speech)
