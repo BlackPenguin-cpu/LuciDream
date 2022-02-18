@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 public class CameraManager : Singleton<CameraManager>
 {
     [Header("Post Procssing")]
-    [SerializeField] VolumeProfile Volume;
+    public VolumeProfile Volume;
     Vignette vignette;
     FilmGrain grain;
     DepthOfField depthOfField;
