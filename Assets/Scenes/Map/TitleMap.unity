@@ -346,6 +346,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 29da4cd6f876d6c439012df8a1231901, type: 3}
   - Name: Chickena
     clip: {fileID: 8300000, guid: c97e292e9afaa2849a75133c37e307ae, type: 3}
+  - Name: Die
+    clip: {fileID: 8300000, guid: bbbbd1916a37d084f84850a2d5a2dc8b, type: 3}
   On: 1
   SFXOn: 1
   MusicSlider: {fileID: 5236770127382514329}
@@ -4813,6 +4815,7 @@ MonoBehaviour:
     Text: 
   volume: {fileID: 11400000, guid: b41867d586ed30c47a4b7f62e4fe7c5c, type: 2}
   DeathUI: {fileID: 449625581}
+  Deathimage: {fileID: 0}
   Photo: {fileID: 772817481}
   number: {fileID: 1684443997}
   Description: {fileID: 1626448223}
