@@ -6895,9 +6895,10 @@ GameObject:
   - component: {fileID: 1666104195}
   - component: {fileID: 1666104194}
   - component: {fileID: 1666104193}
-  m_Layer: 7
+  - component: {fileID: 1666104196}
+  m_Layer: 0
   m_Name: UpStairs
-  m_TagString: Untagged
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6993,6 +6994,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1666104196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666104192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26184a1bdfc8bff44a038de7c8d63480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isClicked: 0
+  SceneName: Sans
+  x: -7
+  y: -1
 --- !u!1 &1673294826
 GameObject:
   m_ObjectHideFlags: 0

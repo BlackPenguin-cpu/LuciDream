@@ -91,10 +91,7 @@ public class CameraManager : Singleton<CameraManager>
     }
     void VolumeReset()
     {
-        vignette.intensity.value = 0;
-        grain.intensity.value = 0;
-        depthOfField.mode.value = 0;
-        bloom.intensity.value = 0;
+        Volume.Reset();
 
     }
 

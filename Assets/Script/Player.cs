@@ -183,19 +183,19 @@ public class Player : Singleton<Player>
 
     void VectorStateChecker(Vector2 dir)
     {
-        if (transform.position.x < dir.x)
+        if (Vector3Int.RoundToInt(transform.position).x < dir.x)
         {
             PlayerDir = PlayerDir.RIGHT;
         }
-        else if (transform.position.x > dir.x)
+        else if (Vector3Int.RoundToInt(transform.position).x > dir.x)
         {
             PlayerDir = PlayerDir.LEFT;
         }
-        else if (transform.position.y > dir.y)
+        else if (Vector3Int.RoundToInt(transform.position).y > dir.y)
         {
             PlayerDir = PlayerDir.DOWN;
         }
-        else if (transform.position.y < dir.y)
+        else if (Vector3Int.RoundToInt(transform.position).y < dir.y)
         {
             PlayerDir = PlayerDir.UP;
         }
