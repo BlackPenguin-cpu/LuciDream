@@ -673,7 +673,7 @@ Transform:
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &449625578
 GameObject:
@@ -3687,7 +3687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
       propertyPath: SceneName
-      value: LunchRoom
+      value: ButtonMOve
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
@@ -4671,44 +4671,14 @@ MonoBehaviour:
   - num: 0
     Image: {fileID: 0}
     Text: 
-  - num: 0
-    Image: {fileID: 0}
-    Text: 
-  - num: 0
-    Image: {fileID: 0}
-    Text: 
-  - num: 0
-    Image: {fileID: 0}
-    Text: 
-  - num: 0
-    Image: {fileID: 0}
-    Text: 
-  - num: 0
-    Image: {fileID: 0}
-    Text: 
-  - num: 0
-    Image: {fileID: 0}
-    Text: 
-  - num: 0
-    Image: {fileID: 0}
-    Text: 
-  - num: 0
-    Image: {fileID: 0}
-    Text: 
-  - num: 0
-    Image: {fileID: 0}
-    Text: 
-  - num: 0
-    Image: {fileID: 0}
-    Text: 
   - num: 5
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: cce95a6106812354ea5ed9e485d3715d, type: 3}
     Text: "\uB370\uC2A4\uB178\uD2B8\uC5D0 \uC790\uC2E0\uC758 \uC774\uB984\uC744 \uC801\uC5B4
       \uC0AC\uB9DD\uD588\uC2B5\uB2C8\uB2E4,\n\uC6B0\uB9AC\uB294 \uC774\uB85C\uC368
       \uC0AC\uB78C \uC8FD\uC774\uB294 \uACF5\uCC45\uB3C4 \uB611\uB611\uD55C \uC0AC\uB78C\uC774
       \uC368\uC57C \uD55C\uB2E4\uB294 \uAC78 \uC54C\uAC8C \uB418\uC5C8\uC2B5\uB2C8\uB2E4."
   - num: 6
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: aae76a87c05cbd64daa5c34d70b8a5fe, type: 3}
     Text: "\uBC18\uBCF5\uB41C \uC8FD\uC74C\uC5D0 \uD5C8\uD0C8\uD568\uC744 \uB290\uB080
       \uB2F9\uC2E0\uC740 \uADF8\uB0E5 \uD3EC\uAE30\uD558\uAE30\uB85C \uD588\uC2B5\uB2C8\uB2E4.\n\uB9DE\uC544\uC694
       \uB2E4 \uD3EC\uAE30\uD558\uBA74 \uB9C8\uC74C \uD3B8\uD558\uC8E0, \uC9C0\uAC01\uC740
@@ -4723,7 +4693,7 @@ MonoBehaviour:
     Image: {fileID: 0}
     Text: 
   - num: 10
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 44a4511bd60a43040849f25454edd189, type: 3}
     Text: "\uB2F9\uC2E0\uC740 \uB192\uC73C\uC2E0 \uBD84\uC758 \uBE68\uAC04 \uBC84\uD2BC\uC744
       \uB20C\uB7EC \uD575\uC804\uC7C1\uC744 \uC77C\uC73C\uCF30\uC2B5\uB2C8\uB2E4.\n\uB2F9\uC2E0\uC758
       \uC0AC\uC0C1\uB825 \uC815\uB9D0 \uC774\uB300\uB85C \uAD1C\uCC2E\uC744\uAE4C\uC694?"
@@ -4733,7 +4703,7 @@ MonoBehaviour:
       \n\uC774\uC81C \uB2F9\uC2E0\uC758 \uAFC8\uC5D4 \uB2ED\uB9CC\uC774 \uAC00\uB4DD\uD560
       \uAC81\uB2C8\uB2E4."
   - num: 12
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 4dce0ddef1b8a964681217776290a345, type: 3}
     Text: "\uB2F9\uC2E0\uC740 \uD06C\uB9AC\uD37C\uC640 \uD55C \uBAB8\uC774 \uB418\uC5C8\uC2B5\uB2C8\uB2E4.\n\uD3ED\uBC1C\uC740
       \uC608\uC220\uC774\uC8E0, \uC790\uD3ED\uC740 \uD658\uC0C1\uC774\uACE0\uC694."
   - num: 0
@@ -4745,6 +4715,10 @@ MonoBehaviour:
   - num: 0
     Image: {fileID: 0}
     Text: 
+  - num: 16
+    Image: {fileID: 21300000, guid: 69cfee5e37829e24d88e97ff252d5ac2, type: 3}
+    Text: "\uD53C\uC790\uAC00\uAC8C \uC54C\uBC14\uB294 \uD56D\uC0C1 \uC704\uD5D8\uD55C
+      \uAC83\uC774\uC8E0.\n\uC694\uC2E4\uAE08\uC740 \uC544\uB2C8\uAE38 \uBE4C\uC5B4\uC57C\uACA0\uB124\uC694."
   - num: 0
     Image: {fileID: 0}
     Text: 
@@ -4757,12 +4731,10 @@ MonoBehaviour:
   - num: 0
     Image: {fileID: 0}
     Text: 
-  - num: 0
-    Image: {fileID: 0}
-    Text: 
-  - num: 0
-    Image: {fileID: 0}
-    Text: 
+  - num: 21
+    Image: {fileID: 21300000, guid: d7295db6841c03e49a4a293403cd8860, type: 3}
+    Text: "\uC815\uCE58\uC9C8\uC744 \uB2F9\uD558\uC5EC \uC6B0\uC8FC\uC758 \uBA3C\uC9C0\uAC00
+      \uB418\uC168\uC2B5\uB2C8\uB2E4.\n\uAFC8\uC5D0\uC11C\uB3C4 \uC678\uD1A8\uC774\uAD70\uC694."
   - num: 0
     Image: {fileID: 0}
     Text: 
@@ -4788,10 +4760,40 @@ MonoBehaviour:
     Image: {fileID: 0}
     Text: 
   - num: 30
-    Image: {fileID: 0}
+    Image: {fileID: 21300000, guid: 17ef7114b4d8bbd40923ea109f4057ea, type: 3}
     Text: "\uB2EC\uC740 \uCC38 \uC544\uB984\uB2F5\uAD70\uC694, \uB2EC \uB4A4\uD3B8\uC5D0
       \uC815\uB9D0 \uC911\uAD6D\uAE30\uC9C0\uAC00 \uC788\uB294\uC9C0 \uD655\uC778\uD574
       \uBCFC\uAE4C\uC694?\n\uC544 \uC774\uBBF8 \uC8FD\uC73C\uC168\uAD70\uC694."
+  - num: 0
+    Image: {fileID: 0}
+    Text: 
+  - num: 0
+    Image: {fileID: 0}
+    Text: 
+  - num: 0
+    Image: {fileID: 0}
+    Text: 
+  - num: 0
+    Image: {fileID: 0}
+    Text: 
+  - num: 0
+    Image: {fileID: 0}
+    Text: 
+  - num: 0
+    Image: {fileID: 0}
+    Text: 
+  - num: 0
+    Image: {fileID: 0}
+    Text: 
+  - num: 0
+    Image: {fileID: 0}
+    Text: 
+  - num: 0
+    Image: {fileID: 0}
+    Text: 
+  - num: 0
+    Image: {fileID: 0}
+    Text: 
   volume: {fileID: 11400000, guid: b41867d586ed30c47a4b7f62e4fe7c5c, type: 2}
   DeathUI: {fileID: 449625581}
   Photo: {fileID: 772817481}
