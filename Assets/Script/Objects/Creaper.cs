@@ -24,7 +24,7 @@ public class Creaper : MonoBehaviour
     {
         b = false;
         creeper.SetActive(false);
-        MainCamera.GetComponent<Inventory>().Creeper = true;
+        DeathManager.Instance.OnDeathUI(DeathManager.Instance.DeathList[12]);
     }
 
     void bbb()

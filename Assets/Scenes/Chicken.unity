@@ -513,7 +513,6 @@ GameObject:
   - component: {fileID: 349398669}
   - component: {fileID: 349398668}
   - component: {fileID: 349398665}
-  - component: {fileID: 349398666}
   - component: {fileID: 349398667}
   m_Layer: 0
   m_Name: chicken_run
@@ -548,27 +547,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.028256705, y: 0.04250116}
   m_EdgeRadius: 0
---- !u!50 &349398666
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 349398664}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!114 &349398667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,8 +559,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2123ec0291d94be44aa661b4171c1ed0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextMove: 5
-  game: {fileID: 1339031851}
 --- !u!95 &349398668
 Animator:
   serializedVersion: 3
@@ -5985,7 +5961,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2328226917990281525, guid: 913a0bb99f0de184d95312a5c0d56983, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.51
+      value: -0.48
       objectReference: {fileID: 0}
     - target: {fileID: 2328226917990281525, guid: 913a0bb99f0de184d95312a5c0d56983, type: 3}
       propertyPath: m_LocalPosition.y

@@ -18,10 +18,10 @@ public class ChickenMisc : Objects
     }
     public override void Interaction()
     {
-        if(a < 5)
+        base.Interaction();
+        if (a < 5)
         {
-            base.Interaction();
-            StartCoroutine(TextPrint());
+            StartCoroutine(TalkUIManager.Instance.TextScript(Name, Speech));
             a++;
         }
         else
@@ -31,7 +31,7 @@ public class ChickenMisc : Objects
             Player.Instance.transform.position = new Vector3(x, y);
         }
     }
-    protected virtual IEnumerator TextPrint()
+    IEnumerator enumerator()
     {
         yield return StartCoroutine(TalkUIManager.Instance.TextScript(Name, Speech));
     }

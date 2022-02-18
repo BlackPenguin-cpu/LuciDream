@@ -16,7 +16,6 @@ public class memoryMove : Objects
     void PlayerMove()
     {
         SoundManager.Instance.PlaySound("MiDaatDoor");
-        Player.Instance.CoroutineQuit();
         Player.Instance.transform.position = new Vector3(x, y);
         SceneManager.LoadScene(SceneName);
     }

@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using System.Threading.Tasks;
-using System.Threading;
 
 public class CameraManager : Singleton<CameraManager>
 {
@@ -19,6 +19,7 @@ public class CameraManager : Singleton<CameraManager>
 
     [Header("Camera")]
     [SerializeField] Player player;
+    public Image BlackScreen;
     bool isBed;
     public bool isUIon;
     float Timer;
