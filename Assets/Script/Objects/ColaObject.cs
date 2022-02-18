@@ -6,7 +6,6 @@ public class ColaObject : Objects
 {
     private Animator anim;
     public int number;
-    public Sprite image;
     public string text;
     public override void Interaction()
     {
@@ -14,6 +13,6 @@ public class ColaObject : Objects
         anim = GetComponent<Animator>();
         anim.SetBool("isClick", true);
         Debug.Log("µðÁü ¤µ¤¡");
-        DeathManager.Instance.OnDeathUI(number, image, text);
+        //DeathManager.Instance.OnDeathUI(number, text);
     }
 }

@@ -6,7 +6,6 @@ public class LegoObject : MonoBehaviour
 {
     public int number;
     public string text;
-    public 
     void Start()
     {
         
@@ -21,8 +20,7 @@ public class LegoObject : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            Debug.Log("¿¿æ÷");
-            //DeathManager.Instance.OnDeathUI()
+            //DeathManager.Instance.OnDeathUI(number, text);
         }
     }
 }
