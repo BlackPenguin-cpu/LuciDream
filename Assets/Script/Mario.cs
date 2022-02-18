@@ -6,6 +6,8 @@ using DG.Tweening;
 public class Mario : MonoBehaviour
 {
     private Rigidbody2D rigid;
+    public int number;
+    public string text;
 
     void Start()
     {
@@ -30,5 +32,11 @@ public class Mario : MonoBehaviour
     {
         this.gameObject.SetActive(false);
         Player.Instance._State = PlayerState.DIE;
+        Invoke(nameof(death), 3f);
+    }
+
+    void death()
+    {
+        DeathManager.Instance.OnDeathUI(number, text);
     }
 }
