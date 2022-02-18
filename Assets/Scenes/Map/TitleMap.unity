@@ -346,6 +346,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 29da4cd6f876d6c439012df8a1231901, type: 3}
   - Name: Chickena
     clip: {fileID: 8300000, guid: c97e292e9afaa2849a75133c37e307ae, type: 3}
+  - Name: Die
+    clip: {fileID: 8300000, guid: bbbbd1916a37d084f84850a2d5a2dc8b, type: 3}
   On: 1
   SFXOn: 1
   MusicSlider: {fileID: 5236770127382514329}
