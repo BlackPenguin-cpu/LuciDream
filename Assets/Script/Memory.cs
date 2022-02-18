@@ -195,7 +195,7 @@ public class Memory : MonoBehaviour
             if (a == c)
             {
                 Good.SetActive(true);
-                Invoke("good", 2);
+                Invoke("good", 1);
 
                 if(c == 5)
                 {
@@ -247,7 +247,7 @@ public class Memory : MonoBehaviour
         else if(Red == 0)
         {
             Bad.SetActive(true);
-            Invoke("bad", 2);
+            Invoke("bad", 1);
         }
     }
     public void Yellowa()
@@ -268,7 +268,7 @@ public class Memory : MonoBehaviour
         else if (Yellow == 0)
         {
             Bad.SetActive(true);
-            Invoke("bad", 2);
+            Invoke("bad", 1);
         }
     }
     public void Greena()
@@ -289,7 +289,7 @@ public class Memory : MonoBehaviour
         else if (Green == 0)
         {
             Bad.SetActive(true);
-            Invoke("bad", 2);
+            Invoke("bad", 1);
         }
     }
     public void Bluea()
@@ -310,7 +310,7 @@ public class Memory : MonoBehaviour
         else if (Blue == 0)
         {
             Bad.SetActive(true);
-            Invoke("bad", 2);
+            Invoke("bad", 1);
         }
     }
     public void Orangea()
@@ -331,7 +331,7 @@ public class Memory : MonoBehaviour
         else if (Orange == 0)
         {
             Bad.SetActive(true);
-            Invoke("bad", 2);
+            Invoke("bad", 1);
         }
     }
     public void Pinka()
@@ -352,7 +352,7 @@ public class Memory : MonoBehaviour
         else if (Pink == 0)
         {
             Bad.SetActive(true);
-            Invoke("bad", 2);
+            Invoke("bad", 1);
         }
     }
     public void Minta()
@@ -373,7 +373,7 @@ public class Memory : MonoBehaviour
         else if (Mint == 0)
         {
             Bad.SetActive(true);
-            Invoke("bad", 2);
+            Invoke("bad", 1);
         }
     }
     public void Blacka()
@@ -394,7 +394,7 @@ public class Memory : MonoBehaviour
         else if (Black == 0)
         {
             Bad.SetActive(true);
-            Invoke("bad", 2);
+            Invoke("bad", 1);
         }
     }
     public void Purplea()
@@ -415,7 +415,7 @@ public class Memory : MonoBehaviour
         else if (Purple == 0)
         {
             Bad.SetActive(true);
-            Invoke("bad", 2);
+            Invoke("bad", 1);
         }
     }
 }

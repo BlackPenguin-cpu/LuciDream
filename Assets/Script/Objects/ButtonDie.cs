@@ -8,9 +8,10 @@ public class ButtonDie : Objects
     int i = 0;
     public GameObject red;
     public GameObject gm;
-    public GameObject MainCamera;
+    public GameObject blue;
     protected override void Start()
     {
+        base.Start();
         anim = GetComponent<Animator>();
         red.SetActive(false);
         gm.SetActive(false);
@@ -28,6 +29,7 @@ public class ButtonDie : Objects
     void aaa()
     {
         i = 0;
+        blue.GetComponent<CameraWark>().VibrateDorTime(2);
         anim.SetBool("isButton", false);
         red.SetActive(true);
         Invoke("Red", 2);
@@ -36,12 +38,11 @@ public class ButtonDie : Objects
 
     void Red()
     {
-        red.SetActive(false);
+        gm.SetActive(true);
     }
 
     void Die()
     {
-        gm.SetActive(true);
-        MainCamera.GetComponent<Inventory>().Button = true;
+        DeathManager.Instance.OnDeathUI(DeathManager.Instance.DeathList[10]);
     }
 }

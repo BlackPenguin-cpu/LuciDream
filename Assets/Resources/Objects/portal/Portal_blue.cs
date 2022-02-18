@@ -4,9 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Portal_blue : MonoBehaviour
 {
-    public GameObject MainCamera;
     private void Start()
     {
-        MainCamera.GetComponent<Inventory>().portal = true;
+        Invoke("aaa", 3);
+    }
+
+    void aaa()
+    {
+        DeathManager.Instance.OnDeathUI(DeathManager.Instance.DeathList[30]);
     }
 }

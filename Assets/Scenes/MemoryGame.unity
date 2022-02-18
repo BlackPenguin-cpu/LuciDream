@@ -2964,8 +2964,8 @@ MonoBehaviour:
   Bad: {fileID: 1524917960}
   Player2: {fileID: 5168589092254020267, guid: 901a7d5e99d39634e9a432086e726b62, type: 3}
   SceneName: ButtonMOve
-  x: 0
-  y: 0
+  x: -0.53
+  y: -5.45
   Deletetime: 1
   Deletetime1: 0.5
   aaatime: 2

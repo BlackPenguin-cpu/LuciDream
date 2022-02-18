@@ -22,10 +22,11 @@ public class Pen2 : Objects
     {
         base.Interaction();
         StartCoroutine(TalkUIManager.Instance.TextScript(Name, Speech));
-        if (Input.GetMouseButtonUp(0))
-        {
-            Image.SetActive(true);
-        }
+        Invoke("aaa", 1.5f);
+    }
+    void aaa()
+    {
+        Image.SetActive(true);
     }
     IEnumerator enumerator()
     {
