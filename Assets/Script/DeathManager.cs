@@ -102,4 +102,12 @@ public class DeathManager : Singleton<DeathManager>
         Player.Instance.transform.position = new Vector3(0, 2, 0);
         SceneManager.LoadScene("TitleMap");
     }
+
+    private void Update()
+    {
+        if(DeathUI.gameObject.activeSelf == true)
+        {
+            if (Input.anyKey || Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) UIOff();
+        }
+    }
 }

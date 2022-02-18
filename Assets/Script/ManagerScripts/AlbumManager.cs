@@ -27,7 +27,7 @@ public class AlbumManager : Singleton<AlbumManager>
 
     }
 
-    void Save()
+    public void Save()
     {
         saveData.explanation = explanation;
         saveData.unlock = unlock;
