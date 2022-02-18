@@ -146,6 +146,7 @@ public class Player : Singleton<Player>
         {
             InteractionObj.isClicked = false;
             InteractionObj._isOutLine = false;
+            InteractionObj = null;
         }
 
         foreach (RaycastHit2D hit in hitobjects)

@@ -5,28 +5,22 @@ using UnityEngine;
 public class Shoose : Misc
 {
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        StartCoroutine(Hide());
-
+        base.Start();
+        if (Inventory.Instance.Shoose) gameObject.SetActive(false);
     }
 
     public override void Interaction()
     {
         base.Interaction();
-        StartCoroutine(Hide());
     }
     protected override IEnumerator TextPrint()
     {
-        yield return base.TextPrint();
-
-    }
-
-    IEnumerator Hide()
-    {
-
-        yield return new WaitForSeconds(10);
+        yield return StartCoroutine(base.TextPrint());
+        Inventory.Instance.Shoose = true;
         this.gameObject.SetActive(false);
     }
+
 }
 
