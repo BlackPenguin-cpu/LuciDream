@@ -24,7 +24,7 @@ public abstract class Objects : MonoBehaviour
             isOutLine = value;
         }
     }
-    private void Start()
+    protected virtual void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
