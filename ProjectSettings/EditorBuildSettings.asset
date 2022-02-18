@@ -35,4 +35,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map/Mario.unity
     guid: 5cad26ea74e22d84f973c0a6215f0207
+  - enabled: 1
+    path: Assets/Scenes/Deathnote.unity
+    guid: 26de82c4d952ba84182d8e63cff48e3b
+  - enabled: 1
+    path: Assets/Scenes/Garbagedump.unity
+    guid: 2cd5f20bf79fc024e89175ab666b7c1f
+  - enabled: 1
+    path: Assets/Scenes/ButtonMOve.unity
+    guid: 8df7d850c7178c948b0a79b50aa382cc
   m_configObjects: {}

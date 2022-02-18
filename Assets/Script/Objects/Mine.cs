@@ -12,8 +12,9 @@ public class Mine : Objects
     public bool chek = false;
     public GameObject MainCamera;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         mine.SetActive(true);
         Image.SetActive(false);
     }

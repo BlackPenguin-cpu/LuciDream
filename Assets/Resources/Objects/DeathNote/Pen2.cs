@@ -12,8 +12,9 @@ public class Pen2 : Objects
     public bool chek = false;
     public GameObject MainCamera;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         pen.SetActive(true);
         Image.SetActive(false);
     }
