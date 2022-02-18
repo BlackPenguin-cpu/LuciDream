@@ -1656,11 +1656,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
       propertyPath: x
-      value: 29
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
       propertyPath: y
-      value: -3
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
       propertyPath: SceneName

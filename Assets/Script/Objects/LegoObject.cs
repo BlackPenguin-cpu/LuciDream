@@ -20,7 +20,7 @@ public class LegoObject : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            //DeathManager.Instance.OnDeathUI(number, text);
+            DeathManager.Instance.OnDeathUI(number, text);
         }
     }
 }
