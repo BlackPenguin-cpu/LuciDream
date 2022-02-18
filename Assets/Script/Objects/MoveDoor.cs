@@ -11,7 +11,6 @@ public class MoveDoor : Objects
     public override void Interaction()
     {
         base.Interaction();
-        Debug.Log("¿Ãµø");
         PlayerMove();
     }
 
