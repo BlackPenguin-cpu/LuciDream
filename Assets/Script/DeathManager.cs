@@ -112,18 +112,16 @@ public class DeathManager : Singleton<DeathManager>
 
         vignette.intensity.value = 5;
     }
-    public void OnDeathUI(int num,Sprite image,string text)
+    public void OnDeathUI(int num,string text)
     {
         onDeadReset();
         Player.Instance.Dead = true;
         AlbumManager.Instance.gameObject.SetActive(true);
-        AlbumManager.Instance.image[num] = image;
         AlbumManager.Instance.unlock[num] = true;
         AlbumManager.Instance.explanation[num] = text;
         AlbumManager.Instance.Save();
 
         DeathUI.gameObject.SetActive(true);
-        Photo.sprite = image;
         number.text = "# " + num;
         Description.text = text;
 

@@ -9,7 +9,6 @@ public class GasterBlaster : MonoBehaviour
 {
     int time;
     [SerializeField] int num;
-    [SerializeField] Sprite sprite;
     [SerializeField] string Desc;
     [SerializeField] bool shoot = false;
     [SerializeField] float Speed = 1;
@@ -28,7 +27,7 @@ public class GasterBlaster : MonoBehaviour
         yield return new WaitForSeconds(2);
         if (Player.Instance.Dead == false)
         {
-            DeathManager.Instance.OnDeathUI(num, sprite, Desc);
+            DeathManager.Instance.OnDeathUI(num, Desc);
         }
     }
     public void ShootFormChange()
