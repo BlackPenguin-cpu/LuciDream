@@ -2,31 +2,72 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Creaper : Objects
+public class Creaper : MonoBehaviour
 {
     Animator anim;
     public GameObject creeper;
-    public string Name;
-    public List<string> Speech;
-    public AudioClip creaper;
-    AudioSource audioSource;
+    public GameObject black;
+    public GameObject MainCamera;
+    public float a;
+    public bool b;
     void Start()
     {
         anim = GetComponent<Animator>();
+        creeper.transform.position = new Vector3(0.96f, -1.42f, 5);
     }
-
+    private void Update()
+    {
+        a += Time.deltaTime;
+        bbb();
+    }
     void aaa()
     {
-        anim.SetBool("isPang", false);
+        b = false;
         creeper.SetActive(false);
-        print("Á×À½");
+        MainCamera.GetComponent<Inventory>().Creeper = true;
     }
-    public override void Interaction()
+
+    void bbb()
     {
-        base.Interaction();
-        StartCoroutine(TalkUIManager.Instance.TextScript(Name, Speech));
-        anim.SetBool("isPang", true);
-        audioSource.clip = creaper;
-        Invoke("aaa", 1.5f);
+        if (a > 1)
+        {
+            black.SetActive(true);
+        }
+        if (a > 2)
+        {
+            black.SetActive(false);
+        }
+        if (a > 3)
+        {
+            black.SetActive(true);
+        }
+        if (a > 4)
+        {
+            creeper.transform.position = new Vector3(0.96f, -1.42f, -2.4f);
+            black.SetActive(false);
+        }
+        if (a > 5)
+        {
+            creeper.transform.position = new Vector3(0.96f, -1.42f, 5);
+            black.SetActive(true);
+        }
+        if (a > 6)
+        {
+            black.SetActive(false);
+        }
+        if(a > 7)
+        {
+            black.SetActive(true);
+        }
+        if(a > 8)
+        {
+            creeper.transform.position = new Vector3(0.96f, -1.42f, -2.4f);
+            black.SetActive(false);
+        }
+        if(a > 9)
+        {
+            b = true;
+            Invoke("aaa", 1.3f);
+        }
     }
 }

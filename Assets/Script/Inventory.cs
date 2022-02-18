@@ -12,6 +12,7 @@ public class Inventory : Singleton<Inventory>
     public bool minem = false;
     public bool among = false;
     public bool portal = false;
+    public bool Creeper = false;
 
     private void Update()
     {
@@ -41,7 +42,12 @@ public class Inventory : Singleton<Inventory>
 
         if (portal == true)
         {
-            if (Player.Instance.Dead == false) StartCoroutine(DeathManager.Instance.amongDie());
+            if (Player.Instance.Dead == false) StartCoroutine(DeathManager.Instance.portalDie());
+        }
+
+        if(Creeper == true)
+        {
+            if (Player.Instance.Dead == false) StartCoroutine(DeathManager.Instance.CreeperDie());
         }
     }
 }

@@ -9,6 +9,7 @@ public class Among : MonoBehaviour
     public GameObject yellow;
     public float a = 0;
     public GameObject MainCamera;
+    
     void Start()
     {
         bule.SetActive(false);
@@ -21,6 +22,7 @@ public class Among : MonoBehaviour
         a += Time.deltaTime;
         if(a > 2)
         {
+            SoundManager.Instance.PlaySound("Amonga");
             bule.SetActive(true);
         }if(a > 3)
             red.SetActive(true);

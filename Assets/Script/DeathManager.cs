@@ -7,20 +7,8 @@ using TMPro;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-[System.Serializable]
-public class DeathResources
-{
-    public int num;
-    public Sprite Image;
-    [TextArea]
-    public string Text;
-}
-
 public class DeathManager : Singleton<DeathManager>
 {
-    public List<DeathResources> DeathList;
-
-    [Header("연출")]
     [SerializeField] VolumeProfile volume;
     [SerializeField] Canvas DeathUI;
     [SerializeField] Image Photo;
@@ -31,34 +19,12 @@ public class DeathManager : Singleton<DeathManager>
     public IEnumerator ShooseDie()
     {
         yield return new WaitForSeconds(1);
-        Player.Instance.Dead = true;
+        Player.Instance._State = PlayerState.DIE;
 
         volume.TryGet(out vignette);
-        vignette.color.value = new Color(0, 0, 0, 0.5f);
-        StartCoroutine(RollingGirl());
-        while (vignette.intensity.value < 0.5f)
-        {
-            vignette.intensity.value += 0.001f;
-            yield return new WaitForSeconds(0.02f);
-        }
 
-        OnDeathUI(DeathList[1]);
+        vignette.intensity.value = 1;
     }
-    public IEnumerator RollingGirl()
-    {
-        Rigidbody2D rigid = Player.Instance.GetComponent<Rigidbody2D>();
-        rigid.bodyType = RigidbodyType2D.Dynamic;
-        rigid.gravityScale = 0.3f;
-        for (int i = 0; i < 10; i++)
-        {
-            rigid.velocity = new Vector2(0,0);
-            rigid.angularVelocity = 0;
-            rigid.AddForce(new Vector3(-1f, 2, 0), ForceMode2D.Impulse);
-            rigid.AddTorque(-5f,ForceMode2D.Impulse);
-            yield return new WaitForSeconds(2);
-        }
-    }
-
     public IEnumerator DeathNote()
     {
         yield return new WaitForSeconds(5);
@@ -77,12 +43,24 @@ public class DeathManager : Singleton<DeathManager>
 
         vignette.intensity.value = 5;
     }
+    public IEnumerator portalDie()
+    {
+        yield return new WaitForSeconds(5);
+        Player.Instance._State = PlayerState.DIE;
 
+        volume.TryGet(out vignette);
 
+        vignette.intensity.value = 5;
+    }
+    public IEnumerator CreeperDie()
+    {
+        yield return new WaitForSeconds(5);
+        Player.Instance._State = PlayerState.DIE;
 
+        volume.TryGet(out vignette);
 
-
-
+        vignette.intensity.value = 5;
+    }
     public void OnDeathUI(int num, Sprite image, string Text)
     {
         AlbumManager.Instance.gameObject.SetActive(true);
@@ -90,25 +68,9 @@ public class DeathManager : Singleton<DeathManager>
         AlbumManager.Instance.unlock[num] = true;
         AlbumManager.Instance.explanation[num] = Text;
 
-        Photo.sprite = image;
+        /*Photo.sprite = image;
         number.text = "# " + num;
-        Description.text = Text;
-
-        //여따가 num은 번호 image는 이미지 Text는 설명이니까 알아서 적용시켜^^
-
-    }
-
-    public void OnDeathUI(DeathResources List)
-    {
-        AlbumManager.Instance.gameObject.SetActive(true);
-        AlbumManager.Instance.image[List.num] = List.Image;
-        AlbumManager.Instance.unlock[List.num] = true;
-        AlbumManager.Instance.explanation[List.num] = List.Text;
-
-        DeathUI.gameObject.SetActive(true);
-        Photo.sprite = List.Image;
-        number.text = "# " + List.num;
-        Description.text = List.Text;
+        Description.text = Text;*/
 
         //여따가 num은 번호 image는 이미지 Text는 설명이니까 알아서 적용시켜^^
 
@@ -120,10 +82,5 @@ public class DeathManager : Singleton<DeathManager>
 
         Player.Instance.transform.position = new Vector3(0, 2, 0);
         SceneManager.LoadScene("TitleMap");
-    }
-
-    private void onDeadReset()
-    {
-        volume.Reset();
     }
 }

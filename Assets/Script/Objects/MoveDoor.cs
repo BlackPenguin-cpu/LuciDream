@@ -16,6 +16,7 @@ public class MoveDoor : Objects
 
     void PlayerMove()
     {
+        Player.Instance.CoroutineQuit();
         Player.Instance.transform.position = new Vector3(x, y);
         SceneManager.LoadScene(SceneName);
     }

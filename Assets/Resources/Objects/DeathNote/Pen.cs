@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class Pen : Misc
 {
-    void Start()
-    {
-        StartCoroutine(Hide());
-
-    }
-
+    public GameObject mine;
     public override void Interaction()
     {
-        StartCoroutine(Hide());
+        if (mine.GetComponent<Mine>().chek == true)
+        {
+            StartCoroutine(Hide());
+        }
     }
 
     IEnumerator Hide()
     {
-        yield return new WaitForSeconds(10);
+        yield return StartCoroutine(TextPrint());
         this.gameObject.SetActive(false);
     }
 }

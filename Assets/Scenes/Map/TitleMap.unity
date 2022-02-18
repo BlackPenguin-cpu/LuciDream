@@ -325,7 +325,13 @@ MonoBehaviour:
   isNotSingle: 0
   isNotDontdestroy: 0
   audioSource: {fileID: 1734116838}
-  clips: []
+  clips:
+  - Name: Amonga
+    clip: {fileID: 8300000, guid: 311257138238c6c43b384e8c87ba56d5, type: 3}
+  - Name: 
+    clip: {fileID: 0}
+  - Name: 
+    clip: {fileID: 0}
   On: 1
   SFXOn: 1
   MusicSlider: {fileID: 5236770127382514329}

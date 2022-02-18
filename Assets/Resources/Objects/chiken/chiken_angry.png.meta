@@ -1,13 +1,7 @@
 fileFormatVersion: 2
-guid: 8148b8e0e68e5774d954c9152648929f
+guid: d12154e3a6d15c94994c623b39a23085
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 3562792200860003302
-    second: "\uACC4\uB2E8 3_0"
-  - first:
-      213: -182334053852579144
-    second: "\uACC4\uB2E8 3_1"
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -94,7 +88,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -107,49 +101,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: "\uACC4\uB2E8 3_0"
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 93.5
-        width: 192
-        height: 93.5
-      alignment: 9
-      pivot: {x: 32, y: 64}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ebeac451a4917130800000000000000
-      internalID: 3562792200860003302
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\uACC4\uB2E8 3_1"
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0.5
-        width: 192
-        height: 93.5
-      alignment: 9
-      pivot: {x: 32, y: 64}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8baf8a1e428387df0800000000000000
-      internalID: -182334053852579144
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
