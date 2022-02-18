@@ -16,8 +16,8 @@ public class CreeperAinm : MonoBehaviour
         a += Time.deltaTime;
         if (a > 9)
         {
-            SoundManager.Instance.PlaySound("creepera");
             anim.SetBool("isPang", true);
+            SoundManager.Instance.PlaySound("creepera");
         }
         else
         {

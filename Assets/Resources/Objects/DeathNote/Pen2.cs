@@ -10,7 +10,7 @@ public class Pen2 : Objects
     bool mineyes = true;
     public GameObject Image;
     public bool chek = false;
-    public GameObject MainCamera;
+    public GameObject Pentable;
 
     protected override void Start()
     {
@@ -34,7 +34,7 @@ public class Pen2 : Objects
     public void yes()
     {
         chek = true;
-        MainCamera.GetComponent<Inventory>().pen = true;
+        Inventory.Instance.pen = true;
         Image.SetActive(false);
     }
 

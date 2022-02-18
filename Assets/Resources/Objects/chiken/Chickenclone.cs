@@ -4,26 +4,20 @@ using UnityEngine;
 
 public class Chickenclone : MonoBehaviour
 {
-    Rigidbody2D rigid;
     Animator anim;
     public int nextMove;
-    public GameObject Chi;
-    public GameObject Player;
+    public GameObject game;
+
+
     private void Start()
     {
-        Vector3 player = Player.transform.position;
-        Chi.transform.position = new Vector3(player.x, 3, -1);
-    }
-    private void Awake()
-    {
         anim = GetComponent<Animator>();
-        rigid = GetComponent<Rigidbody2D>();
         Invoke("Think", 1);
     }
     void FixedUpdate()
     {
-        SoundManager.Instance.PlaySound("Chickena");
-        rigid.velocity = new Vector2(nextMove, rigid.velocity.y);
+        //  SoundManager.Instance.PlaySound("Chickena");
+        transform.position = Vector3.Lerp(transform.position, game.transform.position, Time.deltaTime);
         anim.SetBool("isChicken", true);
     }
 

@@ -9,9 +9,9 @@ public class Note : Objects
     public GameObject MainCamera;
     public override void Interaction()
     {
-        if(MainCamera.GetComponent<Inventory>().pen == false)
+        base.Interaction();
+        if (MainCamera.GetComponent<Inventory>().pen == false)
         {
-            base.Interaction();
             StartCoroutine(TalkUIManager.Instance.TextScript(Name, Speech));
         }
         else
