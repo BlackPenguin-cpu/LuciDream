@@ -752,6 +752,7 @@ MonoBehaviour:
   isNotDontdestroy: 0
   Volume: {fileID: 0}
   player: {fileID: 0}
+  BlackScreen: {fileID: 0}
   isUIon: 0
 --- !u!114 &412411548
 MonoBehaviour:
@@ -776,6 +777,7 @@ MonoBehaviour:
   Creeper: 0
   Chicken: 0
   Button: 0
+  MissingPoster: 0000000000
 --- !u!1 &554348294
 GameObject:
   m_ObjectHideFlags: 0
@@ -4571,7 +4573,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 622883556}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0bf45b7c6eb78f448cce8c755fe0429, type: 3}
+  m_Script: {fileID: 11500000, guid: 26184a1bdfc8bff44a038de7c8d63480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isClicked: 0
@@ -7581,7 +7583,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1735595976}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0bf45b7c6eb78f448cce8c755fe0429, type: 3}
+  m_Script: {fileID: 11500000, guid: 26184a1bdfc8bff44a038de7c8d63480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isClicked: 0

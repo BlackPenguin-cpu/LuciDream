@@ -2648,6 +2648,7 @@ MonoBehaviour:
   isNotDontdestroy: 0
   Volume: {fileID: 0}
   player: {fileID: 0}
+  BlackScreen: {fileID: 0}
   isUIon: 0
 --- !u!1 &226266015
 GameObject:
@@ -5715,8 +5716,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isClicked: 0
   SceneName: 1F
-  x: -5
-  y: -8
+  x: 0
+  y: -7
 --- !u!61 &1365994540
 BoxCollider2D:
   m_ObjectHideFlags: 0
