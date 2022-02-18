@@ -4,35 +4,22 @@ using UnityEngine;
 
 public class Chicken : MonoBehaviour
 {
-    Rigidbody2D rigid;
-    Animator anim;
-    public int nextMove;
     public GameObject chicken;
     public int a = 0;
     int i = 0;
     public GameObject MainCamera;
 
-    private void Start()
-    {
-
-    }
     private void Awake()
     {
-        anim = GetComponent<Animator>();
-        rigid = GetComponent<Rigidbody2D>();
-        Invoke("Think", 1);        
+        Invoke("Think", 1);
     }
     void FixedUpdate()
     {
-        SoundManager.Instance.PlaySound("Chickena");
-        rigid.velocity = new Vector2(nextMove, rigid.velocity.y);
-        anim.SetBool("isChicken", true);
         Invoke("aaa", 0.5f);
     }
 
     void Think()
     {     
-        nextMove = Random.Range(-2, 0);     
         Invoke("Think", 0.5f); 
         i++;
     }
