@@ -607,6 +607,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 917185048}
+  number: 26
+  text: "\uC61B\uB0A0 \uB808\uD2B8\uB85C \uAC8C\uC784\uC740 \uC870\uC2EC\uD560\uAC8C
+    \uB9CE\uC8E0.... \uC608\uB97C\uB4E4\uC5B4 \uC774\uBE68\uBE60\uC9C4 \uB9CC\uB450\uB77C\uB358\uAC00..."
 --- !u!1 &1931999122
 GameObject:
   m_ObjectHideFlags: 0
