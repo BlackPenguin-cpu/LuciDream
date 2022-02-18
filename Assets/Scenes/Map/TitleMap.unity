@@ -329,7 +329,7 @@ MonoBehaviour:
   - Name: Amonga
     clip: {fileID: 8300000, guid: 311257138238c6c43b384e8c87ba56d5, type: 3}
   - Name: creepera
-    clip: {fileID: 8300000, guid: cf2728f6784b0384f8552c6732061dad, type: 3}
+    clip: {fileID: 8300000, guid: ce194d1e56e7aba49804a07906c946b5, type: 3}
   - Name: deathnotea
     clip: {fileID: 8300000, guid: 7f777a22b2a3360499f7881c7a05bbae, type: 3}
   - Name: Glassa
@@ -342,7 +342,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: ce194d1e56e7aba49804a07906c946b5, type: 3}
   - Name: Explosiona
     clip: {fileID: 8300000, guid: bb9b539d1c8dee6409791f49e8a71232, type: 3}
-  - Name: Explosiona
+  - Name: SlanderSound
     clip: {fileID: 8300000, guid: 29da4cd6f876d6c439012df8a1231901, type: 3}
   - Name: Chickena
     clip: {fileID: 8300000, guid: c97e292e9afaa2849a75133c37e307ae, type: 3}

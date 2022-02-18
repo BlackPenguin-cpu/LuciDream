@@ -41,4 +41,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Garbagedump.unity
     guid: 2cd5f20bf79fc024e89175ab666b7c1f
+  - enabled: 1
+    path: Assets/Scenes/Chicken.unity
+    guid: cf60a79318715664da54467cc360dfef
+  - enabled: 1
+    path: Assets/Scenes/PortalMove.unity
+    guid: d463c319717fd55429b6381c4ff06472
+  - enabled: 1
+    path: Assets/Scenes/Deathnote.unity
+    guid: 26de82c4d952ba84182d8e63cff48e3b
+  - enabled: 1
+    path: Assets/Scenes/Among.unity
+    guid: fb0a209cdd88c27458cf841f855fbdc9
+  - enabled: 1
+    path: Assets/Scenes/ButtonMOve.unity
+    guid: 8df7d850c7178c948b0a79b50aa382cc
+  - enabled: 1
+    path: Assets/Scenes/Moon.unity
+    guid: 2870883638316fe4780c637bc2e6bed9
   m_configObjects: {}

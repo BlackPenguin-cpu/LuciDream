@@ -2,24 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonDie : MonoBehaviour
+public class ButtonDie : Objects
 {
     Animator anim;
     int i = 0;
     public GameObject red;
     public GameObject gm;
-    public GameObject Player2;
-    void Start()
+    public GameObject MainCamera;
+    protected override void Start()
     {
-        Player2.SetActive(false);
         anim = GetComponent<Animator>();
         red.SetActive(false);
         gm.SetActive(false);
     }
-    public void ButtonOn()
+    public override void Interaction()
     {
         i++;
-        if(i > 0)
+        if (i > 0)
         {
             anim.SetBool("isButton", true);
             Invoke("aaa", 0.1f);
@@ -43,6 +42,6 @@ public class ButtonDie : MonoBehaviour
     void Die()
     {
         gm.SetActive(true);
-        print("Á×À½");
+        MainCamera.GetComponent<Inventory>().Button = true;
     }
 }
