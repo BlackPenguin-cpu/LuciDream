@@ -25,9 +25,11 @@ public class Among : MonoBehaviour
             SoundManager.Instance.PlaySound("Amonga");
             bule.SetActive(true);
         }if(a > 3)
-            red.SetActive(true);
+            SoundManager.Instance.PlaySound("Amonga");
+        red.SetActive(true);
         if(a > 4)
         {
+            SoundManager.Instance.PlaySound("Amonga");
             yellow.SetActive(true);
             MainCamera.GetComponent<Inventory>().among = true;
         }

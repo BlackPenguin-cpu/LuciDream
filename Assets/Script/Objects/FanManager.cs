@@ -39,6 +39,6 @@ public class FanManager : MonoBehaviour
     void Die()
     {
         Debug.Log("¡Í±›!");
-        //DeathManager.Instance.OnDeathUI(number, text);
+        DeathManager.Instance.OnDeathUI(number, text);
     }
 }

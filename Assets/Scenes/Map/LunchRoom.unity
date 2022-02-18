@@ -251,7 +251,6 @@ GameObject:
   m_Component:
   - component: {fileID: 116134600}
   - component: {fileID: 116134599}
-  - component: {fileID: 116134598}
   - component: {fileID: 116134602}
   - component: {fileID: 116134601}
   m_Layer: 7
@@ -261,14 +260,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &116134598
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116134597}
-  m_Enabled: 1
 --- !u!20 &116134599
 Camera:
   m_ObjectHideFlags: 0
@@ -389,7 +380,7 @@ GameObject:
   - component: {fileID: 157620299}
   m_Layer: 7
   m_Name: table (9)
-  m_TagString: Untagged
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1502,7 +1493,7 @@ GameObject:
   - component: {fileID: 265551378}
   m_Layer: 7
   m_Name: table (6)
-  m_TagString: Untagged
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1827,7 +1818,7 @@ GameObject:
   - component: {fileID: 429027665}
   m_Layer: 7
   m_Name: table (7)
-  m_TagString: Untagged
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2520,7 +2511,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627476563}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.49, z: -2}
+  m_LocalPosition: {x: 0, y: -0.49, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1444823770}
@@ -2825,7 +2816,7 @@ GameObject:
   - component: {fileID: 992459882}
   m_Layer: 7
   m_Name: table (4)
-  m_TagString: Untagged
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3299,7 +3290,7 @@ GameObject:
   - component: {fileID: 1054169777}
   m_Layer: 7
   m_Name: table (16)
-  m_TagString: Untagged
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3429,7 +3420,7 @@ GameObject:
   - component: {fileID: 1147286766}
   m_Layer: 7
   m_Name: table (10)
-  m_TagString: Untagged
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4056,7 +4047,7 @@ GameObject:
   - component: {fileID: 1203437091}
   m_Layer: 7
   m_Name: table (13)
-  m_TagString: Untagged
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4186,7 +4177,7 @@ GameObject:
   - component: {fileID: 1214342152}
   m_Layer: 7
   m_Name: table (8)
-  m_TagString: Untagged
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4316,7 +4307,7 @@ GameObject:
   - component: {fileID: 1265838534}
   m_Layer: 7
   m_Name: table (14)
-  m_TagString: Untagged
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4558,6 +4549,7 @@ MonoBehaviour:
   portal: 0
   Creeper: 0
   Chicken: 0
+  Button: 0
 --- !u!61 &1444823768
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7793,7 +7785,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526029160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.33, y: 2.39, z: -2}
+  m_LocalPosition: {x: 19.27, y: 2.27, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7844,7 +7836,7 @@ MonoBehaviour:
   pen: {fileID: 1526029160}
   Image: {fileID: 1045289212}
   chek: 0
-  MainCamera: {fileID: 1444823766}
+  Pentable: {fileID: 1444823766}
 --- !u!114 &1526029166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8348,7 +8340,7 @@ GameObject:
   - component: {fileID: 1745919118}
   m_Layer: 7
   m_Name: table (3)
-  m_TagString: Untagged
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8478,7 +8470,7 @@ GameObject:
   - component: {fileID: 1765413280}
   m_Layer: 7
   m_Name: table (1)
-  m_TagString: Untagged
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8700,7 +8692,7 @@ GameObject:
   - component: {fileID: 1794527352}
   m_Layer: 7
   m_Name: table (5)
-  m_TagString: Untagged
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9039,7 +9031,7 @@ GameObject:
   - component: {fileID: 1872799336}
   m_Layer: 7
   m_Name: table (11)
-  m_TagString: Untagged
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9169,7 +9161,7 @@ GameObject:
   - component: {fileID: 1914909031}
   m_Layer: 7
   m_Name: table (2)
-  m_TagString: Untagged
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9299,7 +9291,7 @@ GameObject:
   - component: {fileID: 1917881475}
   m_Layer: 7
   m_Name: table (12)
-  m_TagString: Untagged
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10739,7 +10731,7 @@ GameObject:
   - component: {fileID: 2031481669}
   m_Layer: 7
   m_Name: table (15)
-  m_TagString: Untagged
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10978,7 +10970,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2088638154}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 5.53, z: -1}
+  m_LocalPosition: {x: 3, y: 5.53, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

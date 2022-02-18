@@ -66,6 +66,7 @@ public class DeathManager : Singleton<DeathManager>
         volume.TryGet(out vignette);
 
         vignette.intensity.value = 5;
+        OnDeathUI(DeathList[1]);
     }
     public IEnumerator amongDie()
     {
@@ -75,6 +76,7 @@ public class DeathManager : Singleton<DeathManager>
         volume.TryGet(out vignette);
 
         vignette.intensity.value = 5;
+        OnDeathUI(DeathList[1]);
     }
     public IEnumerator portalDie()
     {
@@ -84,6 +86,7 @@ public class DeathManager : Singleton<DeathManager>
         volume.TryGet(out vignette);
 
         vignette.intensity.value = 5;
+        OnDeathUI(DeathList[1]);
     }
     public IEnumerator CreeperDie()
     {
@@ -93,6 +96,7 @@ public class DeathManager : Singleton<DeathManager>
         volume.TryGet(out vignette);
 
         vignette.intensity.value = 5;
+        OnDeathUI(DeathList[1]);
     }
     public IEnumerator ChickenDie()
     {
@@ -102,6 +106,7 @@ public class DeathManager : Singleton<DeathManager>
         volume.TryGet(out vignette);
 
         vignette.intensity.value = 5;
+        OnDeathUI(DeathList[1]);
     }
     public IEnumerator ButtonDie()
     {
@@ -111,6 +116,7 @@ public class DeathManager : Singleton<DeathManager>
         volume.TryGet(out vignette);
 
         vignette.intensity.value = 5;
+        OnDeathUI(DeathList[1]);
     }
     public void OnDeathUI(int num,string text)
     {
