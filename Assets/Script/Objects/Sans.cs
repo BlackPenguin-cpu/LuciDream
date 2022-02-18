@@ -55,4 +55,9 @@ public class Sans : Misc
         }
     }
 
+    IEnumerator Attack()
+    {
+
+    }
+
 }
