@@ -12,7 +12,7 @@ public class Chickenclone : MonoBehaviour
     private void Start()
     {
         Vector3 player = Player.transform.position;
-        Chi.transform.position = new Vector3(player, 3, -1);
+        Chi.transform.position = new Vector3(player.x, 3, -1);
     }
     private void Awake()
     {
