@@ -15,6 +15,7 @@ public class Inventory : Singleton<Inventory>
     public bool Creeper = false;
     public bool Chicken = false;
     public bool Button = false;
+    public int MissingPoster;
 
     private void Update()
     {

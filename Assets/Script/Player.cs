@@ -32,7 +32,7 @@ public class Player : Singleton<Player>
         get { return State; }
         set
         {
-            if (value == PlayerState.DIE)
+            if (State == PlayerState.DIE)
             {
                 return;
             }
