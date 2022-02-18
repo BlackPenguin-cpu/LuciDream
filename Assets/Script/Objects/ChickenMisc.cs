@@ -27,15 +27,9 @@ public class ChickenMisc : Objects
         else
         {
             red.SetActive(true);
-            Invoke("aaa", 0.5f);
             SceneManager.LoadScene(SceneName);
             Player.Instance.transform.position = new Vector3(x, y);
         }
-    }
-
-    void aaa()
-    {
-        red.SetActive(false);
     }
     protected virtual IEnumerator TextPrint()
     {

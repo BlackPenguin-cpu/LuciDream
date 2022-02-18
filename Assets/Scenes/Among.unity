@@ -225,6 +225,7 @@ MonoBehaviour:
   minem: 0
   among: 0
   portal: 0
+  Creeper: 0
 --- !u!114 &229213374
 MonoBehaviour:
   m_ObjectHideFlags: 0

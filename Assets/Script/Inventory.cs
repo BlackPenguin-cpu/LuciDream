@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour
     public bool among = false;
     public bool portal = false;
     public bool Creeper = false;
+    public bool Chicken = false;
 
     private void Update()
     {
@@ -44,6 +45,10 @@ public class Inventory : MonoBehaviour
         if(Creeper == true)
         {
             if (Player.Instance.Dead == false) StartCoroutine(DeathManager.Instance.CreeperDie());
+        }
+        if(Chicken == true)
+        {
+            if (Player.Instance.Dead == false) StartCoroutine(DeathManager.Instance.ChickenDie());
         }
     }
 }

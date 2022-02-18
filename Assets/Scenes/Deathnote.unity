@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 379458657}
   - component: {fileID: 379458659}
   - component: {fileID: 379458658}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -832,6 +832,7 @@ MonoBehaviour:
   minem: 0
   among: 0
   portal: 0
+  Creeper: 0
 --- !u!1 &1674841778
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,7 +926,7 @@ GameObject:
   - component: {fileID: 1724938254}
   - component: {fileID: 1724938256}
   - component: {fileID: 1724938255}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}

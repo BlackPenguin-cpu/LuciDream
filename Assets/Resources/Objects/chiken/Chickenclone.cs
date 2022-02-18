@@ -16,6 +16,7 @@ public class Chickenclone : MonoBehaviour
     }
     void FixedUpdate()
     {
+        SoundManager.Instance.PlaySound("Chickena");
         rigid.velocity = new Vector2(nextMove, rigid.velocity.y);
         anim.SetBool("isChicken", true);
     }
