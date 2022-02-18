@@ -182,8 +182,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isClicked: 0
   SceneName: B1F
-  x: 28
-  y: 2.5
+  x: 21
+  y: -1
 --- !u!212 &205007387
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -379,6 +379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isNotSingle: 0
+  isNotDontdestroy: 0
   Volume: {fileID: 0}
   player: {fileID: 0}
   isUIon: 0

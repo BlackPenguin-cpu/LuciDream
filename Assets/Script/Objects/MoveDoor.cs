@@ -11,11 +11,13 @@ public class MoveDoor : Objects
     public override void Interaction()
     {
         base.Interaction();
+        Debug.Log("¿Ãµø");
         PlayerMove();
     }
 
     void PlayerMove()
     {
+        Player.Instance.CoroutineQuit();
         Player.Instance.transform.position = new Vector3(x, y);
         SceneManager.LoadScene(SceneName);
     }
