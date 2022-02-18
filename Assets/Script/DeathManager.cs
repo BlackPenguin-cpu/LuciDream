@@ -118,27 +118,25 @@ public class DeathManager : Singleton<DeathManager>
         vignette.intensity.value = 5;
         OnDeathUI(DeathList[1]);
     }
-    public void OnDeathUI(int num,Sprite image,string text)
+    public void OnDeathUI(int num,string text)
     {
         onDeadReset();
+        Player.Instance.Dead = true;
         AlbumManager.Instance.gameObject.SetActive(true);
-        AlbumManager.Instance.image[num] = image;
         AlbumManager.Instance.unlock[num] = true;
         AlbumManager.Instance.explanation[num] = text;
         AlbumManager.Instance.Save();
 
         DeathUI.gameObject.SetActive(true);
-        Photo.sprite = image;
         number.text = "# " + num;
         Description.text = text;
 
-        Player.Instance.transform.position = new Vector3(0, 2, 0);
-        SceneManager.LoadScene("TitleMap");
     }
 
     public void OnDeathUI(DeathResources List)
     {
         onDeadReset();
+        Player.Instance.Dead = true;
         AlbumManager.Instance.gameObject.SetActive(true);
         AlbumManager.Instance.image[List.num] = List.Image;
         AlbumManager.Instance.unlock[List.num] = true;
@@ -150,8 +148,6 @@ public class DeathManager : Singleton<DeathManager>
         number.text = "# " + List.num;
         Description.text = List.Text;
 
-        Player.Instance.transform.position = new Vector3(0, 2, 0);
-        SceneManager.LoadScene("TitleMap");
     }
 
     public void UIOff()
@@ -159,6 +155,9 @@ public class DeathManager : Singleton<DeathManager>
         DeathUI.gameObject.SetActive(false);
 
         Player.Instance.transform.position = new Vector3(0, 2, 0);
+        Camera.main.transform.position = new Vector3(0, 2, -10);
+        Player.Instance.CoroutineQuit();
+        Player.Instance.Dead = false;
         SceneManager.LoadScene("TitleMap");
     }
 

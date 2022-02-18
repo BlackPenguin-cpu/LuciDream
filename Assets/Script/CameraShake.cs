@@ -19,4 +19,8 @@ public class CameraShake : MonoBehaviour
     {
         anim.SetBool("isShakeing", true);
     }
+    public void PlayerOff()
+    {
+        Player.Instance.gameObject.layer = 8;
+    }
 }

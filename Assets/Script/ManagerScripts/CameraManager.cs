@@ -62,7 +62,7 @@ public class CameraManager : Singleton<CameraManager>
                     PlayerTimer += Time.deltaTime;
                 }
             }
-            else
+            else 
             {
                 Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, 5, Time.deltaTime);
                 transform.position = Vector3.Lerp(transform.position, new Vector3(0, 13, -10), Time.deltaTime);
@@ -70,7 +70,7 @@ public class CameraManager : Singleton<CameraManager>
             if(!FindObjectOfType<MainTitle>().StopPlayer)
             Timer -= Time.deltaTime;
         }
-        else
+        else if(SceneManager.GetActiveScene().name != "Mario")
         {
             FollowPlayer();
         }
@@ -91,10 +91,7 @@ public class CameraManager : Singleton<CameraManager>
     }
     void VolumeReset()
     {
-        vignette.intensity.value = 0;
-        grain.intensity.value = 0;
-        depthOfField.mode.value = 0;
-        bloom.intensity.value = 0;
+        Volume.Reset();
 
     }
 

@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Moon.unity
     guid: 2870883638316fe4780c637bc2e6bed9
+  - enabled: 1
+    path: Assets/Scenes/Map/Sans.unity
+    guid: 248bca0db1bf0a547ae7962770dcc98f
   m_configObjects: {}

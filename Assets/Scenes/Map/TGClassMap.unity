@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 141218280}
   - component: {fileID: 141218279}
   - component: {fileID: 141218278}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: trash tong
   m_TagString: Interaction
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: 29018c07d63bbb84b8ff03122a0d5495, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 175755316}
   - component: {fileID: 175755315}
   - component: {fileID: 175755314}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: trash tong (1)
   m_TagString: Interaction
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: 29018c07d63bbb84b8ff03122a0d5495, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -632,7 +632,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isClicked: 0
   number: 0
-  image: {fileID: 0}
   text: 
 --- !u!1 &379735358
 GameObject:
@@ -975,6 +974,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c973b9520dd3714eb39019e339aa576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  number: 13
+  text: "\uBC14\uB2E5\uC744 \uC798 \uBCF4\uACE0 \uB2E4\uB2C8\uC154\uC57C\uD569\uB2C8\uB2E4.
+    \uD604\uC2E4\uC774 \uC544\uB2C8\uB77C\uC11C \uB2E4\uD589\uC774\uB124\uC694."
 --- !u!1 &784367133
 GameObject:
   m_ObjectHideFlags: 0

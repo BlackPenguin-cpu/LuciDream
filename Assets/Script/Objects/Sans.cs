@@ -5,9 +5,19 @@ using UnityEngine;
 public class Sans : Misc
 {
     int endingCount;
+    [SerializeField] GameObject GasterBlaster;
+    Animator animator;
+    protected override void Start()
+    {
+        base.Start();
+        animator = GetComponent<Animator>();
+    }
     public override void Interaction()
     {
         base.Interaction();
+    }
+    protected override IEnumerator TextPrint()
+    {
         endingCount = 0;
         foreach (bool check in AlbumManager.Instance.unlock)
         {
@@ -16,43 +26,55 @@ public class Sans : Misc
                 endingCount++;
             }
         }
-        Speech = null;
+        Speech = new List<string>();
         switch (endingCount)
         {
             case 0:
-                Speech.Add("¿À ¾È³ç?");
-                Speech.Add("³­ »÷Áî¾ß.");
-                Speech.Add("»À´Ù±¸ »÷Áî.");
+                Speech.Add("ì˜¤ ì•ˆë…•?");
+                Speech.Add("ë‚œ ìƒŒì¦ˆì•¼.");
+                Speech.Add("ë¼ˆë‹¤êµ¬ ìƒŒì¦ˆ.");
                 break;
             case 1:
-                Speech.Add("°è¼Ó ÀÌ°÷¿¡ ¿À´Â°Å¾ß?");
-                Speech.Add("¾Æ´Ï Ã³À½ÀÎ°Ç°¡? ¹¹ µÆ¾î");
+                Speech.Add("ê³„ì† ì´ê³³ì— ì˜¤ëŠ”ê±°ì•¼?");
+                Speech.Add("ì•„ë‹ˆ ì²˜ìŒì¸ê±´ê°€? ë­ ëì–´");
                 break;
             case 2:
-                Speech.Add("³Ê°¡ ¿©±â °è¼Ó ¿À´Â°Ç µµ¿òÀÌ µÇÁö ¾Ê¾Æ");
-                Speech.Add("...°è¼ÓÇØ¼­ ¿©±æ ºüÁ®³ª°¡·Á ÇÏ´Â°Íµµ µµ¿òÀÌ ¾ÈµÇ°í ¸»ÀÌ¾ß");
+                Speech.Add("ë„ˆê°€ ì—¬ê¸° ê³„ì† ì˜¤ëŠ”ê±´ ë„ì›€ì´ ë˜ì§€ ì•Šì•„");
+                Speech.Add("...ê³„ì†í•´ì„œ ì—¬ê¸¸ ë¹ ì ¸ë‚˜ê°€ë ¤ í•˜ëŠ”ê²ƒë„ ë„ì›€ì´ ì•ˆë˜ê³  ë§ì´ì•¼");
                 break;
             case 3:
-                Speech.Add("È¤½Ã ¸ô¶ó¼­ ¸»ÇÏ´Â°Çµ¥ ³­ ³Ê¸¦ ¿©±â¼­ ºüÁ®³ª°¡°Ô ÇØÁÙ¼ö ¾ø¾î");
-                Speech.Add("°ð ³Ê°¡ ¿©±â¿¡¼­ º¸³»´Â ½Ã°£ÀÌ Çê°í»ýÀÌ¶ó´Â°É");
-                Speech.Add("\"»À Àú¸®°Ô\" ´À³¥²¨¾ß ");
+                Speech.Add("í˜¹ì‹œ ëª°ë¼ì„œ ë§í•˜ëŠ”ê±´ë° ë‚œ ë„ˆë¥¼ ì—¬ê¸°ì„œ ë¹ ì ¸ë‚˜ê°€ê²Œ í•´ì¤„ìˆ˜ ì—†ì–´");
+                Speech.Add("ê³§ ë„ˆê°€ ì—¬ê¸°ì—ì„œ ë³´ë‚´ëŠ” ì‹œê°„ì´ í—›ê³ ìƒì´ë¼ëŠ”ê±¸");
+                Speech.Add("\"ë¼ˆ ì €ë¦¬ê²Œ\" ëŠë‚„êº¼ì•¼ ");
                 break;
             case 4:
-                Speech.Add("¾ÆÁ÷ Æ÷±â ¾ÈÇÑ°Å¾ß?");
-                Speech.Add("±×³É Æ÷±âÇØ, ³­ ÀÌ¹Ì Æ÷±âÇß¾î.");
+                Speech.Add("ì•„ì§ í¬ê¸° ì•ˆí•œê±°ì•¼?");
+                Speech.Add("ê·¸ëƒ¥ í¬ê¸°í•´, ë‚œ ì´ë¯¸ í¬ê¸°í–ˆì–´.");
                 break;
             case 5:
-                Speech.Add("±»ÀÌ ¾î·Á¿î±æÀ» ¼±ÅÃÇÏ°Ú´Ù, ÀÌ°ÅÁö?");
-                Speech.Add("¹¹, ´ÙÀ½¿¡µµ ÀÌ°÷¿¡ ¿Â´Ù¸é ±×¶§´Â");
-                Speech.Add("Á¤¸»·Î \"»À¾ÆÇÂ\" ÀÏÀÌ ÀÏ¾î³¯²¨¾ß");
-                Speech.Add("Á¶±Ý Á¶½ÉÇÏ´ÂÆíÀÌ ÁÁÀ»²¬?");
+                Speech.Add("êµ³ì´ ì–´ë ¤ìš´ê¸¸ì„ ì„ íƒí•˜ê² ë‹¤, ì´ê±°ì§€?");
+                Speech.Add("ë­, ë‹¤ìŒì—ë„ ì´ê³³ì— ì˜¨ë‹¤ë©´ ê·¸ë•ŒëŠ”");
+                Speech.Add("ì •ë§ë¡œ \"ë¼ˆì•„í”ˆ\" ì¼ì´ ì¼ì–´ë‚ êº¼ì•¼");
+                Speech.Add("ì¡°ê¸ˆ ì¡°ì‹¬í•˜ëŠ”íŽ¸ì´ ì¢‹ì„ê»„?");
                 break;
             default:
-                Speech.Add("ÁÁ¾Æ, ÁÁ¾Æ");
-                Speech.Add("³»°¡ Á³¾î ÀÌ°É·Î µÆÁö?");
-                Speech.Add("¾ÕÀ¸·Î´Â ´Ù½Ã´Â ¿ÀÁö¸¶");
+                Speech.Add("ì¢‹ì•„, ì¢‹ì•„");
+                Speech.Add("ë‚´ê°€ ì¡Œì–´ ì´ê±¸ë¡œ ëì§€?");
+                Speech.Add("ì•žìœ¼ë¡œëŠ” ë‹¤ì‹œëŠ” ì˜¤ì§€ë§ˆ");
                 break;
         }
+        yield return base.TextPrint();
+        if(endingCount >= 6)
+        StartCoroutine(Attack());
     }
+    IEnumerator Attack()
+    {
+        animator.SetBool("isAngry", true);
+        for (int i = 0; i < 100; i++)
+        {
+            Instantiate(GasterBlaster, gameObject.transform.position + new Vector3(0, 15, 0), Quaternion.Euler(0, 0, 120));
+            yield return new WaitForSeconds(0.5f);
+        }
 
+    }
 }

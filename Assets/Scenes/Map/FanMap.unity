@@ -183,7 +183,7 @@ MonoBehaviour:
   isClicked: 0
   SceneName: B1F
   x: 21
-  y: -1
+  y: 3
 --- !u!212 &205007387
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 447917562}
   - component: {fileID: 447917561}
   - component: {fileID: 447917563}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1362,6 +1362,7 @@ GameObject:
   - component: {fileID: 572892421}
   - component: {fileID: 572892423}
   - component: {fileID: 572892422}
+  - component: {fileID: 572892424}
   m_Layer: 0
   m_Name: Frame
   m_TagString: Untagged
@@ -1422,7 +1423,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -1829,6 +1830,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &572892424
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572892420}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &654360515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,7 +1858,7 @@ GameObject:
   - component: {fileID: 654360519}
   - component: {fileID: 654360518}
   - component: {fileID: 654360517}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Invisible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1917,7 +1934,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -3651,6 +3668,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CloseDoorObject: {fileID: 1541391814}
   Fan: {fileID: 1960865744}
+  number: 4
+  text: "\uC120\uD48D\uAE30\uB97C \uD2C0\uACE0 \uC790\uBA74 \uC8FD\uB294\uB2E4\uACE0
+    \uD558\uC8E0. \uADFC\uB370 \uC790\uBA74\uC11C \uC120\uD48D\uAE30 \uD2C0\uC904\uC740
+    \uB204\uAC00 \uC54C\uC558\uACA0\uC5B4\uC694?"
 --- !u!4 &1618030327
 Transform:
   m_ObjectHideFlags: 0

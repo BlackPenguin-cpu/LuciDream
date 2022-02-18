@@ -9,6 +9,7 @@ public class Mario : MonoBehaviour
 
     void Start()
     {
+        Camera.main.transform.position = Vector3.zero;
         rigid = Player.Instance.gameObject.GetComponent<Rigidbody2D>();
         rigid.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
         rigid.bodyType = RigidbodyType2D.Dynamic;
