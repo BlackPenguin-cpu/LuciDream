@@ -10,6 +10,7 @@ public class Chicken : MonoBehaviour
     public GameObject chicken;
     public int a = 0;
     int i = 0;
+    public GameObject MainCamera;
 
     private void Start()
     {
@@ -23,6 +24,7 @@ public class Chicken : MonoBehaviour
     }
     void FixedUpdate()
     {
+        SoundManager.Instance.PlaySound("Chickena");
         rigid.velocity = new Vector2(nextMove, rigid.velocity.y);
         anim.SetBool("isChicken", true);
         Invoke("aaa", 0.5f);
@@ -45,6 +47,6 @@ public class Chicken : MonoBehaviour
                 a++;
             }
         }else
-            print("Á×À½");
+            MainCamera.GetComponent<Inventory>().Chicken = true;
     }
 }
