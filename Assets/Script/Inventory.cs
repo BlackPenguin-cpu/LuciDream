@@ -14,6 +14,7 @@ public class Inventory : Singleton<Inventory>
     public bool portal = false;
     public bool Creeper = false;
     public bool Chicken = false;
+    public bool Button = false;
 
     private void Update()
     {
@@ -53,6 +54,10 @@ public class Inventory : Singleton<Inventory>
         if(Chicken == true)
         {
             if (Player.Instance.Dead == false) StartCoroutine(DeathManager.Instance.ChickenDie());
+        }
+        if (Button == true)
+        {
+            if (Player.Instance.Dead == false) StartCoroutine(DeathManager.Instance.ButtonDie());
         }
     }
 }

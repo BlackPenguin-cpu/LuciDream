@@ -4548,6 +4548,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b602568aa74097848a1f3b8f4c002dbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNotSingle: 0
+  isNotDontdestroy: 0
+  Shoose: 0
   note: 0
   pen: 0
   minem: 0
@@ -9505,7 +9508,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1944196374}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26184a1bdfc8bff44a038de7c8d63480, type: 3}
+  m_Script: {fileID: 11500000, guid: b0bf45b7c6eb78f448cce8c755fe0429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isClicked: 0
@@ -10624,7 +10627,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2026152880}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26184a1bdfc8bff44a038de7c8d63480, type: 3}
+  m_Script: {fileID: 11500000, guid: b0bf45b7c6eb78f448cce8c755fe0429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isClicked: 0
