@@ -346,6 +346,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 29da4cd6f876d6c439012df8a1231901, type: 3}
   - Name: Chickena
     clip: {fileID: 8300000, guid: c97e292e9afaa2849a75133c37e307ae, type: 3}
+  - Name: Die
+    clip: {fileID: 8300000, guid: bbbbd1916a37d084f84850a2d5a2dc8b, type: 3}
   On: 1
   SFXOn: 1
   MusicSlider: {fileID: 5236770127382514329}
@@ -3612,6 +3614,7 @@ MonoBehaviour:
   isNotDontdestroy: 0
   Volume: {fileID: 11400000, guid: b41867d586ed30c47a4b7f62e4fe7c5c, type: 2}
   player: {fileID: 690756886}
+  BlackScreen: {fileID: 0}
   isUIon: 0
 --- !u!114 &1734116840
 MonoBehaviour:
@@ -4839,6 +4842,7 @@ MonoBehaviour:
   Creeper: 0
   Chicken: 0
   Button: 0
+  MissingPoster: 0
 --- !u!4 &2066460785
 Transform:
   m_ObjectHideFlags: 0
