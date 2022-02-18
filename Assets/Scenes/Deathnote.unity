@@ -697,7 +697,6 @@ MonoBehaviour:
   - "\uD3C9\uBC94\uD55C \uB178\uD2B8\uAC19\uC740\uB370 \uC774\uB984\uC774 \uC368\uC838\uC788\uB2E4"
   - "\u3139\uC774 \uBB50\uC9C0?"
   - "\uB098\uB3C4 \uC368\uBCFC\uAE4C? \uC544 \uD39C\uC774 \uC5C6\uB124 \uCC3E\uC544\uBCFC\uAE4C"
-  MainCamera: {fileID: 1518520578}
 --- !u!1 &1518520578
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,6 +817,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b602568aa74097848a1f3b8f4c002dbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNotSingle: 0
+  isNotDontdestroy: 0
+  Shoose: 0
   note: 0
   pen: 0
   minem: 0
@@ -825,6 +827,7 @@ MonoBehaviour:
   portal: 0
   Creeper: 0
   Chicken: 0
+  Button: 0
 --- !u!1 &1674841778
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,7 +838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1674841780}
   - component: {fileID: 1674841779}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}

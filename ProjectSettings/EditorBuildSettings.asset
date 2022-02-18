@@ -62,4 +62,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map/Sans.unity
     guid: 248bca0db1bf0a547ae7962770dcc98f
+  - enabled: 1
+    path: Assets/Scenes/Freddy.unity
+    guid: ff0baaac323adde428004a5d64c24d9f
+  - enabled: 1
+    path: Assets/Scenes/MemoryGame.unity
+    guid: 929f3fb4619fcaa458be7f6a9913eae6
   m_configObjects: {}
