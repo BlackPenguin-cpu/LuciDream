@@ -76,6 +76,7 @@ public class DeathManager : Singleton<DeathManager>
         AlbumManager.Instance.image[num] = image;
         AlbumManager.Instance.unlock[num] = true;
         AlbumManager.Instance.explanation[num] = Text;
+        AlbumManager.Instance.Save();
 
         /*Photo.sprite = image;
         number.text = "# " + num;
