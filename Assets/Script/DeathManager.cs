@@ -142,6 +142,8 @@ public class DeathManager : Singleton<DeathManager>
     {
         Photo.transform.DOMoveY(0, 0).SetEase(Ease.InOutBack);
 
+        Player.Instance.CoroutineQuit();
+
         onDeadReset();
         Player.Instance.Dead = true;
         AlbumManager.Instance.gameObject.SetActive(true);
@@ -164,6 +166,7 @@ public class DeathManager : Singleton<DeathManager>
 
         Player.Instance.transform.position = new Vector3(0, 2, 0);
         Camera.main.transform.position = new Vector3(0, 2, -10);
+        CameraManager.Instance.Volume.Reset();
         Player.Instance.CoroutineQuit();
         Player.Instance.Dead = false;
 
