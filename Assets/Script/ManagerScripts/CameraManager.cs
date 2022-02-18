@@ -64,7 +64,6 @@ public class CameraManager : Singleton<CameraManager>
             }
             else 
             {
-                Debug.Log("디버그입니다.");
                 Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, 5, Time.deltaTime);
                 transform.position = Vector3.Lerp(transform.position, new Vector3(0, 13, -10), Time.deltaTime);
             }
