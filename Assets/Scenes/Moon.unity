@@ -199,7 +199,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636186880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.15, y: -1.8, z: 0}
+  m_LocalPosition: {x: 1.23, y: -8.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -420,7 +420,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1526452280}
   - component: {fileID: 1526452279}
-  - component: {fileID: 1526452278}
   - component: {fileID: 1526452282}
   - component: {fileID: 1526452281}
   m_Layer: 0
@@ -430,14 +429,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1526452278
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1526452277}
-  m_Enabled: 1
 --- !u!20 &1526452279
 Camera:
   m_ObjectHideFlags: 0
@@ -512,6 +503,8 @@ MonoBehaviour:
   minem: 0
   among: 0
   portal: 0
+  Creeper: 0
+  Chicken: 0
 --- !u!114 &1526452282
 MonoBehaviour:
   m_ObjectHideFlags: 0

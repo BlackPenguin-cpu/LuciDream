@@ -16,8 +16,13 @@ public class Note : Objects
         }
         else
         {
+            Invoke("note", 1);
             MainCamera.GetComponent<Inventory>().note = true;
         }
+    }
+    void note()
+    {
+        SoundManager.Instance.PlaySound("deathnotea");
     }
     IEnumerator enumerator()
     {
