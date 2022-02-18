@@ -43,6 +43,7 @@ public class AlbumManager : Singleton<AlbumManager>
         string jsonSave = "";
         if (System.IO.File.Exists(dataPath))
             jsonSave = System.IO.File.ReadAllText(dataPath);
+        if (jsonSave == "") return;
 /*
         jsonSave = PlayerPrefs.GetString(saveKey);*/
 
