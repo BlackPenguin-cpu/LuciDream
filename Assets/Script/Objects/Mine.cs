@@ -22,7 +22,10 @@ public class Mine : Objects
     {
         base.Interaction();
         StartCoroutine(TalkUIManager.Instance.TextScript(Name, Speech));
-        Image.SetActive(true);
+        if (Input.GetMouseButtonUp(0))
+        {
+            Image.SetActive(true);
+        }
     }
     IEnumerator enumerator()
     {

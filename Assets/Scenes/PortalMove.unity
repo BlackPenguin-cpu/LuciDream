@@ -2210,7 +2210,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1838460116}
   - component: {fileID: 1838460115}
-  - component: {fileID: 1838460114}
   - component: {fileID: 1838460118}
   - component: {fileID: 1838460117}
   m_Layer: 0
@@ -2220,14 +2219,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1838460114
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1838460113}
-  m_Enabled: 1
 --- !u!20 &1838460115
 Camera:
   m_ObjectHideFlags: 0
@@ -2303,6 +2294,7 @@ MonoBehaviour:
   among: 0
   portal: 0
   Creeper: 0
+  Chicken: 0
 --- !u!114 &1838460118
 MonoBehaviour:
   m_ObjectHideFlags: 0
