@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using System.Threading.Tasks;
 
 [System.Serializable]
 public class DeathResources
@@ -22,6 +24,7 @@ public class DeathManager : Singleton<DeathManager>
     [Header("ø¨√‚")]
     [SerializeField] VolumeProfile volume;
     [SerializeField] Canvas DeathUI;
+    [SerializeField] Image Deathimage;
     [SerializeField] Image Photo;
     [SerializeField] TextMeshProUGUI number;
     [SerializeField] TextMeshProUGUI Description;
@@ -120,6 +123,8 @@ public class DeathManager : Singleton<DeathManager>
     }
     public void OnDeathUI(int num,string text)
     {
+        Photo.transform.DOMoveY(0, 0).SetEase(Ease.InOutBack);
+
         onDeadReset();
         Player.Instance.Dead = true;
         AlbumManager.Instance.gameObject.SetActive(true);
@@ -135,6 +140,8 @@ public class DeathManager : Singleton<DeathManager>
 
     public void OnDeathUI(DeathResources List)
     {
+        Photo.transform.DOMoveY(0, 0).SetEase(Ease.InOutBack);
+
         onDeadReset();
         Player.Instance.Dead = true;
         AlbumManager.Instance.gameObject.SetActive(true);
@@ -144,21 +151,38 @@ public class DeathManager : Singleton<DeathManager>
         AlbumManager.Instance.Save();
 
         DeathUI.gameObject.SetActive(true);
-        Photo.sprite = List.Image;
+        Deathimage.sprite = List.Image;
         number.text = "# " + List.num;
         Description.text = List.Text;
 
     }
 
-    public void UIOff()
+    public async void UIOff()
     {
+        Photo.transform.DOMoveY(0, 8);
         DeathUI.gameObject.SetActive(false);
 
         Player.Instance.transform.position = new Vector3(0, 2, 0);
         Camera.main.transform.position = new Vector3(0, 2, -10);
         Player.Instance.CoroutineQuit();
         Player.Instance.Dead = false;
+
+        float alpah = 0;
+        while(CameraManager.Instance.BlackScreen.color.a < 1)
+        {
+            CameraManager.Instance.BlackScreen.color = new Color(0, 0, 0, alpah);
+            alpah += 0.01f;
+            await Task.Delay(10);
+        }
+        
         SceneManager.LoadScene("TitleMap");
+        while (CameraManager.Instance.BlackScreen.color.a > 0)
+        {
+            CameraManager.Instance.BlackScreen.color = new Color(0, 0, 0, alpah);
+            alpah -= 0.01f;
+            await Task.Delay(10);
+        }
+
     }
 
     private void Update()

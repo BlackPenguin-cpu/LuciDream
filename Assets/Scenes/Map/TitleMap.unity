@@ -346,8 +346,6 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 29da4cd6f876d6c439012df8a1231901, type: 3}
   - Name: Chickena
     clip: {fileID: 8300000, guid: c97e292e9afaa2849a75133c37e307ae, type: 3}
-  - Name: Die
-    clip: {fileID: 8300000, guid: bbbbd1916a37d084f84850a2d5a2dc8b, type: 3}
   On: 1
   SFXOn: 1
   MusicSlider: {fileID: 5236770127382514329}
@@ -911,6 +909,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2284625036191604947, guid: 13410c112d6b29c4a9e658a15328aca3, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2459810523113422988, guid: 13410c112d6b29c4a9e658a15328aca3, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2459810523113422988, guid: 13410c112d6b29c4a9e658a15328aca3, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194856462930693236, guid: 13410c112d6b29c4a9e658a15328aca3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8596810840617203685, guid: 13410c112d6b29c4a9e658a15328aca3, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -3343,7 +3357,7 @@ Transform:
   - {fileID: 1018229078}
   - {fileID: 1275904357}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1712989433
 GameObject:
@@ -4842,7 +4856,7 @@ MonoBehaviour:
   Creeper: 0
   Chicken: 0
   Button: 0
-  MissingPoster: 0
+  MissingPoster: 
 --- !u!4 &2066460785
 Transform:
   m_ObjectHideFlags: 0
@@ -7076,7 +7090,7 @@ RectTransform:
   - {fileID: 5236770126907488718}
   - {fileID: 290379833}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
