@@ -10,4 +10,9 @@ public class MarioCoin : MonoBehaviour
     {
         anim.SetBool("isBouns", true);
     }
+
+    public void trigger()
+    {
+        Player.Instance.gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+    }
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class CameraShake : MonoBehaviour
 {
     public Animator anim;
+    public int number;
+    public string text;
     void Start()
     {
         
@@ -22,5 +24,9 @@ public class CameraShake : MonoBehaviour
     public void PlayerOff()
     {
         Player.Instance.gameObject.layer = 8;
+    }
+    public void Death()
+    {
+        DeathManager.Instance.OnDeathUI(number, text);
     }
 }

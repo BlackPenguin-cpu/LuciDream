@@ -21,7 +21,14 @@ public class Mario : MonoBehaviour
             Player.Instance.CoroutineQuit();
             rigid.constraints = RigidbodyConstraints2D.FreezePositionX;
             rigid.AddForce(new Vector3(0, 5, 0), ForceMode2D.Impulse);
-            this.gameObject.SetActive(false);
+            Invoke(nameof(die), 0.5f);
         }
+
+    }
+
+    void die()
+    {
+        this.gameObject.SetActive(false);
+        Player.Instance._State = PlayerState.DIE;
     }
 }
