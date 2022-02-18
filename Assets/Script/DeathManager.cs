@@ -30,7 +30,6 @@ public class DeathManager : Singleton<DeathManager>
     public IEnumerator ShooseDie()
     {
         yield return new WaitForSeconds(1);
-        Player.Instance._State = PlayerState.DIE;
         Player.Instance.Dead = true;
 
         volume.TryGet(out vignette);

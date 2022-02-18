@@ -25,7 +25,6 @@ public class Player : Singleton<Player>
     public float MoveTime;
     public PlayerDir PlayerDir;
     public bool Dead;
-    public bool CanNotMove;
     private PlayerState State;
     float die = 0;
     public PlayerState _State
@@ -65,7 +64,7 @@ public class Player : Singleton<Player>
 
                 if (SceneManager.GetActiveScene().name == "TitleMap")
                 {
-                    if (!FindObjectOfType<MainTitle>().StopPlayer && !CanNotMove)
+                    if (!FindObjectOfType<MainTitle>().StopPlayer && !Dead)
                     {
                         OnMouseClickIEnumerator = StartCoroutine(OnMouseClick());
                     }
