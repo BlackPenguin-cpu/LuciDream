@@ -7,7 +7,13 @@ public class Chickenclone : MonoBehaviour
     Rigidbody2D rigid;
     Animator anim;
     public int nextMove;
-
+    public GameObject Chi;
+    public GameObject Player;
+    private void Start()
+    {
+        Vector3 player = Player.transform.position;
+        Chi.transform.position = new Vector3(player, 3, -1);
+    }
     private void Awake()
     {
         anim = GetComponent<Animator>();
