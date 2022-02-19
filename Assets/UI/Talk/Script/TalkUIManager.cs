@@ -57,7 +57,6 @@ public class TalkUIManager : Singleton<TalkUIManager>
             if (IsClick)
             {
                 SpeechText.text = speech;
-                SoundManager.Instance.PlaySound("UISound");
                 break;
             }
             SoundManager.Instance.PlaySound("TalkSound");

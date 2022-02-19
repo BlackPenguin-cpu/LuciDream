@@ -159,7 +159,6 @@ public class DeathManager : Singleton<DeathManager>
 
     public async void UIOff()
     {
-        DeathUI.gameObject.SetActive(false);
 
         Player.Instance.transform.position = new Vector3(0, 2, 0);
         Camera.main.transform.position = new Vector3(0, 2, -10);
@@ -176,6 +175,8 @@ public class DeathManager : Singleton<DeathManager>
         
         onDeadReset();
         SceneManager.LoadScene("TitleMap");
+        Photo.transform.position = new Vector3(1100, 0, 0);
+        DeathUI.gameObject.SetActive(false);
         while (CameraManager.Instance.BlackScreen.color.a > 0)
         {
             CameraManager.Instance.BlackScreen.color = new Color(0, 0, 0, alpah);
