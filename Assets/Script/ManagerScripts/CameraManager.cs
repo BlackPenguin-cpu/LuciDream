@@ -38,7 +38,7 @@ public class CameraManager : Singleton<CameraManager>
     private void OnLevelWasLoaded(int level)
     {
         player = FindObjectOfType<Player>();
-        if (SceneManager.GetActiveScene().name != "TitleMap")
+        if (SceneManager.GetActiveScene().name != "TitleMap" && !Stop)
         {
             transform.position = player.transform.position;
         }
