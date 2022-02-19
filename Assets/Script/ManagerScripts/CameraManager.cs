@@ -24,6 +24,7 @@ public class CameraManager : Singleton<CameraManager>
     public bool isUIon;
     float Timer;
     float PlayerTimer;
+    public bool Stop;
     void Start()
     {
         player = FindObjectOfType<Player>();
@@ -71,7 +72,7 @@ public class CameraManager : Singleton<CameraManager>
             if(!FindObjectOfType<MainTitle>().StopPlayer)
             Timer -= Time.deltaTime;
         }
-        else if(SceneManager.GetActiveScene().name != "Mario")
+        else if(SceneManager.GetActiveScene().name != "Mario" && !Stop)
         {
             FollowPlayer();
         }
