@@ -300,6 +300,7 @@ GameObject:
   - component: {fileID: 1011918490}
   - component: {fileID: 1011918494}
   - component: {fileID: 1011918493}
+  - component: {fileID: 1011918495}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -385,6 +386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShakeAmount: 2
+  Cam: {fileID: 0}
 --- !u!114 &1011918494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,6 +419,25 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &1011918495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011918489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d8e01fab40e9a54d8c9183a06d95480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isNotSingle: 0
+  isNotDontdestroy: 0
+  Volume: {fileID: 0}
+  player: {fileID: 0}
+  BlackScreen: {fileID: 0}
+  isUIon: 0
+  Stop: 0
 --- !u!1 &1027073382
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,6 +449,7 @@ GameObject:
   - component: {fileID: 1027073385}
   - component: {fileID: 1027073384}
   - component: {fileID: 1027073383}
+  - component: {fileID: 1027073386}
   m_Layer: 0
   m_Name: FreddyMab
   m_TagString: Untagged
@@ -516,6 +538,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1027073386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027073382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dfe3d346e4a8f44bb1d61dd6ce78a8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  number: 0
+  text: 
 --- !u!1 &1039142309
 GameObject:
   m_ObjectHideFlags: 0

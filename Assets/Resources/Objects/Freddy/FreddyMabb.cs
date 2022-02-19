@@ -21,11 +21,10 @@ public class FreddyMabb : MonoBehaviour
         if(a > 2)
         {
             Map2.SetActive(true);
-            if(a > 6)
+            if(a == 6)
             {
                 Freddy.SetActive(true);
                 SoundManager.Instance.PlaySound("Freddy");
-                blue.GetComponent<CameraWark>().VibrateDorTime(2);
             }else if(a > 8)
             {
                 DeathManager.Instance.OnDeathUI(DeathManager.Instance.DeathList[16]);
