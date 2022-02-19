@@ -175,6 +175,7 @@ public class DeathManager : Singleton<DeathManager>
             await Task.Delay(10);
         }
         
+        onDeadReset();
         SceneManager.LoadScene("TitleMap");
         while (CameraManager.Instance.BlackScreen.color.a > 0)
         {
@@ -199,8 +200,8 @@ public class DeathManager : Singleton<DeathManager>
     }
     private void onDeadReset()
     {
-        Player.Instance.transform.rotation = Quaternion.identity;
         Player.Instance.GetComponent<Rigidbody2D>().isKinematic = true;
+        Player.Instance.transform.rotation = Quaternion.identity;
         //Player.Instance.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
         //Player.Instance.GetComponent<Rigidbody2D>().angularVelocity = 0;
         volume.Reset();
