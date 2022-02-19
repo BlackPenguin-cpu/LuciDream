@@ -348,6 +348,14 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: c97e292e9afaa2849a75133c37e307ae, type: 3}
   - Name: Die
     clip: {fileID: 8300000, guid: bbbbd1916a37d084f84850a2d5a2dc8b, type: 3}
+  - Name: TalkSound
+    clip: {fileID: 8300000, guid: 1ce078265fac09441a4a6d3552186199, type: 3}
+  - Name: Warp
+    clip: {fileID: 8300000, guid: af9936c1bd52b604db36db1065d1ad81, type: 3}
+  - Name: Walk
+    clip: {fileID: 8300000, guid: 1698ff05808aa444a8a92c2bcae49a74, type: 3}
+  - Name: UISound
+    clip: {fileID: 8300000, guid: 73a03e114deee5c4ab1daf0d95cd0b8e, type: 3}
   On: 1
   SFXOn: 1
   MusicSlider: {fileID: 5236770127382514329}
