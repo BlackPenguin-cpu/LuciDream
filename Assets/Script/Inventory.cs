@@ -15,7 +15,7 @@ public class Inventory : Singleton<Inventory>
     public bool Creeper = false;
     public bool Chicken = false;
     public bool Button = false;
-    public bool[] MissingPoster = new bool[5];
+    public List<bool> MissingPoster;
 
     private void Update()
     {
