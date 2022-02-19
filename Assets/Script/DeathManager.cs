@@ -131,7 +131,8 @@ public class DeathManager : Singleton<DeathManager>
         AlbumManager.Instance.Save();
 
         DeathUI.gameObject.SetActive(true);
-        Photo.rectTransform.DOLocalMoveY(0, 1).SetEase(Ease.InOutBack);
+        Tween t = Photo.rectTransform.DOLocalMoveY(0, 1).SetEase(Ease.InOutBack);
+        t.onKill();
         number.text = "# " + num;
         Description.text = text;
         Photo.sprite = AlbumManager.Instance.image[num];
