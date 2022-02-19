@@ -19,6 +19,7 @@ public class MoveDoor : Objects
     async void PlayerMove()
     {
         SoundManager.Instance.PlaySound("GlassDoor");
+        //CameraManager.Instance.Stop = false;
         float alpah = 0;
         while (CameraManager.Instance.BlackScreen.color.a < 1)
         {
