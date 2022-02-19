@@ -630,6 +630,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isClicked: 0
   um2: {fileID: 21300000, guid: 95a93b8ad6e5adb43a70acf47f3a8c5a, type: 3}
+  number: 15
+  text: "\uC5C4."
 --- !u!61 &180772279
 BoxCollider2D:
   m_ObjectHideFlags: 0
