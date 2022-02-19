@@ -18,6 +18,7 @@ public class MoveDoor : Objects
 
     async void PlayerMove()
     {
+        SoundManager.Instance.PlaySound("Warp");
         float alpah = 0;
         while (CameraManager.Instance.BlackScreen.color.a < 1)
         {
