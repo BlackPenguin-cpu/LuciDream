@@ -67,6 +67,7 @@ public class Among : MonoBehaviour
     {
         a = 0;
         Text.SetActive(true);
+        SoundManager.Instance.PlaySound("Amongg");
         game.transform.position = new Vector3(-7.79f, 17.76f, -5);
         b = true;
         Invoke("Die", 5);

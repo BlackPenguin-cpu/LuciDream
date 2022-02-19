@@ -22,6 +22,7 @@ public class Potalgun : Objects
 
     public void yes()
     {
+        SoundManager.Instance.PlaySound("Portalbutton");
         potal_bule.SetActive(true);
         potal_orange.SetActive(true);
         Image.SetActive(false);

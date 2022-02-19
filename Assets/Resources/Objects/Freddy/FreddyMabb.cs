@@ -24,6 +24,7 @@ public class FreddyMabb : MonoBehaviour
             if(a > 6)
             {
                 Freddy.SetActive(true);
+                SoundManager.Instance.PlaySound("Freddy");
                 blue.GetComponent<CameraWark>().VibrateDorTime(2);
             }else if(a > 8)
             {

@@ -82,7 +82,8 @@ public class Player : Singleton<Player>
         die += Time.deltaTime;
         if (die > 60)
         {
-            print("Á×À½");
+            Player.Instance._State = PlayerState.DIE;
+            DeathManager.Instance.OnDeathUI(DeathManager.Instance.DeathList[5]);
         }
     }
     void InteractionDetected()
