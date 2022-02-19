@@ -36,6 +36,7 @@ public class car : Objects
     {
         Car.SetActive(false);
         print("ddd");
+        no();
     }
 
     public void no()
