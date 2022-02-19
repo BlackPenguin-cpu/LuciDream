@@ -8,6 +8,7 @@ public class Chickenclone : MonoBehaviour
     public GameObject game;
     private void Start()
     {
+        SoundManager.Instance.PlaySound("Chickena");
         game = Player.Instance.gameObject;
        // GameObject.Find("Player").GetComponent<Transform>().transform.position = game.transform.position;
         anim = GetComponent<Animator>();

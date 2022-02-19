@@ -22,6 +22,7 @@ public class ButtonDie : Objects
         if (i > 0)
         {
             anim.SetBool("isButton", true);
+            SoundManager.Instance.PlaySound("Beepa");
             Invoke("aaa", 0.1f);
         }
     }
@@ -39,6 +40,7 @@ public class ButtonDie : Objects
     void Red()
     {
         gm.SetActive(true);
+        SoundManager.Instance.PlaySound("Explosiona");
     }
 
     void Die()
