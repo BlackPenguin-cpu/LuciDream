@@ -15,7 +15,8 @@ public class MainTitle : MonoBehaviour
 
     void Start()
     {
-
+        CameraManager.Instance.Stop = true;
+        Player.Instance.GetComponent<Rigidbody2D>().isKinematic = true;
     }
 
     // Update is called once per frame
