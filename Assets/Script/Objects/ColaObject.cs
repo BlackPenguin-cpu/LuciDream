@@ -12,12 +12,17 @@ public class ColaObject : Objects
         base.Interaction();
         anim = GetComponent<Animator>();
         anim.SetBool("isClick", true);
-        Invoke(nameof(Die), 3f);
+        Invoke(nameof(UION), 3f);
     }
 
-    public void Die()
+    public void UION()
+    {
+        Invoke(nameof(die), 3f);
+        Player.Instance._State = PlayerState.DIE;
+
+    }
+    void die()
     {
         DeathManager.Instance.OnDeathUI(number, text);
-
     }
 }

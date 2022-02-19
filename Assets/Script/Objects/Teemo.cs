@@ -9,6 +9,12 @@ public class Teemo : Objects
     public override void Interaction()
     {
         base.Interaction();
+        Invoke(nameof(Die), 3f);
+        Player.Instance._State = PlayerState.DIE;
+    }
+
+    void Die()
+    {
         DeathManager.Instance.OnDeathUI(number, text);
     }
 }

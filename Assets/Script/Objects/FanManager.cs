@@ -36,9 +36,14 @@ public class FanManager : MonoBehaviour
         }
     }
 
+
+    void UION()
+    {
+        Invoke(nameof(Die), 3f);
+        Player.Instance._State = PlayerState.DIE;
+    }
     void Die()
     {
-        Debug.Log("¡Í±›!");
         DeathManager.Instance.OnDeathUI(number, text);
     }
 }
