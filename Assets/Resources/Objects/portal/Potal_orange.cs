@@ -14,6 +14,7 @@ public class Potal_orange : Objects
     }
     public override void Interaction()
     {
+        Player.Instance.CoroutineQuit();
         SoundManager.Instance.PlaySound("Warp");
         game.transform.position = new Vector3(7, -0.55f, -1);
     }
