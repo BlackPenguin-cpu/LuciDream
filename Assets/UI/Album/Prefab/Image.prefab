@@ -149,6 +149,7 @@ MonoBehaviour:
   CloseUpImage: {fileID: 0}
   Number: 5
   Explanation: 5
+  Art: {fileID: 0}
 --- !u!1 &9139166902349915863
 GameObject:
   m_ObjectHideFlags: 0

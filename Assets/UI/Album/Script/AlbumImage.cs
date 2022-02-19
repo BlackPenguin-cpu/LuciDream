@@ -23,6 +23,7 @@ public class AlbumImage : MonoBehaviour
     public void CloseUp()
     {
         CloseUpImage.SetActive(true);
+        SoundManager.Instance.PlaySound("UISound");
         CloseUpImage.GetComponentInChildren<Text>().text = Explanation;
         CloseUpImage.GetComponent<Image>().sprite = Art;
         CloseUpImage.transform.Find("Numbering").gameObject.GetComponent<Text>().text = "#" + Number;
