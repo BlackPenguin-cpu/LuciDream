@@ -69,7 +69,7 @@ public class Among : MonoBehaviour
     void bbb()
     {
         a = 0;
-        Text.SetActive(true);
+        Invoke("Textt", 2);
         if(d == true)
         {
             Sound();
@@ -91,5 +91,10 @@ public class Among : MonoBehaviour
     {
         SoundManager.Instance.PlaySound("Amongg");
         d = false;
+    }
+
+    void Textt()
+    {
+        Text.SetActive(true);
     }
 }
