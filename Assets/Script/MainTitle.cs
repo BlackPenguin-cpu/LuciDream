@@ -15,6 +15,7 @@ public class MainTitle : MonoBehaviour
 
     void Start()
     {
+        SoundManager.Instance.Playbgm("MainBGM");
         Player.Instance.GetComponent<Rigidbody2D>().isKinematic = true;
     }
 

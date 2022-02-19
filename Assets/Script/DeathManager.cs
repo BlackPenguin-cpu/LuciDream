@@ -202,6 +202,7 @@ public class DeathManager : Singleton<DeathManager>
     {
         Player.Instance.GetComponent<Rigidbody2D>().isKinematic = true;
         Player.Instance.transform.rotation = Quaternion.identity;
+        Player.Instance.Dead = false;
         //Player.Instance.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
         //Player.Instance.GetComponent<Rigidbody2D>().angularVelocity = 0;
         volume.Reset();
