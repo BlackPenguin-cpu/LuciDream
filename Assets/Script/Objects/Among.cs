@@ -19,6 +19,8 @@ public class Among : MonoBehaviour
     public bool b = false;
     public bool c = false;
     public bool d = false;
+    public bool g = false;
+    public bool h = false;
     public GameObject target;
     Rigidbody2D rb;
     void Start()
@@ -38,7 +40,10 @@ public class Among : MonoBehaviour
     {
         if(MainCamera.GetComponent<AmongMic>().Ok == true)
         {
-            SoundManager.Instance.PlaySound("Amonga");
+            if(g == false)
+            {
+                ss();
+            }
             Player1.SetActive(true);
             Player2.SetActive(true);
             Player3.SetActive(true);
@@ -76,7 +81,10 @@ public class Among : MonoBehaviour
         }
         game.transform.position = new Vector3(0.39f, 20.19f, -5);
         b = true;
-        Invoke("Die", 5);
+        if(h == false)
+        {
+            Invoke("Die", 5);
+        }
     }
     void Die()
     {
@@ -85,12 +93,18 @@ public class Among : MonoBehaviour
         rb.isKinematic = true;
         rb.gravityScale = 1;
         rb.AddTorque(0);
+        h = true;
     }
 
     void Sound()
     {
         SoundManager.Instance.PlaySound("Amongg");
         d = false;
+    }
+    void ss()
+    {
+        SoundManager.Instance.PlaySound("Amonga");
+        g = true;
     }
 
     void Textt()
