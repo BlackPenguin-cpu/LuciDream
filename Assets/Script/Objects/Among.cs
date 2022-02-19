@@ -14,9 +14,14 @@ public class Among : MonoBehaviour
     public GameObject x;
     public float a  = 1;
     public GameObject MainCamera;
-    
+    public GameObject game;
+    public GameObject game2;
+    public float rotSpeed = 5;
+    public bool b = false;
+    public GameObject target;
     void Start()
     {
+        game2 = Player.Instance.gameObject;
         Player1.SetActive(false);
         Player2.SetActive(false);
         Player3.SetActive(false);
@@ -40,6 +45,11 @@ public class Among : MonoBehaviour
                 Invoke("bbb", 2);
             }
         }
+        if(b == true)
+        {
+            game.transform.rotation = Quaternion.Euler(0, 10, 0);
+            game.transform.position = Vector3.Lerp(game.transform.position, target.transform.position, Time.deltaTime * 3);
+        }
     }
 
     void aaa()
@@ -53,6 +63,13 @@ public class Among : MonoBehaviour
     {
         a = 0;
         Text.SetActive(true);
+        game.transform.position = new Vector3(-7.79f, 17.76f, -5);
+        game2.transform.position = new Vector3(-7.79f, 17.76f, 5);
+        b = true;
+        Invoke("Die", 5);
+    }
+    void Die()
+    {
         DeathManager.Instance.OnDeathUI(DeathManager.Instance.DeathList[21]);
     }
 }

@@ -22,7 +22,6 @@ public class MoveDoor : Objects
         float alpah = 0;
         while (CameraManager.Instance.BlackScreen.color.a < 1)
         {
-            Debug.Log("asd");
             CameraManager.Instance.BlackScreen.color = new Color(0, 0, 0, alpah);
             alpah += 0.01f;
             await Task.Delay(7);
