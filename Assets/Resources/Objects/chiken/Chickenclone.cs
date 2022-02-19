@@ -5,11 +5,11 @@ using UnityEngine;
 public class Chickenclone : MonoBehaviour
 {
     Animator anim;
- GameObject game;
-
+    public GameObject game;
     private void Start()
     {
-        GameObject.Find("Player").GetComponent<Transform>().transform.position = game.transform.position;
+        game = Player.Instance.gameObject;
+       // GameObject.Find("Player").GetComponent<Transform>().transform.position = game.transform.position;
         anim = GetComponent<Animator>();
     }
     void FixedUpdate()

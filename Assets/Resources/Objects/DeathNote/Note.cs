@@ -15,9 +15,15 @@ public class Note : Objects
         }
         else
         {
-            Invoke("note", 1);
             SoundManager.Instance.PlaySound("deathnotea");
+            //  GetComponent<Player>()._State = PlayerState.DIE;
+            Invoke("Die", 3);
+            Invoke("note", 4);
         }
+    }
+    void Die()
+    {
+        Player.Instance._State = PlayerState.DIE;
     }
     void note()
     {

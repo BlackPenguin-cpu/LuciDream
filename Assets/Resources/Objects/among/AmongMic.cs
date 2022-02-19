@@ -17,6 +17,7 @@ public class AmongMic : Objects
         Talk2.SetActive(false);
         Talk3.SetActive(false);
         Talk1.SetActive(true);
+
         StartCoroutine(TalkUIManager.Instance.TextScript(Name, Speech));
     }
     public override void Interaction()
@@ -25,12 +26,12 @@ public class AmongMic : Objects
     }
     private void Update()
     {
-        if (TalkUIManager.Instance.a <= 1)
+        if (TalkUIManager.Instance.a == 1)
         {
             Talk1.SetActive(false);
             Talk2.SetActive(true);
         }
-        else if (TalkUIManager.Instance.a <= 2)
+        else if (TalkUIManager.Instance.a == 2)
         {
             Talk2.SetActive(false);
             Talk3.SetActive(true);

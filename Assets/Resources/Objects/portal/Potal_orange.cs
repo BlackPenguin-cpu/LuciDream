@@ -8,8 +8,9 @@ public class Potal_orange : Objects
 
     protected override void Start()
     {
+        game = Player.Instance.gameObject;
         base.Start();
-        GameObject.Find("Player").GetComponent<Transform>().transform.position = game.transform.position;
+     //   GameObject.Find("Player").GetComponent<Transform>().transform.position = game.transform.position;
     }
     public override void Interaction()
     {

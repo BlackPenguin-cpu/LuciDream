@@ -19,6 +19,7 @@ public class ChickenMisc : Objects
     public override void Interaction()
     {
         base.Interaction();
+        print("ddd");
         if (a < 5)
         {
             StartCoroutine(TalkUIManager.Instance.TextScript(Name, Speech));
