@@ -15,7 +15,6 @@ public class Chickenclone : MonoBehaviour
     }
     void FixedUpdate()
     {
-        //  SoundManager.Instance.PlaySound("Chickena");
         transform.position = Vector3.Lerp(transform.position, game.transform.position, Time.deltaTime *3 );
         anim.SetBool("isChicken", true);
     }

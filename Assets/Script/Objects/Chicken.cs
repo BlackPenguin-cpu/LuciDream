@@ -7,7 +7,6 @@ public class Chicken : MonoBehaviour
     public GameObject chicken;
     public int a = 0;
     int i = 0;
-    public GameObject MainCamera;
 
     private void Awake()
     {
