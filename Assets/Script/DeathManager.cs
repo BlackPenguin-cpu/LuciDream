@@ -131,11 +131,10 @@ public class DeathManager : Singleton<DeathManager>
         AlbumManager.Instance.Save();
 
         DeathUI.gameObject.SetActive(true);
-        Tween t = Photo.rectTransform.DOLocalMoveY(0, 1).SetEase(Ease.InOutBack);
-        t.onKill();
+        Photo.rectTransform.DOLocalMoveY(0, 1).SetEase(Ease.InOutBack);
         number.text = "# " + num;
+        Deathimage.sprite = AlbumManager.Instance.image[num];
         Description.text = text;
-        Photo.sprite = AlbumManager.Instance.image[num];
 
     }
 
@@ -145,15 +144,15 @@ public class DeathManager : Singleton<DeathManager>
         onDeadReset();
         Player.Instance.Dead = true;
         AlbumManager.Instance.gameObject.SetActive(true);
-        AlbumManager.Instance.image[List.num] = List.Image;
+        //AlbumManager.Instance.image[List.num] = List.Image;
         AlbumManager.Instance.unlock[List.num] = true;
         AlbumManager.Instance.explanation[List.num] = List.Text;
         AlbumManager.Instance.Save();
 
         DeathUI.gameObject.SetActive(true);
         Photo.rectTransform.DOLocalMoveY(0, 1).SetEase(Ease.InOutBack);
-        Deathimage.sprite = List.Image;
         number.text = "# " + List.num;
+        Deathimage.sprite = List.Image;
         Description.text = List.Text;
 
     }
@@ -175,6 +174,7 @@ public class DeathManager : Singleton<DeathManager>
             await Task.Delay(10);
         }
         
+        onDeadReset();
         SceneManager.LoadScene("TitleMap");
         while (CameraManager.Instance.BlackScreen.color.a > 0)
         {
@@ -199,8 +199,8 @@ public class DeathManager : Singleton<DeathManager>
     }
     private void onDeadReset()
     {
-        Player.Instance.transform.rotation = Quaternion.identity;
         Player.Instance.GetComponent<Rigidbody2D>().isKinematic = true;
+        Player.Instance.transform.rotation = Quaternion.identity;
         //Player.Instance.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
         //Player.Instance.GetComponent<Rigidbody2D>().angularVelocity = 0;
         volume.Reset();
