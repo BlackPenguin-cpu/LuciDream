@@ -316,7 +316,9 @@ MonoBehaviour:
   isNotDontdestroy: 0
   Volume: {fileID: 0}
   player: {fileID: 0}
+  BlackScreen: {fileID: 0}
   isUIon: 0
+  Stop: 0
 --- !u!114 &116134602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3511,7 +3513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
       propertyPath: x
-      value: 1.58
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
       propertyPath: y
@@ -3521,8 +3523,31 @@ PrefabInstance:
       propertyPath: SceneName
       value: Among
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
+--- !u!1 &1149674004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1420347126833258050, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
+  m_PrefabInstance: {fileID: 1149674003}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1149674005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149674004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82d85c754a385ca4796f8d8e1b21f605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isClicked: 0
+  SceneName: Among
+  x: 20
+  y: 0.72
+  Cam: {fileID: 116134597}
 --- !u!1 &1151407257
 GameObject:
   m_ObjectHideFlags: 0
@@ -4397,7 +4422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
       propertyPath: x
-      value: 1.58
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
       propertyPath: y
@@ -4407,8 +4432,31 @@ PrefabInstance:
       propertyPath: SceneName
       value: Among
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
+--- !u!1 &1364207383 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1420347126833258050, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
+  m_PrefabInstance: {fileID: 1364207382}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1364207384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364207383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82d85c754a385ca4796f8d8e1b21f605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isClicked: 0
+  SceneName: Among
+  x: 20
+  y: 0.72
+  Cam: {fileID: 116134597}
 --- !u!1 &1444823766
 GameObject:
   m_ObjectHideFlags: 0
@@ -8464,7 +8512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
       propertyPath: x
-      value: -8.24
+      value: -8.5
       objectReference: {fileID: 0}
     - target: {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
       propertyPath: y
