@@ -514,6 +514,7 @@ GameObject:
   - component: {fileID: 349398668}
   - component: {fileID: 349398665}
   - component: {fileID: 349398667}
+  - component: {fileID: 349398666}
   m_Layer: 0
   m_Name: chicken_run
   m_TagString: Untagged
@@ -534,7 +535,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.019509634, y: -0.012876887}
+  m_Offset: {x: 0.0037709028, y: -0.02104552}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -545,8 +546,29 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.028256705, y: 0.04250116}
+  m_Size: {x: 0.2102581, y: 0.13457367}
   m_EdgeRadius: 0
+--- !u!50 &349398666
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349398664}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!114 &349398667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,6 +581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2123ec0291d94be44aa661b4171c1ed0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game: {fileID: 1339031851}
 --- !u!95 &349398668
 Animator:
   serializedVersion: 3
@@ -2894,6 +2917,32 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &420445541 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9001201879840856, guid: 2a858e292491b88479c854cfd3510e8a, type: 3}
+  m_PrefabInstance: {fileID: 1074081080}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &420445547
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420445541}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &601489063
 GameObject:
   m_ObjectHideFlags: 0
@@ -3156,6 +3205,7 @@ MonoBehaviour:
   Creeper: 0
   Chicken: 0
   Button: 0
+  MissingPoster: 0000000000
 --- !u!20 &705994473
 Camera:
   m_ObjectHideFlags: 0
@@ -3379,11 +3429,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5168589092254020270, guid: 901a7d5e99d39634e9a432086e726b62, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.54
+      value: -6.44
       objectReference: {fileID: 0}
     - target: {fileID: 5168589092254020270, guid: 901a7d5e99d39634e9a432086e726b62, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.2
+      value: -0.76
       objectReference: {fileID: 0}
     - target: {fileID: 5168589092254020270, guid: 901a7d5e99d39634e9a432086e726b62, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4236,11 +4286,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9001201879840860, guid: 2a858e292491b88479c854cfd3510e8a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.6207762
+      value: -1.47
       objectReference: {fileID: 0}
     - target: {fileID: 9001201879840860, guid: 2a858e292491b88479c854cfd3510e8a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.147761
+      value: 4.6
       objectReference: {fileID: 0}
     - target: {fileID: 9001201879840860, guid: 2a858e292491b88479c854cfd3510e8a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4273,6 +4323,22 @@ PrefabInstance:
     - target: {fileID: 9001201879840860, guid: 2a858e292491b88479c854cfd3510e8a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001201879840863, guid: 2a858e292491b88479c854cfd3510e8a, type: 3}
+      propertyPath: m_Size.x
+      value: 0.16260684
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001201879840863, guid: 2a858e292491b88479c854cfd3510e8a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.12132788
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001201879840863, guid: 2a858e292491b88479c854cfd3510e8a, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.049890757
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001201879840863, guid: 2a858e292491b88479c854cfd3510e8a, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.03565836
       objectReference: {fileID: 0}
     - target: {fileID: 2247752288871584919, guid: 2a858e292491b88479c854cfd3510e8a, type: 3}
       propertyPath: game
