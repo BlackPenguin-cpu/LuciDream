@@ -88,14 +88,8 @@ public class CameraManager : Singleton<CameraManager>
     }
     private void OnApplicationQuit()
     {
-        VolumeReset();
-    }
-    void VolumeReset()
-    {
         Volume.Reset();
-
     }
-
     public async void BedEvent()
     {
         while (vignette.intensity.value != 1)

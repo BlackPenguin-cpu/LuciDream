@@ -4690,8 +4690,8 @@ MonoBehaviour:
     Text: 
   volume: {fileID: 11400000, guid: b41867d586ed30c47a4b7f62e4fe7c5c, type: 2}
   DeathUI: {fileID: 449625581}
-  Deathimage: {fileID: 932815196}
-  Photo: {fileID: 772817481}
+  Deathimage: {fileID: 772817481}
+  Photo: {fileID: 932815196}
   number: {fileID: 1684443997}
   Description: {fileID: 1626448223}
 --- !u!114 &1993370766 stripped
@@ -5105,7 +5105,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 21300000, guid: 98423cc2cd852924d9a93a1d0791da05, type: 3}
   - {fileID: 0}
-  - {fileID: 21300000, guid: 90d185922d3f38745ad8b32bc4c988c1, type: 3}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

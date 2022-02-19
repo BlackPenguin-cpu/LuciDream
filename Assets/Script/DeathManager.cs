@@ -44,7 +44,6 @@ public class DeathManager : Singleton<DeathManager>
             yield return new WaitForSeconds(0.02f);
         }
 
-        vignette.intensity.value = 1;
         OnDeathUI(DeathList[1]);
     }
     public IEnumerator RollingGirl()
@@ -57,7 +56,7 @@ public class DeathManager : Singleton<DeathManager>
             rigid.velocity = new Vector2(0, 0);
             rigid.angularVelocity = 0;
             rigid.AddForce(new Vector3(-1f, 2, 0), ForceMode2D.Impulse);
-            rigid.AddTorque(-5f, ForceMode2D.Impulse);
+            rigid.AddTorque(-4.5f, ForceMode2D.Impulse);
             yield return new WaitForSeconds(2);
         }
     }
@@ -123,7 +122,6 @@ public class DeathManager : Singleton<DeathManager>
     }
     public void OnDeathUI(int num,string text)
     {
-        Photo.transform.DOMoveY(0, 0).SetEase(Ease.InOutBack);
 
         onDeadReset();
         Player.Instance.Dead = true;
@@ -133,6 +131,7 @@ public class DeathManager : Singleton<DeathManager>
         AlbumManager.Instance.Save();
 
         DeathUI.gameObject.SetActive(true);
+        Photo.rectTransform.DOLocalMoveY(0, 1).SetEase(Ease.InOutBack);
         number.text = "# " + num;
         Description.text = text;
         Photo.sprite = AlbumManager.Instance.image[num];
@@ -141,7 +140,6 @@ public class DeathManager : Singleton<DeathManager>
 
     public void OnDeathUI(DeathResources List)
     {
-        Photo.transform.DOMoveY(0, 0).SetEase(Ease.InOutBack);
 
         onDeadReset();
         Player.Instance.Dead = true;
@@ -152,6 +150,7 @@ public class DeathManager : Singleton<DeathManager>
         AlbumManager.Instance.Save();
 
         DeathUI.gameObject.SetActive(true);
+        Photo.rectTransform.DOLocalMoveY(0, 1).SetEase(Ease.InOutBack);
         Deathimage.sprite = List.Image;
         number.text = "# " + List.num;
         Description.text = List.Text;
@@ -160,7 +159,6 @@ public class DeathManager : Singleton<DeathManager>
 
     public async void UIOff()
     {
-        Photo.transform.DOMoveY(0, 8);
         DeathUI.gameObject.SetActive(false);
 
         Player.Instance.transform.position = new Vector3(0, 2, 0);
@@ -183,6 +181,7 @@ public class DeathManager : Singleton<DeathManager>
             alpah -= 0.01f;
             await Task.Delay(10);
         }
+        Player.Instance._State = PlayerState.IDLE;
 
     }
 
@@ -190,11 +189,17 @@ public class DeathManager : Singleton<DeathManager>
     {
         if (DeathUI.gameObject.activeSelf == true)
         {
-            if (Input.anyKey || Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) UIOff();
+            if (Input.anyKey || Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) && !Input.GetKeyDown(KeyCode.F1)) UIOff();
+        }
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            OnDeathUI(DeathList[1]);
         }
     }
     private void onDeadReset()
     {
         volume.Reset();
+        volume.TryGet(out vignette);
+        vignette.intensity.value = 0;
     }
 }

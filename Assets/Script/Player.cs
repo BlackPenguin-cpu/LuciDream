@@ -73,7 +73,7 @@ public class Player : Singleton<Player>
                         OnMouseClickIEnumerator = StartCoroutine(OnMouseClick());
                     }
                 }
-                else
+                else if(!Dead)
                     OnMouseClickIEnumerator = StartCoroutine(OnMouseClick());
             }
         }
