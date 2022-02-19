@@ -52,7 +52,7 @@ public class Memory : MonoBehaviour
     void Start()
     {
         Player2.SetActive(false);
-        Delete();
+        Invoke("Delete", 1);
         Randoma();
     }
     void Randoma()
@@ -199,13 +199,16 @@ public class Memory : MonoBehaviour
 
                 if(c == 5)
                 {
-                    SceneManager.LoadScene(SceneName);
-                    Player.Instance.transform.position = new Vector3(x, y);
+                    Invoke("move", 1);
                 }
             }
         }
     }
-
+    void move()
+    {
+        SceneManager.LoadScene(SceneName);
+        Player.Instance.transform.position = new Vector3(x, y);
+    }
     void good()
     {
         Good.SetActive(false);

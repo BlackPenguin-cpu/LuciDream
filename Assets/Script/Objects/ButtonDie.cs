@@ -33,7 +33,7 @@ public class ButtonDie : Objects
         anim.SetBool("isButton", false);
         red.SetActive(true);
         Invoke("Red", 2);
-        Invoke("Die", 2);
+        Invoke("Die", 4);
     }
 
     void Red()
