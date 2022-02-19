@@ -854,6 +854,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b3183b7c80ff8488fe34428e5328f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  number: 24
+  text: "\uC544\uBB34\uB798\uB3C4 \uBCBD\uB3CC\uC744 \uBA38\uB9AC\uB85C \uCE58\uB294\uAC74
+    \uC544\uBB34\uB798\uB3C4 \uBB34\uBAA8\uD55C \uC9D3\uC774\uACA0\uC8E0. \uC65C
+    \uADF8\uB7F0 \uBA4D\uCCAD\uD55C \uC9D3\uC744 \uB2F9\uC5F0\uD558\uAC8C\uB3C4 \uD558\uC2E0\uAC70\uC8E0?"
 --- !u!1 &1284233499
 GameObject:
   m_ObjectHideFlags: 0
