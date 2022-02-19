@@ -754,6 +754,7 @@ MonoBehaviour:
   player: {fileID: 0}
   BlackScreen: {fileID: 0}
   isUIon: 0
+  Stop: 0
 --- !u!114 &412411548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7871,11 +7872,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
       propertyPath: x
-      value: -0.24
+      value: -5.08
       objectReference: {fileID: 0}
     - target: {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
       propertyPath: y
-      value: -0.78
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
       propertyPath: SceneName

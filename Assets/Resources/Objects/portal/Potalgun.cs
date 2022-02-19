@@ -17,6 +17,7 @@ public class Potalgun : Objects
     }
     public override void Interaction()
     {
+        base.Interaction();
         Image.SetActive(true);
     }
 

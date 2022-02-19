@@ -8,6 +8,7 @@ public class aaa : Objects
 {
     public string SceneName;
     public float x, y;
+    public GameObject Cam;
 
     public override void Interaction()
     {
@@ -18,6 +19,9 @@ public class aaa : Objects
     async void PlayerMove()
     {
         SoundManager.Instance.PlaySound("Warp");
+         CameraManager.Instance.Stop = true;
+        Cam = Camera.main.gameObject;
+        Cam.transform.position = new Vector3(0, 0, -10);
         float alpah = 0;
         while (CameraManager.Instance.BlackScreen.color.a < 1)
         {
