@@ -199,6 +199,7 @@ public class DeathManager : Singleton<DeathManager>
     }
     private void onDeadReset()
     {
+        Player.Instance.transform.rotation = Quaternion.identity;
         volume.Reset();
         volume.TryGet(out vignette);
         vignette.intensity.value = 0;
