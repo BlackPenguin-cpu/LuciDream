@@ -10,6 +10,7 @@ public class AmongMic : Objects
     public GameObject Talk2;
     public GameObject Talk3;
     public bool Ok;
+    public float a;
     protected override void Start()
     {
         base.Start();
@@ -17,8 +18,7 @@ public class AmongMic : Objects
         Talk2.SetActive(false);
         Talk3.SetActive(false);
         Talk1.SetActive(true);
-
-        StartCoroutine(TalkUIManager.Instance.TextScript(Name, Speech));
+        Invoke("aaa", 1);
     }
     public override void Interaction()
     {
@@ -43,6 +43,10 @@ public class AmongMic : Objects
             Talk3.SetActive(true);
             Ok = true;
         }
+    }
+    void aaa()
+    {
+        StartCoroutine(TalkUIManager.Instance.TextScript(Name, Speech));
     }
     IEnumerator enumerator()
     {
