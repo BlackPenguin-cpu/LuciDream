@@ -15,13 +15,13 @@ public class Among : MonoBehaviour
     public float a  = 1;
     public GameObject MainCamera;
     public GameObject game;
-    public GameObject game2;
     public float rotSpeed = 5;
     public bool b = false;
     public GameObject target;
+    Rigidbody2D rb;
     void Start()
     {
-        game2 = Player.Instance.gameObject;
+        game = Player.Instance.gameObject;
         Player1.SetActive(false);
         Player2.SetActive(false);
         Player3.SetActive(false);
@@ -29,6 +29,7 @@ public class Among : MonoBehaviour
         Check2.SetActive(false);
         Check3.SetActive(false);
         x.SetActive(false);
+
     }
 
     void Update()
@@ -47,7 +48,10 @@ public class Among : MonoBehaviour
         }
         if(b == true)
         {
-            game.transform.rotation = Quaternion.Euler(0, 10, 0);
+            rb = Player.Instance.GetComponent<Rigidbody2D>();
+            rb.isKinematic = false;
+            rb.gravityScale = 0;
+            rb.AddTorque(3 * Time.deltaTime);  
             game.transform.position = Vector3.Lerp(game.transform.position, target.transform.position, Time.deltaTime * 3);
         }
     }
@@ -64,7 +68,6 @@ public class Among : MonoBehaviour
         a = 0;
         Text.SetActive(true);
         game.transform.position = new Vector3(-7.79f, 17.76f, -5);
-        game2.transform.position = new Vector3(-7.79f, 17.76f, 5);
         b = true;
         Invoke("Die", 5);
     }

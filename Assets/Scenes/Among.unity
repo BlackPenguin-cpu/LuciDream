@@ -4489,7 +4489,6 @@ MonoBehaviour:
   a: 0
   MainCamera: {fileID: 1925492276}
   game: {fileID: 1588286182}
-  game2: {fileID: 5168589092254020267, guid: 901a7d5e99d39634e9a432086e726b62, type: 3}
   rotSpeed: 5
   b: 0
   target: {fileID: 2109040277}
@@ -4582,7 +4581,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109040277}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.43, y: 15.95, z: -33.511116}
+  m_LocalPosition: {x: 10.24, y: 17.86, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

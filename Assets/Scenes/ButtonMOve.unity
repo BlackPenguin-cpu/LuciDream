@@ -1335,7 +1335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShakeAmount: 2
-  Cam: {fileID: 0}
+  Cam: {fileID: 1508852336}
 --- !u!1 &1188264608
 GameObject:
   m_ObjectHideFlags: 0
