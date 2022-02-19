@@ -3512,6 +3512,7 @@ MonoBehaviour:
   player: {fileID: 690756886}
   BlackScreen: {fileID: 2459810523688741860}
   isUIon: 0
+  Stop: 0
 --- !u!114 &1734116840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3542,7 +3543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1420347127528601473, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1420347127528601474, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
       propertyPath: m_RootOrder
@@ -3590,15 +3591,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
       propertyPath: x
-      value: 0
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
       propertyPath: y
-      value: -2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5055782261813112920, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
       propertyPath: SceneName
-      value: Among
+      value: PortalMove
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bf99ed23c0f73043929783b6280cc86, type: 3}
