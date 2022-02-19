@@ -17,6 +17,8 @@ public class Among : MonoBehaviour
     public GameObject game;
     public float rotSpeed = 5;
     public bool b = false;
+    public bool c = false;
+    public bool d = false;
     public GameObject target;
     Rigidbody2D rb;
     void Start()
@@ -48,11 +50,12 @@ public class Among : MonoBehaviour
         }
         if(b == true)
         {
+            c = true;
             rb = Player.Instance.GetComponent<Rigidbody2D>();
             rb.isKinematic = false;
             rb.gravityScale = 0;
-            rb.AddTorque(3 * Time.deltaTime);  
-            game.transform.position = Vector3.Lerp(game.transform.position, target.transform.position, Time.deltaTime * 3);
+            rb.AddTorque(1);
+           // game.transform.position = Vector3.Lerp(game.transform.position, target.transform.position, 2);
         }
     }
 
@@ -67,13 +70,26 @@ public class Among : MonoBehaviour
     {
         a = 0;
         Text.SetActive(true);
-        SoundManager.Instance.PlaySound("Amongg");
-        game.transform.position = new Vector3(-7.79f, 17.76f, -5);
+        if(d == true)
+        {
+            Sound();
+        }
+        game.transform.position = new Vector3(0.39f, 20.19f, -5);
         b = true;
         Invoke("Die", 5);
     }
     void Die()
     {
         DeathManager.Instance.OnDeathUI(DeathManager.Instance.DeathList[21]);
+        b = false;
+        rb.isKinematic = true;
+        rb.gravityScale = 1;
+        rb.AddTorque(0);
+    }
+
+    void Sound()
+    {
+        SoundManager.Instance.PlaySound("Amongg");
+        d = false;
     }
 }
