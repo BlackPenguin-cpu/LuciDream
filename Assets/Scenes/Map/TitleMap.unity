@@ -329,7 +329,7 @@ MonoBehaviour:
   - Name: Amonga
     clip: {fileID: 8300000, guid: 311257138238c6c43b384e8c87ba56d5, type: 3}
   - Name: creepera
-    clip: {fileID: 8300000, guid: cf2728f6784b0384f8552c6732061dad, type: 3}
+    clip: {fileID: 8300000, guid: 99efdc8520ae73d4e88244be45b1975a, type: 3}
   - Name: deathnotea
     clip: {fileID: 8300000, guid: 7f777a22b2a3360499f7881c7a05bbae, type: 3}
   - Name: GlassDoor
@@ -356,6 +356,12 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 1698ff05808aa444a8a92c2bcae49a74, type: 3}
   - Name: UISound
     clip: {fileID: 8300000, guid: 73a03e114deee5c4ab1daf0d95cd0b8e, type: 3}
+  - Name: Freddy
+    clip: {fileID: 8300000, guid: 8ff6612e965f0c74cb21c5cfa0baedde, type: 3}
+  - Name: Amongg
+    clip: {fileID: 8300000, guid: 8d551e6adecd5a246b0a6477ae850642, type: 3}
+  - Name: Portalbutton
+    clip: {fileID: 8300000, guid: 5d80231569392a443a6d0acdc258f806, type: 3}
   On: 1
   SFXOn: 1
   MusicSlider: {fileID: 5236770127382514329}
