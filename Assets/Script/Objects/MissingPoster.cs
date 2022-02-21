@@ -14,16 +14,17 @@ public class MissingPoster : Misc
         {
             gameObject.SetActive(false);
         }
-        if(AlbumManager.Instance.unlock[1] == false)
-        {
-            gameObject.SetActive(false);
-        }
     }
 
+    public override void Interaction()
+    {
+        base.Interaction();
+    }
     protected override IEnumerator TextPrint()
     {
-        yield return base.TextPrint();
         Check();
+        yield return base.TextPrint();
+        gameObject.SetActive(false);
     }
     void Check()
     {
@@ -47,7 +48,6 @@ public class MissingPoster : Misc
             default:
                 break;
         }
-        gameObject.SetActive(false);
     }
 
     IEnumerator Slander()
@@ -75,7 +75,7 @@ public class MissingPoster : Misc
     {
         Vector3 pos = Player.Instance.transform.position + new Vector3(Random.Range(14, -14), Random.Range(7, -7));
         GameObject Jumpobj = Instantiate(JumpScareSlanderMan, pos, Quaternion.identity);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5);
 
         Destroy(Jumpobj);
     }

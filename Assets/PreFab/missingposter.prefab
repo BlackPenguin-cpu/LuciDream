@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1254851091844043446}
   - component: {fileID: 1254851091844043441}
   - component: {fileID: 7067158762521657673}
+  - component: {fileID: 4411107067655574421}
   m_Layer: 0
   m_Name: missingposter
   m_TagString: Interaction
@@ -95,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca461a85e2f7d4469852904e6479c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isClicked: 0
+  isClicked: 1
   Name: "\uC2E4\uC885 \uC804\uB2E8\uC9C0"
   Speech:
   - "\uC12C\uB729\uD55C \uC5BC\uAD74\uC744 \uD558\uACE0\uC788\uB294 \uD3EC\uC2A4\uD130\uB2E4"
@@ -104,3 +105,29 @@ MonoBehaviour:
   num: 0
   JumpScareSlanderMan: {fileID: 1401457543717658008, guid: b8c5c2484326c4846a071f5cdbf00cea, type: 3}
   SlanderMan: {fileID: 2988554675694626129, guid: 5cab41cbff29c114cb847cdce6077ad4, type: 3}
+--- !u!61 &4411107067655574421
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254851091844043440}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.08, y: 3.22}
+    newSize: {x: 2.08, y: 3.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.08, y: 3.22}
+  m_EdgeRadius: 0
